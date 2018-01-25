@@ -35,6 +35,8 @@
 .\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\usb_host.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -52,3 +54,11 @@
 .\objects\usb_host.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
 .\objects\usb_host.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
 .\objects\usb_host.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
+.\objects\usb_host.o: ..\APP\inc\app_sys.h
+.\objects\usb_host.o: ..\BSP\inc\bsp.h
+.\objects\usb_host.o: ..\BSP\inc\bsp_key.h
+.\objects\usb_host.o: ..\BSP\inc\bsp.h
+.\objects\usb_host.o: ..\BSP\inc\bsp_led.h
+.\objects\usb_host.o: ..\BSP\inc\bsp_usart.h
+.\objects\usb_host.o: ..\BSP\inc\bsp_timer.h
+.\objects\usb_host.o: ..\BSP\inc\bsp_malloc.h

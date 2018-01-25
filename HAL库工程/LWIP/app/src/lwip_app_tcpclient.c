@@ -4,8 +4,8 @@
 
 static void _cb_tcp_cilent_conn_err(void *arg, err_t err)
 {
-	usb_printf("connect error!!\r\n");
-	usb_printf("try to connect\r\n");
+	printf("connect error!!\r\n");
+	printf("try to connect\r\n");
 	lwip_app_TCPClientConfig();
 }
 
@@ -28,18 +28,27 @@ static err_t _cb_tcp_cilent_recv(void *arg, struct tcp_pcb *pcb, struct pbuf *p,
 
 static err_t _cb_tcp_cilent_sent(void *arg, struct tcp_pcb *pcb, u16_t len)
 {
-	usb_printf("cilent sent data ok\r\n");
+//	printf("cilent sent data ok\r\n");
 	return ERR_OK;
 }
 
 static err_t _cb_tcp_cilent_connected(void *arg, struct tcp_pcb *pcb, err_t err)
 {
 	char string[] = "this is a cilent \r\n";
+	int i = 0;
+	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*1024);
 	
+	for(i = 0; i< 1024;i++)
+	{
+		buff[i] = i;
+	}
 	tcp_recv(pcb, _cb_tcp_cilent_recv);
 	tcp_sent(pcb, _cb_tcp_cilent_sent);
 	
-	tcp_write(pcb, string, sizeof(string), 1);
+	while(1)
+	{
+		tcp_write(pcb, buff, 1024, 1);
+	}
 	
 	return ERR_OK;
 }
@@ -50,7 +59,7 @@ void lwip_app_TCPClientConfig(void)
 	struct ip_addr server_ip;
 	
 	pcb = tcp_new();
-	IP4_ADDR(&server_ip, 192, 168, 137, 2);
+	IP4_ADDR(&server_ip, 192, 168, 1, 110);
 	tcp_connect(pcb, &server_ip, 8080, _cb_tcp_cilent_connected);
 	tcp_err(pcb, _cb_tcp_cilent_conn_err);
 	

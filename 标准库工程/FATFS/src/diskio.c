@@ -12,8 +12,8 @@
 # include "bsp.h"		
 # include "ff.h"
 
-# define SD_CARD		0  //SD卡,卷标为0
-# define EX_FLASH 	1	//外部flash,卷标为1
+# define SD_CARD		1  //SD卡,卷标为0
+# define EX_FLASH 	0	//外部flash,卷标为1
 
 # define FLASH_SECTOR_SIZE 	512			  
 

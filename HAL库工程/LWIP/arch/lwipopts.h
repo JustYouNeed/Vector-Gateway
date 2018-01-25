@@ -12,10 +12,10 @@
 #define SYS_LIGHTWEIGHT_PROT    1		//为1时使用实时操作系统的轻量级保护,保护关键代码不被中断打断
 #define NO_SYS                  0  		//使用UCOS操作系统
 #define MEM_ALIGNMENT           4  		//使用4字节对齐模式
-#define MEM_SIZE                6*1024 	//内存堆heap大小
+#define MEM_SIZE                12*1024 	//内存堆heap大小
 #define MEMP_NUM_PBUF           16 		//MEMP_NUM_PBUF:memp结构的pbuf数量,如果应用从ROM或者静态存储区发送大量数据时,这个值应该设置大一点
 #define MEMP_NUM_UDP_PCB        5		//MEMP_NUM_UDP_PCB:UDP协议控制块(PCB)数量.每个活动的UDP"连接"需要一个PCB.
-#define MEMP_NUM_TCP_PCB        5		//MEMP_NUM_TCP_PCB:同时建立激活的TCP数量
+#define MEMP_NUM_TCP_PCB        10		//MEMP_NUM_TCP_PCB:同时建立激活的TCP数量
 #define MEMP_NUM_TCP_PCB_LISTEN 6		//MEMP_NUM_TCP_PCB_LISTEN:能够监听的TCP连接数量
 #define MEMP_NUM_TCP_SEG        10		//MEMP_NUM_TCP_SEG:最多同时在队列中的TCP段数量
 #define MEMP_NUM_SYS_TIMEOUT    8		//MEMP_NUM_SYS_TIMEOUT:能够同时激活的timeout个数
@@ -48,8 +48,8 @@
 #define LWIP_DHCP               0	//使用DHCP
 #define LWIP_UDP                1 	//使用UDP服务
 #define UDP_TTL                 255 //UDP数据包生存时间
-#define LWIP_STATS 0
-#define LWIP_PROVIDE_ERRNO 1
+#define LWIP_STATS 							0
+#define LWIP_PROVIDE_ERRNO 			1
 
 
 //帧校验和选项，STM32F4x7允许通过硬件识别和计算IP,UDP和ICMP的帧校验和
@@ -93,7 +93,7 @@
 //有关系统的选项
 #define TCPIP_THREAD_STACKSIZE          1000	//内核任务堆栈大小
 #define DEFAULT_UDP_RECVMBOX_SIZE       2000
-#define DEFAULT_THREAD_STACKSIZE        512
+#define DEFAULT_THREAD_STACKSIZE        1024
 
 //LWIP调试选项
 #define LWIP_DEBUG                    	 0	 //关闭DEBUG选项

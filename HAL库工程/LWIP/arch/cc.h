@@ -6,7 +6,6 @@
 
 #include "stdio.h"
 #include "includes.h"  //使用UCOS 要添加此头文件！
-# include "usbd_user.h"
 
 //定义与平台无关的数据类型
 typedef unsigned   char    u8_t;  	//无符号8位整数  
@@ -76,7 +75,7 @@ typedef int sys_prot_t;				//临界保护型数据
 #ifndef LWIP_PLATFORM_ASSERT
 #define LWIP_PLATFORM_ASSERT(x) \
     do \
-    {   usb_printf("Assertion \"%s\" failed at line %d in %s\r\n", x, __LINE__, __FILE__); \
+    {   printf("Assertion \"%s\" failed at line %d in %s\r\n", x, __LINE__, __FILE__); \
     } while(0)
 #endif
 

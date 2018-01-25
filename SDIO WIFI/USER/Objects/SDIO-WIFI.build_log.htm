@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.22.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: He Xin, NUC, LIC=V8545-GPKRU-ZCPJY-I8624-ABNKF-B3EIP
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.22
+Toolchain Path:  D:\Program Files\Keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.22
+Dialog DLL:      DCM.DLL V1.13.9.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
+Dialog DLL:      TCM.DLL V1.21.0.0
+ 
+<h2>Project:</h2>
+E:\学习资料\电子设计\智能家居\Vector Gateway\程序\SDIO WIFI\USER\SDIO-WIFI.uvprojx
+Project File Date:  01/22/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\Program Files\Keil\ARM\ARMCC\Bin'
+Build target 'SDIO-WIFI'
+compiling bsp_wlan.c...
+..\BSP\src\bsp_wlan.c(14): warning:  #177-D: variable "errorstatus"  was declared but never referenced
+  	SD_Error errorstatus=SD_OK;	 
+..\BSP\src\bsp_wlan.c(15): warning:  #177-D: variable "clkdiv"  was declared but never referenced
+    u8 clkdiv=0;
+..\BSP\src\bsp_wlan.c(262): warning:  #61-D: integer operation result is out of range
+      if (
+DIO->RESP1 & (1<<31))  
+..\BSP\src\bsp_wlan.c(262): warning:  #68-D: integer conversion resulted in a change of sign
+      if (
+DIO->RESP1 & (1<<31))  
+..\BSP\src\bsp_wlan.c(209): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i = 0;
+..\BSP\src\bsp_wlan.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=6240 RO-data=508 RW-data=100 ZI-data=140828  
+".\Objects\SDIO-WIFI.axf" - 0 Error(s), 5 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\学习资料\电子设计\智能家居\Vector Gateway\程序\SDIO WIFI\USER\RTE\_SDIO-WIFI
+  D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

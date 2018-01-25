@@ -35,6 +35,8 @@
 .\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\usb_device.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -48,5 +50,7 @@
 .\objects\usb_device.o: ..\USB\USB_DEVICE\CORE\inc\usbd_core.h
 .\objects\usb_device.o: ..\USB\USB_DEVICE\CORE\inc\usbd_ctlreq.h
 .\objects\usb_device.o: ..\USB\USB_DEVICE\USER\inc\usbd_desc.h
-.\objects\usb_device.o: ..\USB\USB_DEVICE\CLASS\CDC\Inc\usbd_cdc.h
-.\objects\usb_device.o: ..\USB\USB_DEVICE\USER\inc\usbd_cdc_if.h
+.\objects\usb_device.o: ..\USB\USB_DEVICE\CLASS\MSC\Inc\usbd_msc.h
+.\objects\usb_device.o: ..\USB\USB_DEVICE\CLASS\MSC\Inc\usbd_msc_bot.h
+.\objects\usb_device.o: ..\USB\USB_DEVICE\CLASS\MSC\Inc\usbd_msc_scsi.h
+.\objects\usb_device.o: ..\USB\USB_DEVICE\USER\inc\usbd_storage_if.h

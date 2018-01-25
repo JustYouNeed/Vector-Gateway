@@ -70,8 +70,12 @@ void bsp_led_Toggle(uint8_t LedId)
 		{
 			case 0:LED0_GPIO_PORT->ODR ^= LED0_GPIO_PIN;
 						 LED1_GPIO_PORT->ODR ^= LED1_GPIO_PIN;break;
-			case 1:LED0_GPIO_PORT->ODR ^= LED0_GPIO_PIN;break;
-			case 2:LED1_GPIO_PORT->ODR ^= LED1_GPIO_PIN;break;
+			case 1:LED0_GPIO_PORT->ODR ^= LED0_GPIO_PIN;
+						 LED1_GPIO_PORT->BSRR = (uint32_t)LED1_GPIO_PIN;
+						break;
+			case 2:LED1_GPIO_PORT->ODR ^= LED1_GPIO_PIN;
+						 LED0_GPIO_PORT->BSRR = (uint32_t)LED0_GPIO_PIN;
+						 break;
 			default:break;
 		}
 	}

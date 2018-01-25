@@ -16,12 +16,12 @@ static err_t http_server_recv(void *arg, struct tcp_pcb *pcb, struct pbuf *p, er
 		data = p->payload;
 		if((p->len >= 3) && data[0] == 'G' && data[1] == 'E' && data[2] == 'T')  /* HTTP GET请求，返回网页 */
 		{
-			usb_printf("GET Request\r\n");
+			printf("GET Request\r\n");
 			tcp_write(pcb, html, sizeof(html), 1);
 		}
 		else
 		{
-			usb_printf("Request Error\r\n");
+			printf("Request Error\r\n");
 		}
 		pbuf_free(p);  /* 数据处理完后释放内存 */
 	}

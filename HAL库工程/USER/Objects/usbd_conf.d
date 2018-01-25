@@ -34,6 +34,8 @@
 .\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\usbd_conf.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -46,11 +48,3 @@
 .\objects\usbd_conf.o: ..\USB\USB_DEVICE\CORE\inc\usbd_ioreq.h
 .\objects\usbd_conf.o: ..\USB\USB_DEVICE\CORE\inc\usbd_core.h
 .\objects\usbd_conf.o: ..\USB\USB_DEVICE\CORE\inc\usbd_ctlreq.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp_timer.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp_key.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp_led.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp_usart.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp_timer.h
-.\objects\usbd_conf.o: ..\BSP\inc\bsp_malloc.h

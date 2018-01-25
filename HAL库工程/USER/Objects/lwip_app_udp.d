@@ -38,6 +38,8 @@
 .\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\lwip_app_udp.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -75,19 +77,19 @@
 .\objects\lwip_app_udp.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 .\objects\lwip_app_udp.o: ..\UCOSIII\uC-LIB\lib_math.h
 .\objects\lwip_app_udp.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
-.\objects\lwip_app_udp.o: ..\USB\USB_DEVICE\USER\inc\usbd_user.h
-.\objects\lwip_app_udp.o: ..\USB\USB_DEVICE\USER\inc\usb_device.h
-.\objects\lwip_app_udp.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
-.\objects\lwip_app_udp.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\lwip_app_udp.o: ..\USB\USB_HOST\USER\inc\usb_host.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\lwip/opt.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\lwip/err.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\lwip/def.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\lwip/pbuf.h
-.\objects\lwip_app_udp.o: ..\BSP\inc\bsp_lan8720.h
+.\objects\lwip_app_udp.o: ..\BSP\inc\bsp_lan.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\lwip/udp.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\ipv4\lwip/ip.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\lwip/tcp.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\lwip/mem.h
 .\objects\lwip_app_udp.o: ..\LWIP\include\ipv4\lwip/icmp.h
+.\objects\lwip_app_udp.o: ..\LWIP\include\lwip/api.h
+.\objects\lwip_app_udp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\lwip_app_udp.o: ..\LWIP\include\lwip/netbuf.h
+.\objects\lwip_app_udp.o: ..\LWIP\include\lwip/sys.h
+.\objects\lwip_app_udp.o: ..\LWIP\arch/sys_arch.h

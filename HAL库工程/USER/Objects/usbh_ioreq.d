@@ -38,6 +38,8 @@
 .\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\usbh_ioreq.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h

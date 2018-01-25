@@ -86,6 +86,8 @@
 #define USBD_LPM_ENABLED     0
 /*---------- -----------*/
 #define USBD_SELF_POWERED     1
+/*---------- -----------*/
+#define MSC_MEDIA_PACKET     512
 
 /****************************************/
 /* #define for FS and HS identification */

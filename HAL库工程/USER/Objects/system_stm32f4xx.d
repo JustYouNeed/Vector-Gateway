@@ -34,6 +34,8 @@
 .\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\system_stm32f4xx.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h

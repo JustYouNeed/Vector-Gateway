@@ -46,6 +46,8 @@
 .\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\bsp_ucosiii.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h

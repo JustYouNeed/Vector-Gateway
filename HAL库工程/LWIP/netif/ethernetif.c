@@ -47,7 +47,7 @@
 # include "netif/ethernetif.h" 
 # include "lwip_comm.h"
 # include "includes.h"
-# include "bsp_lan8720.h"
+# include "bsp_lan.h"
 #if 1 /* don't build, this is only a skeleton, see previous comment */
 
 #include "lwip/def.h"

@@ -1,5 +1,5 @@
-.\objects\app_sys.o: ..\APPLICATION\src\app_sys.c
-.\objects\app_sys.o: ..\APPLICATION\inc\app_sys.h
+.\objects\app_sys.o: ..\APP\src\app_sys.c
+.\objects\app_sys.o: ..\APP\inc\app_sys.h
 .\objects\app_sys.o: ..\BSP\inc\bsp.h
 .\objects\app_sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\app_sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
@@ -37,6 +37,8 @@
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -47,3 +49,15 @@
 .\objects\app_sys.o: ..\BSP\inc\bsp_usart.h
 .\objects\app_sys.o: ..\BSP\inc\bsp_timer.h
 .\objects\app_sys.o: ..\BSP\inc\bsp_malloc.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\app_sys.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\app_sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h

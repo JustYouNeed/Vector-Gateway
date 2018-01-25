@@ -108,7 +108,7 @@ void bsp_i2s_ExtConfig(uint16_t I2S_Standard,uint16_t I2S_Mode,uint16_t I2S_Cloc
 uint8_t bsp_i2s_SampleRateSet(uint32_t samplerate)
 {
 //	u8 i=0; 
-//	u32 tempreg=0;
+//	uint32_t tempreg=0;
 //	samplerate/=10;//缩小10倍   
 //	
 //	for(i=0;i<(sizeof(I2S_PSC_TBL)/10);i++)//看看改采样率是否可以支持
@@ -118,7 +118,7 @@ uint8_t bsp_i2s_SampleRateSet(uint32_t samplerate)
 // 
 //	RCC_PLLI2SCmd(DISABLE);//先关闭PLLI2S
 //	if(i==(sizeof(I2S_PSC_TBL)/10))return 1;//搜遍了也找不到
-//	RCC_PLLI2SConfig((u32)I2S_PSC_TBL[i][1],(u32)I2S_PSC_TBL[i][2]);//设置I2SxCLK的频率(x=2)  设置PLLI2SN PLLI2SR
+//	RCC_PLLI2SConfig((uint32_t)I2S_PSC_TBL[i][1],(uint32_t)I2S_PSC_TBL[i][2]);//设置I2SxCLK的频率(x=2)  设置PLLI2SN PLLI2SR
 // 
 //	RCC->CR|=1<<26;					//开启I2S时钟
 //	while((RCC->CR&1<<27)==0);		//等待I2S时钟开启成功. 
@@ -158,8 +158,8 @@ void bsp_i2s_TX_DMAConfig(uint8_t* buf0,uint8_t *buf1,uint16_t num)
 //  /* 配置 DMA Stream */
 
 //  DMA_InitStructure.DMA_Channel = DMA_Channel_0;  //通道0 SPI2_TX通道 
-//  DMA_InitStructure.DMA_PeripheralBaseAddr = (u32)&SPI2->DR;//外设地址为:(u32)&SPI2->DR
-//  DMA_InitStructure.DMA_Memory0BaseAddr = (u32)buf0;//DMA 存储器0地址
+//  DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)&SPI2->DR;//外设地址为:(uint32_t)&SPI2->DR
+//  DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)buf0;//DMA 存储器0地址
 //  DMA_InitStructure.DMA_DIR = DMA_DIR_MemoryToPeripheral;//存储器到外设模式
 //  DMA_InitStructure.DMA_BufferSize = num;//数据传输量 
 //  DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;//外设非增量模式
@@ -174,7 +174,7 @@ void bsp_i2s_TX_DMAConfig(uint8_t* buf0,uint8_t *buf1,uint16_t num)
 //  DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;//存储器突发单次传输
 //  DMA_Init(DMA1_Stream4, &DMA_InitStructure);//初始化DMA Stream
 //	
-//	DMA_DoubleBufferModeConfig(DMA1_Stream4,(u32)buf1,DMA_Memory_0);//双缓冲模式配置
+//	DMA_DoubleBufferModeConfig(DMA1_Stream4,(uint32_t)buf1,DMA_Memory_0);//双缓冲模式配置
 // 
 //  DMA_DoubleBufferModeCmd(DMA1_Stream4,ENABLE);//双缓冲模式开启
 // 
@@ -216,8 +216,8 @@ void bsp_i2s_RX_DMAConfig(uint8_t* buf0,uint8_t *buf1,uint16_t num)
 //  /* 配置 DMA Stream */
 
 //  DMA_InitStructure.DMA_Channel = DMA_Channel_3;  //通道3 I2S2ext_RX通道 
-//  DMA_InitStructure.DMA_PeripheralBaseAddr = (u32)&I2S2ext->DR;//外设地址为:(u32)&I2S2ext->DR>DR
-//  DMA_InitStructure.DMA_Memory0BaseAddr = (u32)buf0;//DMA 存储器0地址
+//  DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)&I2S2ext->DR;//外设地址为:(uint32_t)&I2S2ext->DR>DR
+//  DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)buf0;//DMA 存储器0地址
 //  DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;//外设到存储器模式
 //  DMA_InitStructure.DMA_BufferSize = num;//数据传输量 
 //  DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;//外设非增量模式
@@ -232,7 +232,7 @@ void bsp_i2s_RX_DMAConfig(uint8_t* buf0,uint8_t *buf1,uint16_t num)
 //  DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;//存储器突发单次传输
 //  DMA_Init(DMA1_Stream3, &DMA_InitStructure);//初始化DMA Stream
 //	
-//	DMA_DoubleBufferModeConfig(DMA1_Stream3,(u32)buf1,DMA_Memory_0);//双缓冲模式配置
+//	DMA_DoubleBufferModeConfig(DMA1_Stream3,(uint32_t)buf1,DMA_Memory_0);//双缓冲模式配置
 // 
 //  DMA_DoubleBufferModeCmd(DMA1_Stream3,ENABLE);//双缓冲模式开启
 // 

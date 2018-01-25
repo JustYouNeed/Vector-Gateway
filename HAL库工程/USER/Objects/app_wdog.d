@@ -1,5 +1,5 @@
-.\objects\app_wdog.o: ..\APPLICATION\src\app_wdog.c
-.\objects\app_wdog.o: ..\APPLICATION\inc\app_wdog.h
+.\objects\app_wdog.o: ..\APP\src\app_wdog.c
+.\objects\app_wdog.o: ..\APP\inc\app_wdog.h
 .\objects\app_wdog.o: ..\USER\stm32f4xx.h
 .\objects\app_wdog.o: ..\USER\stm32f407xx.h
 .\objects\app_wdog.o: ..\CORE\core_cm4.h
@@ -35,6 +35,8 @@
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h

@@ -63,7 +63,7 @@ int telnet_input(struct tcp_pcb *pcb, telnet_conn *conn_arg, struct pbuf *p)
 //	u8_t *dtab = (u8_t *)bsp_mem_Malloc(SRAMIN, sizeof(u8_t)*20);
 //	memcpy(dtab, p->payload, len);
 	u8_t *dtab = (unsigned char *)p->payload;
-	usb_printf("payload:%s,len:%d\r\n",dtab, len);
+//	printf("payload:%s,len:%d\r\n",dtab, len);
 	if((len == 2) && (*dtab == 0x0d) && (*(dtab + 1) == 0x0a))
 	{
 		conn_arg->cmd[conn_arg->bytes_len] = 0x00;
@@ -152,7 +152,7 @@ static err_t telnet_server_recv(void *p_arg, struct tcp_pcb *pcb, struct pbuf *p
 			switch(conn_arg->state)
 			{
 				case TELNET_SETUP:
-					usb_printf("cmd:%c%c%c%c%c\r\n",conn_arg->cmd[0], conn_arg->cmd[1], conn_arg->cmd[2], conn_arg->cmd[3]);
+					//printf("cmd:%c%c%c%c%c\r\n",conn_arg->cmd[0], conn_arg->cmd[1], conn_arg->cmd[2], conn_arg->cmd[3]);
 					if(strcmp(conn_arg->cmd, PASSWORD) == 0)
 					{
 						slen = sprintf(sndbuff, "##Welcome to Gateway Telnet##\r\n");
@@ -203,7 +203,7 @@ static void telnet_server_conn_err(void *p_arg, err_t err)
 	telnet_conn *conn_arg = (telnet_conn *)p_arg;
 	
 	if(!conn_arg) return ;
-	usb_printf("connection error\r\n");
+	printf("connection error\r\n");
 	mem_free(p_arg);
 }
 

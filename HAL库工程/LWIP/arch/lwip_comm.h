@@ -4,7 +4,7 @@
 # include "bsp.h"
 # include "bsp_malloc.h"
 # include "netif.h"
-# include "bsp_lan8720.h"
+# include "bsp_lan.h"
 
 #define LWIP_DHCP_MAX_TRIES		4
 

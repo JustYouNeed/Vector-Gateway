@@ -37,6 +37,8 @@
 .\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\lwip_app_httpserver.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -47,6 +49,18 @@
 .\objects\lwip_app_httpserver.o: ..\BSP\inc\bsp_usart.h
 .\objects\lwip_app_httpserver.o: ..\BSP\inc\bsp_timer.h
 .\objects\lwip_app_httpserver.o: ..\BSP\inc\bsp_malloc.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\lwip_app_httpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\lwip/tcp.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\lwip/opt.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\arch\lwipopts.h
@@ -55,7 +69,6 @@
 .\objects\lwip_app_httpserver.o: ..\LWIP\arch/cc.h
 .\objects\lwip_app_httpserver.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\lwip_app_httpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\lwip_app_httpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\lwip_app_httpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\lwip_app_httpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
 .\objects\lwip_app_httpserver.o: ..\UCOSIII\uCOS-III\Source\os.h
@@ -74,11 +87,6 @@
 .\objects\lwip_app_httpserver.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 .\objects\lwip_app_httpserver.o: ..\UCOSIII\uC-LIB\lib_math.h
 .\objects\lwip_app_httpserver.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
-.\objects\lwip_app_httpserver.o: ..\USB\USB_DEVICE\USER\inc\usbd_user.h
-.\objects\lwip_app_httpserver.o: ..\USB\USB_DEVICE\USER\inc\usb_device.h
-.\objects\lwip_app_httpserver.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
-.\objects\lwip_app_httpserver.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\lwip_app_httpserver.o: ..\USB\USB_HOST\USER\inc\usb_host.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\lwip/opt.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\lwip/mem.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\lwip/pbuf.h

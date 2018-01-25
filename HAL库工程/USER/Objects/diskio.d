@@ -1,7 +1,6 @@
 .\objects\diskio.o: ..\FATFS\src\diskio.c
 .\objects\diskio.o: ..\FATFS\src\diskio.h
-.\objects\diskio.o: ..\FATFS\src\integer.h
-.\objects\diskio.o: ..\APPLICATION\inc\app_w25qxx.h
+.\objects\diskio.o: ..\FATFS\src\ffconf.h
 .\objects\diskio.o: ..\BSP\inc\bsp.h
 .\objects\diskio.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\diskio.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
@@ -39,6 +38,8 @@
 .\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\diskio.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -49,5 +50,18 @@
 .\objects\diskio.o: ..\BSP\inc\bsp_usart.h
 .\objects\diskio.o: ..\BSP\inc\bsp_timer.h
 .\objects\diskio.o: ..\BSP\inc\bsp_malloc.h
+.\objects\diskio.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\diskio.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\diskio.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\diskio.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\diskio.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\diskio.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\diskio.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\diskio.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\diskio.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\diskio.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\diskio.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\diskio.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
+.\objects\diskio.o: ..\FATFS\src\integer.h
+.\objects\diskio.o: ..\APP\inc\app_w25qxx.h
 .\objects\diskio.o: ..\FATFS\src\ff.h
-.\objects\diskio.o: ..\FATFS\src\ffconf.h

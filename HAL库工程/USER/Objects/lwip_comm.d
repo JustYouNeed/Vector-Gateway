@@ -37,6 +37,8 @@
 .\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\lwip_comm.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -47,6 +49,18 @@
 .\objects\lwip_comm.o: ..\BSP\inc\bsp_usart.h
 .\objects\lwip_comm.o: ..\BSP\inc\bsp_timer.h
 .\objects\lwip_comm.o: ..\BSP\inc\bsp_malloc.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\lwip_comm.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip\netif.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/opt.h
 .\objects\lwip_comm.o: ..\LWIP\arch\lwipopts.h
@@ -55,7 +69,6 @@
 .\objects\lwip_comm.o: ..\LWIP\arch/cc.h
 .\objects\lwip_comm.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
 .\objects\lwip_comm.o: ..\UCOSIII\uCOS-III\Source\os.h
@@ -74,17 +87,12 @@
 .\objects\lwip_comm.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 .\objects\lwip_comm.o: ..\UCOSIII\uC-LIB\lib_math.h
 .\objects\lwip_comm.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
-.\objects\lwip_comm.o: ..\USB\USB_DEVICE\USER\inc\usbd_user.h
-.\objects\lwip_comm.o: ..\USB\USB_DEVICE\USER\inc\usb_device.h
-.\objects\lwip_comm.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
-.\objects\lwip_comm.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\lwip_comm.o: ..\USB\USB_HOST\USER\inc\usb_host.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/opt.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/err.h
 .\objects\lwip_comm.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/def.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/pbuf.h
-.\objects\lwip_comm.o: ..\BSP\inc\bsp_lan8720.h
+.\objects\lwip_comm.o: ..\BSP\inc\bsp_lan.h
 .\objects\lwip_comm.o: ..\LWIP\include\netif/etharp.h
 .\objects\lwip_comm.o: ..\LWIP\include\ipv4\lwip/ip.h
 .\objects\lwip_comm.o: ..\LWIP\include\netif\ethernetif.h
@@ -107,4 +115,4 @@
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/api.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/netbuf.h
 .\objects\lwip_comm.o: ..\LWIP\include\lwip/netifapi.h
-.\objects\lwip_comm.o: ..\APPLICATION\inc\app_sys.h
+.\objects\lwip_comm.o: ..\APP\inc\app_sys.h

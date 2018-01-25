@@ -53,9 +53,11 @@
 #include "usbh_core.h"
 #include "usbh_msc.h"
 
+# include "app_sys.h"
+
 /* USB Host Core handle declaration */
 USBH_HandleTypeDef hUsbHostHS;
-ApplicationTypeDef Appli_state = APPLICATION_IDLE;
+//ApplicationTypeDef Appli_state = APPLICATION_IDLE;
 
 /**
 * -- Insert your variables declaration here --
@@ -116,15 +118,18 @@ static void USBH_UserProcess  (USBH_HandleTypeDef *phost, uint8_t id)
   break;
     
   case HOST_USER_DISCONNECTION:
-  Appli_state = APPLICATION_DISCONNECT;
+		printf("USB HOST Disconnection\r\n");
+	Sys_Info.USBH_State = USB_DISCONNECT;
   break;
     
   case HOST_USER_CLASS_ACTIVE:
-  Appli_state = APPLICATION_READY;
+		printf("USB HOST Active\r\n");
+	Sys_Info.USBH_State = USB_ACTIVE;
   break;
 
   case HOST_USER_CONNECTION:
-  Appli_state = APPLICATION_START;
+		printf("USB HOST Connection\r\n");
+  Sys_Info.USBH_State = USB_CONNECTED;
   break;
 
   default:

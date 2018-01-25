@@ -104,6 +104,7 @@ void task_KeyTask(void *p_arg);
 int main(void)
 { 
 	OS_ERR err;
+	DIR dir;
 	uint8_t result = 0;
 	
 	CPU_SR_ALLOC();
@@ -113,8 +114,10 @@ int main(void)
 	bsp_led_ON(1);
 	disk_initialize(1);
 	
-	result = f_mount(fat_FLASH, "1:",1);
-	bsp_UsartPrintf(COM1, "fmount Flash:%d\r\n", result);
+	result = f_mount(fat_FLASH, "0:",1);
+	bsp_UsartPrintf(COM3, "fmount Flash:%d\r\n", result);
+	result = f_opendir(&dir, (const TCHAR*)"0:/test");
+	printf("f_opendir:%d\r\n", result);
 
 	USBD_Init(&USB_OTG_dev,USB_OTG_FS_CORE_ID,&USR_desc,&USBD_MSC_cb,&USR_cb);
 	

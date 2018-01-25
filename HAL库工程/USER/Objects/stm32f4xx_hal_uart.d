@@ -11,7 +11,7 @@
 .\objects\stm32f4xx_hal_uart.o: ..\CORE\cmsis_armcc.h
 .\objects\stm32f4xx_hal_uart.o: ..\CORE\core_cmFunc.h
 .\objects\stm32f4xx_hal_uart.o: ..\CORE\core_cmSimd.h
-.\objects\stm32f4xx_hal_uart.o: D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
+.\objects\stm32f4xx_hal_uart.o: ..\USER\system_stm32f4xx.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\Legacy/stm32_hal_legacy.h
 .\objects\stm32f4xx_hal_uart.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
@@ -25,8 +25,17 @@
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_flash.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_flash_ex.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_flash_ramfunc.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_i2s.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_i2s_ex.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_iwdg.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_pwr.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_pwr_ex.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_sd.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\stm32f4xx_hal_uart.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h

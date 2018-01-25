@@ -9,13 +9,13 @@
 # include "lwip/tcp_impl.h"
 # include "lwip/ip_frag.h"
 # include "lwip/tcpip.h" 
-# include "usbd_user.h"
 # include "app_sys.h"
 
 lwip_dev lwip_info;
 
 
 CPU_STK * TCPIP_THREAD_TASK_STK;
+
 
 # if LWIP_DHCP == 1
 	# define LWIP_DHCP_TASK_PRIO	7
@@ -45,7 +45,7 @@ struct netif lwip_netif;				//定义一个全局的网络接口
 
 /*
 *********************************************************************************************************
-*                                          
+*                                          lwip_default_info_set
 *
 * Description: 
 *             
@@ -120,7 +120,6 @@ uint8_t lwip_comm_mem_malloc(void)
 	TCPIP_THREAD_TASK_STK = (CPU_STK *)bsp_mem_Malloc(SRAMIN, TCPIP_THREAD_STACKSIZE);
 	if(!memp_memory||!ram_heap || !TCPIP_THREAD_TASK_STK)//有申请失败的
 	{
-//		usb_printf((COM3, "Failed\r\n");
 		lwip_comm_mem_free();
 		return 1;
 	}
@@ -192,10 +191,10 @@ uint8_t lwip_config(void)
 	IP4_ADDR(&netmask, lwip_info.netmask[0], lwip_info.netmask[1], lwip_info.netmask[2], lwip_info.netmask[3]);
 	IP4_ADDR(&gateway, lwip_info.gateway[0], lwip_info.gateway[1], lwip_info.gateway[2], lwip_info.gateway[3]);
 	
-	usb_printf("网卡en的MAC地址为:................%d.%d.%d.%d.%d.%d\r\n",lwip_info.mac[0],lwip_info.mac[1],lwip_info.mac[2],lwip_info.mac[3],lwip_info.mac[4],lwip_info.mac[5]);
-	usb_printf("静态IP地址........................%d.%d.%d.%d\r\n",lwip_info.localip[0],lwip_info.localip[1],lwip_info.localip[2],lwip_info.localip[3]);
-	usb_printf("子网掩码..........................%d.%d.%d.%d\r\n",lwip_info.netmask[0],lwip_info.netmask[1],lwip_info.netmask[2],lwip_info.netmask[3]);
-	usb_printf("默认网关..........................%d.%d.%d.%d\r\n",lwip_info.gateway[0],lwip_info.gateway[1],lwip_info.gateway[2],lwip_info.gateway[3]);
+	printf("网卡en的MAC地址为:................%d.%d.%d.%d.%d.%d\r\n",lwip_info.mac[0],lwip_info.mac[1],lwip_info.mac[2],lwip_info.mac[3],lwip_info.mac[4],lwip_info.mac[5]);
+	printf("静态IP地址........................%d.%d.%d.%d\r\n",lwip_info.localip[0],lwip_info.localip[1],lwip_info.localip[2],lwip_info.localip[3]);
+	printf("子网掩码..........................%d.%d.%d.%d\r\n",lwip_info.netmask[0],lwip_info.netmask[1],lwip_info.netmask[2],lwip_info.netmask[3]);
+	printf("默认网关..........................%d.%d.%d.%d\r\n",lwip_info.gateway[0],lwip_info.gateway[1],lwip_info.gateway[2],lwip_info.gateway[3]);
 # endif
 	OS_CRITICAL_ENTER();
 	netif_init = netif_add(&lwip_netif, &localip, &netmask, &gateway, NULL, &ethernetif_init, &tcpip_input);
@@ -300,39 +299,39 @@ void task_LwipDHCPTask(void *p_arg)
 	uint32_t localip = 0;
   uint32_t netmask = 0;
 	uint32_t gateway = 0;
-	//	usb_printf((COM3,"run here\r\n");
+	//	printf((COM3,"run here\r\n");
 	dhcp_start(&lwip_netif);
 	lwip_info.dhcpStatus = 0;
 	
-	usb_printf("正在查找DHCP服务器，请稍等............\r\n");
+	printf("正在查找DHCP服务器，请稍等............\r\n");
 	while(DEF_ON)
 	{
-		usb_printf("正在获取地址...\r\n");
+		printf("正在获取地址...\r\n");
 		localip = lwip_netif.ip_addr.addr;
 		netmask = lwip_netif.netmask.addr;
 		gateway = lwip_netif.gw.addr;
 		if(localip != 0)
 		{
 			lwip_info.dhcpStatus=2;	//DHCP成功
- 			usb_printf("网卡en的MAC地址为:................%d.%d.%d.%d.%d.%d\r\n",lwip_info.mac[0],lwip_info.mac[1],lwip_info.mac[2],lwip_info.mac[3],lwip_info.mac[4],lwip_info.mac[5]);
+ 			printf("网卡的MAC地址为:................%d.%d.%d.%d.%d.%d\r\n",lwip_info.mac[0],lwip_info.mac[1],lwip_info.mac[2],lwip_info.mac[3],lwip_info.mac[4],lwip_info.mac[5]);
 			//解析出通过DHCP获取到的IP地址
 			lwip_info.localip[3]=(uint8_t)(localip>>24); 
 			lwip_info.localip[2]=(uint8_t)(localip>>16);
 			lwip_info.localip[1]=(uint8_t)(localip>>8);
 			lwip_info.localip[0]=(uint8_t)(localip);
-			usb_printf("通过DHCP获取到IP地址..............%d.%d.%d.%d\r\n",lwip_info.localip[0],lwip_info.localip[1],lwip_info.localip[2],lwip_info.localip[3]);
+			printf("通过DHCP获取到IP地址..............%d.%d.%d.%d\r\n",lwip_info.localip[0],lwip_info.localip[1],lwip_info.localip[2],lwip_info.localip[3]);
 			//解析通过DHCP获取到的子网掩码地址
 			lwip_info.netmask[3]=(uint8_t)(netmask>>24);
 			lwip_info.netmask[2]=(uint8_t)(netmask>>16);
 			lwip_info.netmask[1]=(uint8_t)(netmask>>8);
 			lwip_info.netmask[0]=(uint8_t)(netmask);
-			usb_printf("通过DHCP获取到子网掩码............%d.%d.%d.%d\r\n",lwip_info.netmask[0],lwip_info.netmask[1],lwip_info.netmask[2],lwip_info.netmask[3]);
+			printf("通过DHCP获取到子网掩码............%d.%d.%d.%d\r\n",lwip_info.netmask[0],lwip_info.netmask[1],lwip_info.netmask[2],lwip_info.netmask[3]);
 			//解析出通过DHCP获取到的默认网关
 			lwip_info.gateway[3]=(uint8_t)(gateway>>24);
 			lwip_info.gateway[2]=(uint8_t)(gateway>>16);
 			lwip_info.gateway[1]=(uint8_t)(gateway>>8);
 			lwip_info.gateway[0]=(uint8_t)(gateway);
-			usb_printf("通过DHCP获取到的默认网关..........%d.%d.%d.%d\r\n",lwip_info.gateway[0],lwip_info.gateway[1],lwip_info.gateway[2],lwip_info.gateway[3]);
+			printf("通过DHCP获取到的默认网关..........%d.%d.%d.%d\r\n",lwip_info.gateway[0],lwip_info.gateway[1],lwip_info.gateway[2],lwip_info.gateway[3]);
 			break;
 		}else if(lwip_netif.dhcp->tries>LWIP_DHCP_MAX_TRIES) //通过DHCP服务获取IP地址失败,且超过最大尝试次数
 		{  
@@ -341,11 +340,11 @@ void task_LwipDHCPTask(void *p_arg)
 			IP4_ADDR(&(lwip_netif.ip_addr),lwip_info.localip[0],lwip_info.localip[1],lwip_info.localip[2],lwip_info.localip[3]);
 			IP4_ADDR(&(lwip_netif.netmask),lwip_info.netmask[0],lwip_info.netmask[1],lwip_info.netmask[2],lwip_info.netmask[3]);
 			IP4_ADDR(&(lwip_netif.gw),lwip_info.gateway[0],lwip_info.gateway[1],lwip_info.gateway[2],lwip_info.gateway[3]);
-			usb_printf("DHCP服务超时,使用静态IP地址!\r\n");
-			usb_printf("网卡en的MAC地址为:................%d.%d.%d.%d.%d.%d\r\n",lwip_info.mac[0],lwip_info.mac[1],lwip_info.mac[2],lwip_info.mac[3],lwip_info.mac[4],lwip_info.mac[5]);
-			usb_printf("静态IP地址........................%d.%d.%d.%d\r\n",lwip_info.localip[0],lwip_info.localip[1],lwip_info.localip[2],lwip_info.localip[3]);
-			usb_printf("子网掩码..........................%d.%d.%d.%d\r\n",lwip_info.netmask[0],lwip_info.netmask[1],lwip_info.netmask[2],lwip_info.netmask[3]);
-			usb_printf("默认网关..........................%d.%d.%d.%d\r\n",lwip_info.gateway[0],lwip_info.gateway[1],lwip_info.gateway[2],lwip_info.gateway[3]);
+			printf("DHCP服务超时,使用静态IP地址!\r\n");
+			printf("网卡en的MAC地址为:................%d.%d.%d.%d.%d.%d\r\n",lwip_info.mac[0],lwip_info.mac[1],lwip_info.mac[2],lwip_info.mac[3],lwip_info.mac[4],lwip_info.mac[5]);
+			printf("静态IP地址........................%d.%d.%d.%d\r\n",lwip_info.localip[0],lwip_info.localip[1],lwip_info.localip[2],lwip_info.localip[3]);
+			printf("子网掩码..........................%d.%d.%d.%d\r\n",lwip_info.netmask[0],lwip_info.netmask[1],lwip_info.netmask[2],lwip_info.netmask[3]);
+			printf("默认网关..........................%d.%d.%d.%d\r\n",lwip_info.gateway[0],lwip_info.gateway[1],lwip_info.gateway[2],lwip_info.gateway[3]);
 			break;
 		} 
 		

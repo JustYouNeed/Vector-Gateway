@@ -273,14 +273,14 @@ void bsp_audio_AUXGain(uint8_t gain)
 */
 uint8_t bsp_audio_WriteReg(uint8_t reg, uint16_t val)
 {
-	bsp_i2cStart(audio_i2c);
-	bsp_i2cSendByte(audio_i2c, (AUDIO_ADDR << 1) | AUDIO_WRITE);
-	if(bsp_i2cWaitAck(audio_i2c)) return 1;
-	bsp_i2cSendByte(audio_i2c, ((reg << 1) | (val >> 8)) & 0x01 );
-	if(bsp_i2cWaitAck(audio_i2c)) return 2;
-	bsp_i2cSendByte(audio_i2c, val & 0xff);
-	if(bsp_i2cWaitAck(audio_i2c)) return 3;
-	bsp_i2cStop(audio_i2c);
+	bsp_i2c_Start(audio_i2c);
+	bsp_i2c_SendByte(audio_i2c, (AUDIO_ADDR << 1) | AUDIO_WRITE);
+	if(bsp_i2c_WaitAck(audio_i2c)) return 1;
+	bsp_i2c_SendByte(audio_i2c, ((reg << 1) | (val >> 8)) & 0x01 );
+	if(bsp_i2c_WaitAck(audio_i2c)) return 2;
+	bsp_i2c_SendByte(audio_i2c, val & 0xff);
+	if(bsp_i2c_WaitAck(audio_i2c)) return 3;
+	bsp_i2c_Stop(audio_i2c);
 	WM8978_REGVAL_TBL[reg]=val;
 	return 0;
 }

@@ -62,6 +62,8 @@
 .\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\api_msg.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -72,11 +74,17 @@
 .\objects\api_msg.o: ..\BSP\inc\bsp_usart.h
 .\objects\api_msg.o: ..\BSP\inc\bsp_timer.h
 .\objects\api_msg.o: ..\BSP\inc\bsp_malloc.h
-.\objects\api_msg.o: ..\USB\USB_DEVICE\USER\inc\usbd_user.h
-.\objects\api_msg.o: ..\USB\USB_DEVICE\USER\inc\usb_device.h
-.\objects\api_msg.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
-.\objects\api_msg.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\api_msg.o: ..\USB\USB_HOST\USER\inc\usb_host.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\api_msg.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\api_msg.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\api_msg.o: ..\LWIP\include\lwip/opt.h
 .\objects\api_msg.o: ..\LWIP\include\lwip/api_msg.h
 .\objects\api_msg.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h

@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\BSP\inc;..\HALLIB\inc;..\HALLIB\inc\Legacy;..\UCOSIII\uC-CPU;..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView;..\UCOSIII\uC-LIB;..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\UCOSIII\uCOS-III;..\UCOSIII\uCOS-III\Source;..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\UCOSIII\UCOS_BSP;..\UCOSIII\uCOS_CONFIG;..\APPLICATION\inc;..\FATFS\src;..\FATFS\src\option;..\USB\USB_HOST\USER\inc;..\USB\USB_HOST\CORE\inc;..\USB\USB_HOST\CLASS\MSC\Inc;..\USB\USB_DEVICE\USER\inc;..\USB\USB_DEVICE\CORE\inc;..\USB\USB_DEVICE\CLASS\CDC\Inc;..\LWIP;..\LWIP\api;..\LWIP\netif;..\LWIP\arch;..\LWIP\core;..\LWIP\include;..\LWIP\include\netif;..\LWIP\include\ipv4;..\LWIP\include\lwip;..\LWIP\app\inc</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\BSP\inc;..\HALLIB\inc;..\HALLIB\inc\Legacy;..\UCOSIII\uC-CPU;..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView;..\UCOSIII\uC-LIB;..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\UCOSIII\uCOS-III;..\UCOSIII\uCOS-III\Source;..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\UCOSIII\UCOS_BSP;..\UCOSIII\uCOS_CONFIG;..\APP\inc;..\FATFS\src;..\FATFS\src\option;..\USB\USB_HOST\USER\inc;..\USB\USB_HOST\CORE\inc;..\USB\USB_HOST\CLASS\MSC\Inc;..\USB\USB_FATFS\inc;..\USB\USB_DEVICE\USER\inc;..\USB\USB_DEVICE\CORE\inc;..\USB\USB_DEVICE\CLASS\MSC\Inc;..\LWIP;..\LWIP\api;..\LWIP\netif;..\LWIP\arch;..\LWIP\core;..\LWIP\include;..\LWIP\include\netif;..\LWIP\include\ipv4;..\LWIP\include\lwip;..\LWIP\app\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -475,31 +475,6 @@
               <FilePath>..\HALLIB\src\stm32f4xx_ll_usb.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_pwr_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_pwr_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_flash_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash_ramfunc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_flash_ramfunc.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal_dma_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\src\stm32f4xx_hal_dma_ex.c</FilePath>
@@ -525,19 +500,9 @@
               <FilePath>..\HALLIB\src\stm32f4xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_sd.c</FileName>
+              <FileName>stm32f4xx_hal_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_mmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_mmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_sdmmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_ll_sdmmc.c</FilePath>
+              <FilePath>..\HALLIB\src\stm32f4xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -570,11 +535,6 @@
               <FilePath>..\BSP\src\bsp_malloc.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_lan8720.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\src\bsp_lan8720.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_audio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\src\bsp_audio.c</FilePath>
@@ -590,39 +550,49 @@
               <FilePath>..\BSP\src\bsp_i2s.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_esp8266.c</FileName>
+              <FileName>bsp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\src\bsp_esp8266.c</FilePath>
+              <FilePath>..\BSP\src\bsp.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_w8801.c</FileName>
+              <FileName>bsp_esp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\src\bsp_w8801.c</FilePath>
+              <FilePath>..\BSP\src\bsp_esp.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_wlan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\src\bsp_wlan.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_lan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\src\bsp_lan.c</FilePath>
             </File>
             <File>
               <FileName>bsp_sdcard.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\src\bsp_sdcard.c</FilePath>
             </File>
-            <File>
-              <FileName>bsp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\src\bsp.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>APPLICATION</GroupName>
+          <GroupName>APP</GroupName>
           <Files>
+            <File>
+              <FileName>app_sys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\src\app_sys.c</FilePath>
+            </File>
             <File>
               <FileName>app_w25qxx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\APPLICATION\src\app_w25qxx.c</FilePath>
+              <FilePath>..\APP\src\app_w25qxx.c</FilePath>
             </File>
             <File>
               <FileName>app_wdog.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\APPLICATION\src\app_wdog.c</FilePath>
+              <FilePath>..\APP\src\app_wdog.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -880,34 +850,9 @@
           <GroupName>USB_DEVICE</GroupName>
           <Files>
             <File>
-              <FileName>usbd_ioreq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USB\USB_DEVICE\CORE\src\usbd_ioreq.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_ctlreq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USB\USB_DEVICE\CORE\src\usbd_ctlreq.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_core.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USB\USB_DEVICE\CORE\src\usbd_core.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_cdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USB\USB_DEVICE\CLASS\CDC\Src\usbd_cdc.c</FilePath>
-            </File>
-            <File>
               <FileName>usb_device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\USB\USB_DEVICE\USER\src\usb_device.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_cdc_if.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USB\USB_DEVICE\USER\src\usbd_cdc_if.c</FilePath>
             </File>
             <File>
               <FileName>usbd_conf.c</FileName>
@@ -920,9 +865,44 @@
               <FilePath>..\USB\USB_DEVICE\USER\src\usbd_desc.c</FilePath>
             </File>
             <File>
-              <FileName>usbd_user.c</FileName>
+              <FileName>usbd_storage_if.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USB\USB_DEVICE\USER\src\usbd_user.c</FilePath>
+              <FilePath>..\USB\USB_DEVICE\USER\src\usbd_storage_if.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USB\USB_DEVICE\CLASS\MSC\Src\usbd_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_msc_bot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USB\USB_DEVICE\CLASS\MSC\Src\usbd_msc_bot.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_msc_data.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USB\USB_DEVICE\CLASS\MSC\Src\usbd_msc_data.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_msc_scsi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USB\USB_DEVICE\CLASS\MSC\Src\usbd_msc_scsi.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USB\USB_DEVICE\CORE\src\usbd_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_ctlreq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USB\USB_DEVICE\CORE\src\usbd_ctlreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_ioreq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USB\USB_DEVICE\CORE\src\usbd_ioreq.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1140,29 +1120,14 @@
           <GroupName>LWIP_APP</GroupName>
           <Files>
             <File>
-              <FileName>lwip_app_ping.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LWIP\app\src\lwip_app_ping.c</FilePath>
-            </File>
-            <File>
-              <FileName>lwip_app_telnet.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LWIP\app\src\lwip_app_telnet.c</FilePath>
-            </File>
-            <File>
-              <FileName>lwip_app_udp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LWIP\app\src\lwip_app_udp.c</FilePath>
-            </File>
-            <File>
               <FileName>lwip_app_httpserver.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LWIP\app\src\lwip_app_httpserver.c</FilePath>
             </File>
             <File>
-              <FileName>lwip_app_tcpclient.c</FileName>
+              <FileName>lwip_app_ftpserver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LWIP\app\src\lwip_app_tcpclient.c</FilePath>
+              <FilePath>..\LWIP\app\src\lwip_app_ftpserver.c</FilePath>
             </File>
           </Files>
         </Group>

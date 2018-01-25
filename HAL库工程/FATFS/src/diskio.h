@@ -12,12 +12,10 @@ extern "C" {
 #define _USE_WRITE	1	/* 1: Enable disk_write function */
 #define _USE_IOCTL	1	/* 1: Enable disk_ioctl fucntion */
 
+# include "ffconf.h"
+# include "bsp.h"
 # include "integer.h"
-
-
-/* Status of Disk Functions */
-typedef BYTE	DSTATUS;
-
+	
 /* Results of Disk Functions */
 typedef enum {
 	RES_OK = 0,		/* 0: Successful */
@@ -28,9 +26,71 @@ typedef enum {
 } DRESULT;
 
 
+/* Status of Disk Functions */
+typedef BYTE	DSTATUS;
+	
+typedef struct
+{
+  DSTATUS (*disk_initialize) (BYTE);                     /*!< Initialize Disk Drive                     */
+  DSTATUS (*disk_status)     (BYTE);                     /*!< Get Disk Status                           */
+  DRESULT (*disk_read)       (BYTE, BYTE*, DWORD, UINT);       /*!< Read Sector(s)                            */
+#if _USE_WRITE == 1 
+  DRESULT (*disk_write)      (BYTE, const BYTE*, DWORD, UINT); /*!< Write Sector(s) when _USE_WRITE = 0       */
+#endif /* _USE_WRITE == 1 */
+#if _USE_IOCTL == 1  
+  DRESULT (*disk_ioctl)      (BYTE, BYTE, void*);              /*!< I/O control operation when _USE_IOCTL = 1 */
+#endif /* _USE_IOCTL == 1 */
+
+}Diskio_drvTypeDef;
+
+/** 
+  * @brief  Global Disk IO Drivers structure definition  
+  */ 
+typedef struct
+{ 
+  uint8_t                 is_initialized[_VOLUMES];
+  Diskio_drvTypeDef       *drv[_VOLUMES];
+  uint8_t                 lun[_VOLUMES];
+  __IO uint8_t            nbr;
+
+}Disk_drvTypeDef;
+
+
+
+
 /*---------------------------------------*/
 /* Prototypes for disk control functions */
 
+DSTATUS Flash_initialize(BYTE lun);
+DRESULT Flash_ioctl(BYTE lun, BYTE cmd, void *buff);
+DSTATUS Flash_status(BYTE lun);
+DRESULT Flash_read(BYTE, BYTE*, DWORD, UINT);
+DRESULT Flash_write(BYTE, const BYTE*, DWORD, UINT);
+
+
+/* Private function prototypes -----------------------------------------------*/
+DSTATUS USBH_initialize (BYTE);
+DSTATUS USBH_status (BYTE);
+DRESULT USBH_read (BYTE, BYTE*, DWORD, UINT);
+
+#if _USE_WRITE == 1
+  DRESULT USBH_write (BYTE, const BYTE*, DWORD, UINT);
+#endif /* _USE_WRITE == 1 */
+
+#if _USE_IOCTL == 1
+  DRESULT USBH_ioctl (BYTE, BYTE, void*);
+#endif /* _USE_IOCTL == 1 */
+  
+	
+uint8_t FATFS_LinkDriverEx(Diskio_drvTypeDef *drv, char *path, uint8_t lun);
+uint8_t FATFS_LinkDriver(Diskio_drvTypeDef *drv, char *path);
+uint8_t FATFS_UnLinkDriverEx(char *path, uint8_t lun);
+uint8_t FATFS_UnLinkDriver(char *path);
+uint8_t FATFS_GetAttachedDriversNbr(void);
+
+
+
+void fatfs_init(void);
 
 DSTATUS disk_initialize (BYTE pdrv);
 DSTATUS disk_status (BYTE pdrv);

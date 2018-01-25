@@ -58,6 +58,8 @@
 .\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\lwip_app_telnet.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -74,11 +76,6 @@
 .\objects\lwip_app_telnet.o: ..\LWIP\include\lwip/debug.h
 .\objects\lwip_app_telnet.o: ..\LWIP\include\lwip/arch.h
 .\objects\lwip_app_telnet.o: ..\LWIP\arch/cc.h
-.\objects\lwip_app_telnet.o: ..\USB\USB_DEVICE\USER\inc\usbd_user.h
-.\objects\lwip_app_telnet.o: ..\USB\USB_DEVICE\USER\inc\usb_device.h
-.\objects\lwip_app_telnet.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
-.\objects\lwip_app_telnet.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\lwip_app_telnet.o: ..\USB\USB_HOST\USER\inc\usb_host.h
 .\objects\lwip_app_telnet.o: ..\LWIP\include\lwip/opt.h
 .\objects\lwip_app_telnet.o: ..\LWIP\include\lwip/def.h
 .\objects\lwip_app_telnet.o: ..\LWIP\include\lwip/netif.h

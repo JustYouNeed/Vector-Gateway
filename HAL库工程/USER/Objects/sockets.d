@@ -62,6 +62,8 @@
 .\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\sockets.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -72,11 +74,17 @@
 .\objects\sockets.o: ..\BSP\inc\bsp_usart.h
 .\objects\sockets.o: ..\BSP\inc\bsp_timer.h
 .\objects\sockets.o: ..\BSP\inc\bsp_malloc.h
-.\objects\sockets.o: ..\USB\USB_DEVICE\USER\inc\usbd_user.h
-.\objects\sockets.o: ..\USB\USB_DEVICE\USER\inc\usb_device.h
-.\objects\sockets.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
-.\objects\sockets.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\sockets.o: ..\USB\USB_HOST\USER\inc\usb_host.h
+.\objects\sockets.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\sockets.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\sockets.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\sockets.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\sockets.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\sockets.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\sockets.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\sockets.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\sockets.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\sockets.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\sockets.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\sockets.o: ..\LWIP\include\lwip/opt.h
 .\objects\sockets.o: ..\LWIP\include\lwip/sockets.h
 .\objects\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h

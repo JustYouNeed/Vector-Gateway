@@ -57,6 +57,8 @@
 .\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_ll_sdmmc.h
 .\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_hal_mmc.h
 .\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_hal_spi.h
+.\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_hal_uart.h
+.\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_hal_usart.h
 .\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_hal_pcd.h
 .\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\os_cpu_c.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
@@ -67,3 +69,14 @@
 .\objects\os_cpu_c.o: ..\BSP\inc\bsp_usart.h
 .\objects\os_cpu_c.o: ..\BSP\inc\bsp_timer.h
 .\objects\os_cpu_c.o: ..\BSP\inc\bsp_malloc.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\os_cpu_c.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h

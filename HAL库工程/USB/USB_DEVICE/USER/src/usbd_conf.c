@@ -52,8 +52,8 @@
 #include "usbd_def.h"
 #include "usbd_core.h"
 
-# include "bsp_timer.h"
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
+void _Error_Handler(char * file, int line);
 
 /* External functions --------------------------------------------------------*/
 void SystemClock_Config(void);
@@ -74,11 +74,10 @@ void SystemClock_Config(void);
 void HAL_PCD_MspInit(PCD_HandleTypeDef* pcdHandle)
 {
   GPIO_InitTypeDef GPIO_InitStruct;
-		
   if(pcdHandle->Instance==USB_OTG_FS)
   {
   /* USER CODE BEGIN USB_OTG_FS_MspInit 0 */
-		__HAL_RCC_GPIOA_CLK_ENABLE();
+
   /* USER CODE END USB_OTG_FS_MspInit 0 */
   
     /**USB_OTG_FS GPIO Configuration    
@@ -766,6 +765,6 @@ void HAL_PCDEx_LPM_Callback(PCD_HandleTypeDef *hpcd, PCD_LPM_MsgTypeDef msg)
   */
 void  USBD_LL_Delay (uint32_t Delay)
 {
-  bsp_tim_DelayMs(Delay);  
+  HAL_Delay(Delay);  
 }
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
