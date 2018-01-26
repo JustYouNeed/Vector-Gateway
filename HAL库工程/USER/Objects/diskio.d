@@ -65,3 +65,4 @@
 .\objects\diskio.o: ..\FATFS\src\integer.h
 .\objects\diskio.o: ..\APP\inc\app_w25qxx.h
 .\objects\diskio.o: ..\FATFS\src\ff.h
+.\objects\diskio.o: ..\APP\inc\app_sys.h

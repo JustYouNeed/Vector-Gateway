@@ -64,7 +64,7 @@
 	
 # include "usbh_msc.h"
 
-#define HOST_HANDLE hUsbHostHS  
+
 
 # ifdef VECTOR_F1
   //	位带操作,实现51类似的GPIO控制功能

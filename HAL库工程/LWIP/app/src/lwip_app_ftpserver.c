@@ -5,10 +5,11 @@
 #define FTP_PORT			21
 #define FTP_SRV_ROOT		"/"
 #define FTP_MAX_CONNECTION	2
-#define FTP_USER			"rtt"
-#define FTP_PASSWORD		"demo"
-#define FTP_WELCOME_MSG		"220-= welcome on RT-Thread FTP server =-\r\n220 \r\n"
+#define FTP_USER				"Vector"
+#define FTP_PASSWORD		"19960114"
+#define FTP_WELCOME_MSG		"220-= welcome on Vector Smart Gateway FTP server =-\r\n"
 #define FTP_BUFFER_SIZE		1024
+__align(4) char REPLY_BUFF[FTP_BUFFER_SIZE];
 
 static struct ftp_session* session_list = NULL;
 
@@ -17,7 +18,116 @@ static struct ftp_session* session_list = NULL;
 OS_TCB FTPTestTaskTCB;
 CPU_STK FTP_TASK_STK[FTP_TASK_STK_SIZE];
 
-char REPLY_BUFF[FTP_BUFFER_SIZE];
+
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t is_absolute_path(char* path)
+{
+	if (path[0] == '0' && path[1] == ':') return TRUE;
+	return TRUE;
+}
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+int build_full_path(struct ftp_session* session, char* path, char* new_path, size_t size)
+{
+	printf("path:%s newpath:%s\r\n", path, new_path);
+	if (is_absolute_path(path) == TRUE)
+	{
+		strcpy(new_path, path);
+	}
+	else
+	{
+		sprintf(new_path, "%s%s", session->currentdir, path);
+	}
+
+	return 0;
+}
+
+
+
+
+/*
+*********************************************************************************************************
+*                                   do_list       
+*
+* Description: 列出服务器目录、文件
+*             
+* Arguments  : 1> directory: 指向目录的指针
+*              2> sockfd: 连接socket
+*
+* Reutrn     : 1> 0: 成功
+*              2> 1: 失败 
+*
+* Note(s)    : None.
+*********************************************************************************************************
+*/
+int do_list(char* directory, int sockfd)
+{
+	uint8_t result;
+	DIR dir;
+	FILINFO finfo;
+	
+//	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*512);
+	char *direc = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	char bufflen;
+	
+	sprintf(direc, "1:%s",directory);
+	result = f_opendir(&dir, direc);
+	if(result != FR_OK)
+	{
+		printf("open failed\r\n");
+		bufflen = sprintf(REPLY_BUFF, "500 Internal Error\r\n");
+		send(sockfd, REPLY_BUFF, bufflen, 0);
+		return 1;
+	}
+	
+	while(1)
+	{
+		result = f_readdir(&dir,&finfo);
+		if(result != FR_OK || finfo.fname[0] == 0) break;
+		sprintf(REPLY_BUFF, "%s/%s", directory, finfo.fname);
+		
+		if(finfo.fattrib & AM_DIR)
+		{
+			bufflen = sprintf(REPLY_BUFF, "drwxrwxr-x 2 502 504 %d Jan 1 2000 %s\r\n", (int)finfo.fsize, finfo.fname);
+			send(sockfd, REPLY_BUFF, bufflen, 0);
+		}
+		else
+		{
+			bufflen = sprintf(REPLY_BUFF, "-rw-r--r-- 1 admin admin %d Jan 1 2000 %s\r\n", (int)finfo.fsize, finfo.fname);
+			send(sockfd, REPLY_BUFF, bufflen, 0);
+		}
+	}
+//	bsp_mem_Free(SRAMIN, buff);
+	bsp_mem_Free(SRAMIN, direc);
+	f_closedir(&dir);
+	return 0;
+}	
 
 
 /*
@@ -176,8 +286,10 @@ uint8_t ftp_GetCmd(char *buff)
 	else if(ftp_CmdCompare(buff, "QUIT") == 0) return QUIT;
 	else if(ftp_CmdCompare(buff, "SITE") == 0) return SITE;
 	else if(ftp_CmdCompare(buff, "UTIME") == 0) return UTIME;
+	else if(ftp_CmdCompare(buff, "RNFR") == 0) return RNFR;
 	else return NONE;
 }
+
 
 /*
 *********************************************************************************************************
@@ -192,29 +304,8 @@ uint8_t ftp_GetCmd(char *buff)
 * Note(s)    : 
 *********************************************************************************************************
 */
-uint8_t ftp_UserVerify(struct ftp_session* session, char *para)
+uint8_t ftp_Handle_ABOR(struct ftp_session* session)
 {
-	memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
-	
-	if(strcmp(para, "anonymous") == 0)  /*  匿名连接  */
-	{
-		session->is_anonymous = TRUE;
-		sprintf(REPLY_BUFF, "331 Anonymous login OK send e-mail address for password.\r\n");
-		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-		
-	}
-	else if (strcmp(para, FTP_USER) == 0)  /*  用户名正确  */
-	{
-		session->is_anonymous = FALSE;		
-		sprintf(REPLY_BUFF, "331 Password required for %s\r\n", para);
-		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-	}
-	else  /*  用户名错误  */
-	{
-		sprintf(REPLY_BUFF, "530 Login incorrect. Bye.\r\n");
-		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-		return 1;
-	}
 	return 0;
 }
 
@@ -231,18 +322,11 @@ uint8_t ftp_UserVerify(struct ftp_session* session, char *para)
 * Note(s)    : 
 *********************************************************************************************************
 */
-uint8_t ftp_PasswordVerify(struct ftp_session* session, char *para)
-{	
-	if(strcmp(para, FTP_PASSWORD) == 0 || session->is_anonymous)
-	{
-		memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
-		
-		sprintf(REPLY_BUFF, "230 User Logged in\r\n");
-		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-		return 0;
-	}
-	return 1;
+uint8_t ftp_Handle_ACCT(struct ftp_session* session, char *para)
+{
+	return 0;
 }
+
 
 /*
 *********************************************************************************************************
@@ -257,7 +341,383 @@ uint8_t ftp_PasswordVerify(struct ftp_session* session, char *para)
 * Note(s)    : 
 *********************************************************************************************************
 */
-uint8_t ftp_EnterPassiveMode(struct ftp_session* session, char *para)
+uint8_t ftp_Handle_ALLO(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_APPE(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_CDUP(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_CWD(struct ftp_session* session, char *para)
+{
+	printf("Change Work dir,%s\r\n",para);
+	char *filename = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	char bufflen;
+	build_full_path(session, para, filename, 256);
+
+	bufflen = sprintf(buff, "250 Changed to directory \"%s\"\r\n", buff);
+	send(session->sockfd, buff, bufflen, 0);
+	strcpy(session->currentdir, filename);
+	
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_DELE(struct ftp_session* session, char *para)
+{
+	char *path = (char *)bsp_mem_Malloc(SRAMIN, sizeof(char) * 256);
+	char bufflen = 0;
+	sprintf(path, "1:%s%s", session->currentdir, para);
+	
+	if(session->is_anonymous == TRUE)
+	{
+		bufflen = sprintf(REPLY_BUFF, "550 Permission denied.\r\n");
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);
+		return 1;
+	}
+	
+	if(f_unlink(path) != FR_OK)
+	{
+		bufflen = sprintf(REPLY_BUFF, "550 Not such file or directory: %s.\r\n", para);
+	}
+	else
+	{
+		bufflen = sprintf(REPLY_BUFF, "250 Successfully deleted file \"%s\".\r\n", para);
+	}
+	
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	bsp_mem_Free(SRAMIN, path);
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_HELP(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_LIST(struct ftp_session* session, char *para)
+{
+//	memset(REPLY_BUFF,0,FTP_BUFFER_SIZE);
+	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*512);
+	char bufflen = 0;
+	uint8_t res = 0;
+	
+	bufflen = sprintf(buff, "150 Opening Binary mode connection for file list.\r\n");
+	send(session->sockfd, buff, bufflen, 0);
+	
+	res = do_list(session->currentdir, session->pasv_sockfd);
+	
+	closesocket(session->pasv_sockfd);
+	session->pasv_active = 0;
+	bufflen = sprintf(buff, "226 Transfert Complete.\r\n");
+	send(session->sockfd, buff, bufflen, 0);
+	bsp_mem_Free(SRAMIN, buff);
+	
+	return res;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_MODE(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_MKD(struct ftp_session* session, char *para)
+{
+	char bufflen;
+	char *path = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	
+	sprintf(path, "1:%s%s",session->currentdir, para);
+	
+	uint8_t result = f_mkdir(path);
+	
+	if(result == FR_EXIST)
+	{
+		bufflen = sprintf(REPLY_BUFF, "550 File \"%s\" exists.\r\n", para);
+	}
+	else if(result == FR_OK)
+	{
+		bufflen = sprintf(REPLY_BUFF, "257 directory \"%s\" successfully created.\r\n", para);
+	}
+	else
+		return 1;
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	bsp_mem_Free(SRAMIN, path);
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_NLIST(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_NOOP(struct ftp_session* session)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                         ftp_Handle_PASS 
+*
+* Description: 处理PASS命令
+*             
+* Arguments  : 
+*
+* Reutrn     : 1> 0: 密码正确
+*              2> 1: 密码错误
+*
+* Note(s)    : None.
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_PASS(struct ftp_session* session, char *para)
+{
+	char bufflen = 0;
+	if(strcmp(para, FTP_PASSWORD) == 0 || session->is_anonymous)  /*  密码正确,匿名不需要密码  */
+	{
+		bufflen = sprintf(REPLY_BUFF, "230 User Logged in\r\n");
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);
+		return 0;
+	}
+	return 1;  /*  密码错误  */
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_PORT(struct ftp_session* session, char *para)
+{
+	int i;
+	int portcom[6];
+	char tmpip[100];
+	char bufflen = 0;
+	fd_set readfds;
+//	socklen_t addr_len;
+	struct sockaddr_in pasvremote;
+	
+//	addr_len = sizeof(struct sockaddr_in);
+	i=0;
+	
+//	printf("start port connect...para:%s\r\n", para);
+	
+	portcom[i++]=atoi(strtok(para, ".,;()"));
+//	printf("start port connect...\r\n");
+	for(;i<6;i++)
+		portcom[i]=atoi(strtok(0, ".,;()"));
+	
+	sprintf(tmpip, "%d.%d.%d.%d", portcom[0], portcom[1], portcom[2], portcom[3]);
+//	printf("ip:%d.%d.%d.%d, port:%d", portcom[0], portcom[1], portcom[2], portcom[3],portcom[4] * 256 + portcom[5]);
+	FD_ZERO(&readfds);
+	if((session->pasv_sockfd = socket(AF_INET, SOCK_STREAM, 0))==-1)
+	{
+//		memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
+		bufflen = sprintf(REPLY_BUFF, "425 Can't open data connection.\r\n");
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);
+		closesocket(session->pasv_sockfd);
+		session->pasv_active = 0;
+		return 1;
+	}
+	
+	pasvremote.sin_len = sizeof(pasvremote);
+	pasvremote.sin_addr.s_addr = inet_addr(tmpip);
+	pasvremote.sin_port = PP_HTONS(portcom[4] * 256 + portcom[5]);
+	pasvremote.sin_family = AF_INET;
+	
+	if(connect(session->pasv_sockfd, (struct sockaddr *)&pasvremote, sizeof(pasvremote))==-1)
+	{
+		pasvremote.sin_addr=session->remote.sin_addr;
+		if(connect(session->pasv_sockfd, (struct sockaddr *)&pasvremote, sizeof(pasvremote))==-1)
+		{
+			bufflen = sprintf(REPLY_BUFF, "425 Can't open data connection.\r\n");
+			send(session->sockfd, REPLY_BUFF, bufflen, 0);
+			closesocket(session->pasv_sockfd);
+			return 1;
+		}
+	}
+	
+	session->pasv_active = 1;
+	session->pasv_port = portcom[4] * 256 + portcom[5];
+	
+	bufflen = sprintf(REPLY_BUFF, "200 Port Command Successful.\r\n");
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     : 1> 0: 成功
+*              2> 1: 失败
+*
+* Note(s)    : None.
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_PASV(struct ftp_session* session)
 {
 	int dig1, dig2;
 	int sockfd;
@@ -349,126 +809,7 @@ err1:
 	
 	return 0;
 }
-uint8_t is_absolute_path(char* path)
-{
-	if (path[0] == '0' && path[1] == ':') return TRUE;
-	return TRUE;
-}
 
-int build_full_path(struct ftp_session* session, char* path, char* new_path, size_t size)
-{
-	printf("path:%s newpath:%s\r\n", path, new_path);
-	if (is_absolute_path(path) == TRUE)
-	{
-		strcpy(new_path, path);
-	}
-	else
-	{
-		sprintf(new_path, "%s%s", session->currentdir, path);
-	}
-
-	return 0;
-}
-
-uint8_t ftp_EnterPositiveMode(struct ftp_session* session, char *para)
-{
-	int i;
-	int portcom[6];
-	char tmpip[100];
-	fd_set readfds;
-	socklen_t addr_len = sizeof(struct sockaddr_in);
-	struct sockaddr_in pasvremote;
-	i=0;
-	
-//	printf("start port connect...para:%s\r\n", para);
-	
-	portcom[i++]=atoi(strtok(para, ".,;()"));
-//	printf("start port connect...\r\n");
-	for(;i<6;i++)
-		portcom[i]=atoi(strtok(0, ".,;()"));
-	
-	sprintf(tmpip, "%d.%d.%d.%d", portcom[0], portcom[1], portcom[2], portcom[3]);
-//	printf("ip:%d.%d.%d.%d, port:%d", portcom[0], portcom[1], portcom[2], portcom[3],portcom[4] * 256 + portcom[5]);
-	FD_ZERO(&readfds);
-	if((session->pasv_sockfd=socket(AF_INET, SOCK_STREAM, 0))==-1)
-	{
-		memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
-		sprintf(REPLY_BUFF, "425 Can't open data connection.\r\n");
-		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-		closesocket(session->pasv_sockfd);
-		session->pasv_active = 0;
-		return 0;
-	}
-	
-	pasvremote.sin_len = sizeof(pasvremote);
-	pasvremote.sin_addr.s_addr=inet_addr(tmpip);
-	pasvremote.sin_port=PP_HTONS(portcom[4] * 256 + portcom[5]);
-	pasvremote.sin_family=AF_INET;
-	
-	if(connect(session->pasv_sockfd, (struct sockaddr *)&pasvremote, sizeof(pasvremote))==-1)
-	{
-//		printf("connect failed\r\n");
-		// is it only local address?try using gloal ip addr
-		pasvremote.sin_addr=session->remote.sin_addr;
-		if(connect(session->pasv_sockfd, (struct sockaddr *)&pasvremote, sizeof(pasvremote))==-1)
-		{
-			memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
-			sprintf(REPLY_BUFF, "425 Can't open data connection.\r\n");
-			send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-			closesocket(session->pasv_sockfd);
-			return 0;
-		}
-	}
-//	printf("connect ok\r\n");
-	session->pasv_active=1;
-	session->pasv_port = portcom[4] * 256 + portcom[5];
-	memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
-	sprintf(REPLY_BUFF, "200 Port Command Successful.\r\n");
-	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-	return 0;
-}
-
-int do_list(char* directory, int sockfd)
-{
-	uint8_t result;
-	DIR dir;
-	FILINFO finfo;
-	
-	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*512);
-	char *direc = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	char bufflen;
-	
-	sprintf(direc, "0:%s",directory);
-	result = f_opendir(&dir, direc);
-	if(result != FR_OK)
-	{
-		sprintf(REPLY_BUFF, "500 Internal Error\r\n");
-		send(sockfd, REPLY_BUFF, sizeof(REPLY_BUFF), 0);
-		return -1;
-	}
-	
-	while(1)
-	{
-		result = f_readdir(&dir,&finfo);
-		if(result != FR_OK || finfo.fname[0] == 0) break;
-		sprintf(buff, "%s/%s", directory, finfo.fname);
-		
-		if(finfo.fattrib & AM_DIR)
-		{
-			bufflen = sprintf(buff, "drwxrwxr-x 2 502 504 %d Jan 1 2000 %s\r\n", (int)finfo.fsize, finfo.fname);
-			send(sockfd, buff, bufflen, 0);
-		}
-		else
-		{
-			bufflen = sprintf(buff, "-rw-r--r-- 1 admin admin %d Jan 1 2000 %s\r\n", (int)finfo.fsize, finfo.fname);
-			send(sockfd, buff, bufflen, 0);
-		}
-	}
-	bsp_mem_Free(SRAMIN, buff);
-	bsp_mem_Free(SRAMIN, direc);
-	f_closedir(&dir);
-	return 0;
-}	
 
 /*
 *********************************************************************************************************
@@ -483,93 +824,7 @@ int do_list(char* directory, int sockfd)
 * Note(s)    : 
 *********************************************************************************************************
 */
-uint8_t ftp_ListFile(struct ftp_session* session, char *para)
-{
-//	memset(REPLY_BUFF,0,FTP_BUFFER_SIZE);
-	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*512);
-	
-	sprintf(buff, "150 Opening Binary mode connection for file list.\r\n");
-	send(session->sockfd, buff, strlen(buff), 0);
-	
-	do_list(session->currentdir, session->pasv_sockfd);
-	
-	closesocket(session->pasv_sockfd);
-	session->pasv_active = 0;
-	sprintf(buff, "226 Transfert Complete.\r\n");
-	send(session->sockfd, buff, strlen(buff), 0);
-	bsp_mem_Free(SRAMIN, buff);
-	
-	return 0;
-}
-
-/*
-*********************************************************************************************************
-*                                          ftp_MakeDir
-*
-* Description: 新建一个文件夹
-*             
-* Arguments  : 1> session: FTP传输控制块
-*              2> para: FTP客户端传送的参数
-*
-* Reutrn     : 1> 1: 文件夹创建失败
-*              2> 0: 成功
-*
-* Note(s)    : None.
-*********************************************************************************************************
-*/
-uint8_t ftp_MakeDir(struct ftp_session* session, char *para)
-{
-	printf("para%s\r\n", para);
-	
-	char bufflen;
-	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	uint8_t result = f_mkdir(para);
-	
-	if(result == FR_EXIST)
-	{
-		bufflen = sprintf(buff, "550 File \"%s\" exists.\r\n", para);
-	}
-	else if(result == FR_OK)
-	{
-		bufflen = sprintf(buff, "257 directory \"%s\" successfully created.\r\n", para);
-	}
-	else
-		return 1;
-	send(session->sockfd, buff, bufflen, 0);
-	bsp_mem_Free(SRAMIN, buff);
-	printf("result:%d\r\n", result);
-	return 0;
-}
-
-/*
-*********************************************************************************************************
-*                                          ftp_ChangeWorkDir
-*
-* Description: 改变FTP工作目录
-*             
-* Arguments  :
-*
-* Reutrn     : 
-*
-* Note(s)    : 
-*********************************************************************************************************
-*/
-uint8_t ftp_ChangeWorkDir(struct ftp_session* session, char *para)
-{
-	printf("Change Work dir,%s\r\n",para);
-	char *filename = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	char bufflen;
-	build_full_path(session, para, filename, 256);
-
-	bufflen = sprintf(buff, "250 Changed to directory \"%s\"\r\n", buff);
-	send(session->sockfd, buff, bufflen, 0);
-	strcpy(session->currentdir, filename);
-	
-	return 0;
-}
-
-uint8_t ftp_GetWorkDir(struct ftp_session* session, char *para)
+uint8_t ftp_Handle_PWD(struct ftp_session* session)
 {
 	char bufflen = 0;
 	printf("cur dir:%s\r\n", session->currentdir);
@@ -579,39 +834,60 @@ uint8_t ftp_GetWorkDir(struct ftp_session* session, char *para)
 }
 
 
-uint8_t ftp_SetType(struct ftp_session* session, char *para)
-{
-	char bufflen;
-	if(strcmp(para, "I")==0)
-	{
-		bufflen = sprintf(REPLY_BUFF, "200 Type set to binary.\r\n");
-		send(session->sockfd, REPLY_BUFF, bufflen, 0);
-	}
-	else
-	{
-		bufflen = sprintf(REPLY_BUFF, "200 Type set to ascii.\r\n");
-		send(session->sockfd, REPLY_BUFF, bufflen, 0);
-	}
-	return 0;
-}
-
-uint8_t ftp_GetSystemInfo(struct ftp_session* session, char *para)
-{
-	char bufflen = 0;
-	bufflen = sprintf(REPLY_BUFF, "215 %s\r\n", "UCOS-III");
-	send(session->sockfd, REPLY_BUFF, bufflen, 0);
-	return 0;
-}
-
-
-uint8_t ftp_Disconnect(struct ftp_session* session, char *para)
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_QUIT(struct ftp_session* session)
 {
 	sprintf(REPLY_BUFF, "221 Bye!\r\n");
 	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);	
 	return 	1;
 }
 
-uint8_t ftp_SetFileOffset(struct ftp_session* session, char *para)
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_REIN(struct ftp_session* session)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_REST(struct ftp_session* session, char *para)
 {
 	if(atoi(para)>=0)
 	{
@@ -623,52 +899,29 @@ uint8_t ftp_SetFileOffset(struct ftp_session* session, char *para)
 }
 
 
-uint8_t ftp_GetFileSize(struct ftp_session* session, char *para)
-{
-	FIL file;
-	uint8_t res = FR_OK;
-	char *path = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	sprintf(path, "%s/%s", session->currentdir, para);
-	
-	res = f_open(&file, path, FA_OPEN_EXISTING);
-	if(res != FR_OK)
-	{
-		sprintf(REPLY_BUFF, "550 \"%s\" : not a regular file\r\n", para);
-		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-		return 1;
-	}
-	sprintf(REPLY_BUFF, "213 %d\r\n", (int)file.fsize);
-	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-	printf("get file size para:%s, dir:%s\r\n",para, session->currentdir);
-	
-	f_close(&file);
-	bsp_mem_Free(SRAMIN, path);
-	return 0;
-}
-
-
-uint8_t ftp_GetFileLastModTime(struct ftp_session* session, char *para)
-{
-	sprintf(REPLY_BUFF, "550 \"/\" : not a regular file\r\n");
-	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-	return 0;
-}
-
-uint8_t ftp_DelFile(struct ftp_session* session, char *para)
-{
-	return 0;
-}
-
-uint8_t ftp_DownloadFile(struct ftp_session* session, char *para)
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_RETR(struct ftp_session* session, char *para)
 {
 	uint8_t res;
 	FIL file;
 	UINT br;
 	char *buff = (char*)bsp_mem_Malloc(SRAMIN, sizeof(char)*512);
-	char *path = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	char *path = (char*)bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
 	
-	sprintf(path, "%s/%s", session->currentdir, para);
-	
+	sprintf(path, "1:%s/%s", session->currentdir, para);
+	printf("file path is :%s\r\n", path);
 	res = f_open(&file, path, FA_OPEN_EXISTING | FA_READ);
 	if(res != FR_OK)
 	{
@@ -693,9 +946,9 @@ uint8_t ftp_DownloadFile(struct ftp_session* session, char *para)
 	
 	while(1)
 	{
-		res = f_read(&file, buff, 512, &br);
+		res = f_read(&file, REPLY_BUFF, 512, &br);
 		if(br == 0 || res != FR_OK) break;
-		send(session->pasv_sockfd, buff, br, 0);
+		send(session->pasv_sockfd, REPLY_BUFF, br, 0);
 		//printf("read bytes:%d\r\n", br);
 	}
 	sprintf(REPLY_BUFF, "226 Finished.\r\n");
@@ -707,12 +960,163 @@ uint8_t ftp_DownloadFile(struct ftp_session* session, char *para)
 	return 0;
 }
 
-uint8_t ftp_UploadFile(struct ftp_session* session, char *para)
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_RMD(struct ftp_session* session, char *para)
+{
+	char *path = (char *)bsp_mem_Malloc(SRAMIN, sizeof(char) * 256);
+	char bufflen = 0;
+	sprintf(path, "1:%s%s", session->currentdir, para);
+	
+	if (session->is_anonymous == TRUE)
+	{
+		bufflen = sprintf(REPLY_BUFF, "550 Permission denied.\r\n");
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);			
+		return 0;
+	}
+
+	if(f_unlink(path) == FR_OK)
+	{
+		bufflen = sprintf(REPLY_BUFF, "550 Directory \"%s\" doesn't exist.\r\n", para);
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	}
+	else
+	{
+		bufflen = sprintf(REPLY_BUFF, "257 directory \"%s\" successfully deleted.\r\n", para);
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	}
+	
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_RNTO(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_RNFR(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_SITE(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_SMNT(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_STAT(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_STOR(struct ftp_session* session, char *para)
 {
 	struct timeval tv;
 	fd_set readfds;
 	UINT bw;
-	uint32_t bytes;
+	int32_t bytes;
 		
 	tv.tv_sec=3, tv.tv_usec=0;
 	
@@ -768,12 +1172,24 @@ uint8_t ftp_UploadFile(struct ftp_session* session, char *para)
 }
 
 
-uint8_t ftp_UpdataFileTime(struct ftp_session* session, char *para)
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_STOU(struct ftp_session* session, char *para)
 {
-	sprintf(REPLY_BUFF, "200 Finished.\r\n");
-	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
 	return 0;
 }
+
 
 /*
 *********************************************************************************************************
@@ -788,48 +1204,252 @@ uint8_t ftp_UpdataFileTime(struct ftp_session* session, char *para)
 * Note(s)    : 
 *********************************************************************************************************
 */
+uint8_t ftp_Handle_STRU(struct ftp_session* session, char *para)
+{
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_SYST(struct ftp_session* session)
+{
+	char bufflen = 0;
+	bufflen = sprintf(REPLY_BUFF, "215 %s\r\n", "UCOS-III");
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_TYPE(struct ftp_session* session, char *para)
+{
+	char bufflen;
+	if(strcmp(para, "I")==0)
+	{
+		bufflen = sprintf(REPLY_BUFF, "200 Type set to binary.\r\n");
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	}
+	else
+	{
+		bufflen = sprintf(REPLY_BUFF, "200 Type set to ascii.\r\n");
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	}
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                        ftp_Handle_USER  
+*
+* Description: 处理USER命令
+*             
+* Arguments  : 
+*
+* Reutrn     : 1> 0: 用户名正确
+*              2> 1: 用户名错误
+*
+* Note(s)    : None.
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_USER(struct ftp_session* session, char *para)
+{
+	memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
+	
+	if(strcmp(para, "anonymous") == 0)  /*  匿名连接  */
+	{
+		session->is_anonymous = TRUE;
+		sprintf(REPLY_BUFF, "331 Anonymous login OK send e-mail address for password.\r\n");
+		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+	}
+	else if (strcmp(para, FTP_USER) == 0)  /*  用户名正确  */
+	{
+		session->is_anonymous = FALSE;		
+		sprintf(REPLY_BUFF, "331 Password required for %s\r\n", para);
+		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+	}
+	else  /*  用户名错误  */
+	{
+		sprintf(REPLY_BUFF, "530 Login incorrect. Bye.\r\n");
+		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+		return 1;
+	}
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_SIZE(struct ftp_session* session, char *para)
+{
+	FIL file;
+	uint8_t res = FR_OK;
+	char *path = (char *)bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	sprintf(path, "1:%s/%s", session->currentdir, para);
+	printf("file path is :%s\r\n", path);
+	res = f_open(&file, path, FA_OPEN_EXISTING);
+	if(res != FR_OK)
+	{
+		sprintf(REPLY_BUFF, "550 \"%s\" : not a regular file\r\n", para);
+		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+		return 1;
+	}
+	sprintf(REPLY_BUFF, "213 %d\r\n", (int)file.fsize);
+	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+//	printf("get file size para:%s, dir:%s\r\n",para, session->currentdir);
+	
+	f_close(&file);
+	bsp_mem_Free(SRAMIN, path);
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_MDTM(struct ftp_session* session, char *para)
+{
+	sprintf(REPLY_BUFF, "550 \"/\" : not a regular file\r\n");
+	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+	return 0;
+}
+
+
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_UTIME(struct ftp_session* session, char *para)
+{
+	sprintf(REPLY_BUFF, "200 Finished.\r\n");
+	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+	return 0;
+}
+
+
+
+
+/*
+*********************************************************************************************************
+*                                         ftp_process_request 
+*
+* Description: 命令处理函数
+*             
+* Arguments  :
+*
+* Reutrn     : 1> 0: 成功
+*              2> 1: 失败 
+*
+* Note(s)    : None.
+*********************************************************************************************************
+*/
 int ftp_process_request(struct ftp_session *session, char *buff)
 {
 	uint8_t cmd = NONE;  	/*  存储接收到的指令  */
 	char *parameter_ptr;	/*  存储接收到的参数  */
+	uint8_t res = 0;		/*  命令执行结果  */
 	
 	parameter_ptr = ftp_GetParameter(buff);	/*  得到参数  */
 	cmd = ftp_GetCmd(buff);   /*  得到命令  */
 	
 	printf("cmd:%d para:%s\r\n",cmd, parameter_ptr);
 	
-	memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
+	memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);  /*  清空数据缓存区  */
 	switch(cmd)
 	{
-		case USER: ftp_UserVerify(session, parameter_ptr); break;
-		case PASS: ftp_PasswordVerify(session, parameter_ptr); break;
-		case LIST: ftp_ListFile(session, parameter_ptr);break;
-		case NLST: break;
-		case PWD:	 ftp_GetWorkDir(session, parameter_ptr); break;
-		case TYPE: ftp_SetType(session, parameter_ptr);break;
-		case PASV: ftp_EnterPassiveMode(session, parameter_ptr); break;
-		case RETR: ftp_DownloadFile(session, parameter_ptr); break;
-		case STOR: ftp_UploadFile(session, parameter_ptr);break;
-		case SIZE: ftp_GetFileSize(session, parameter_ptr);break;
-		case MDTM: ftp_GetFileLastModTime(session, parameter_ptr); break;
-		case SYST: ftp_GetSystemInfo(session, parameter_ptr);break;
-		case CWD:  ftp_ChangeWorkDir(session, parameter_ptr);break;
-		case CDUP: break;
-		case PORT: ftp_EnterPositiveMode(session, parameter_ptr);break;
-		case REST: ftp_SetFileOffset(session, parameter_ptr);break;
-		case MKD:  ftp_MakeDir(session, parameter_ptr); break;
-		case DELE: ftp_DelFile(session, parameter_ptr); break;
-		case RMD: break;
-		case SITE:
-		{
-			sprintf(REPLY_BUFF, "220 Finish\r\n");;
-			send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
-		}break;
-		case UTIME: ftp_UpdataFileTime(session, parameter_ptr);break;
-		case QUIT: ftp_Disconnect(session, parameter_ptr);break;
+		case ABOR: res = ftp_Handle_ABOR(session); break;
+		case ACCT: res = ftp_Handle_ACCT(session, parameter_ptr); break;
+		case ALLO: res = ftp_Handle_ALLO(session, parameter_ptr); break;
+		case APPE: res = ftp_Handle_APPE(session, parameter_ptr); break;
+		case CDUP: res = ftp_Handle_CDUP(session, parameter_ptr); break;
+		case CWD:  res = ftp_Handle_CWD(session, parameter_ptr); break;
+		case DELE: res = ftp_Handle_DELE(session, parameter_ptr); break;
+		case HELP: res = ftp_Handle_HELP(session, parameter_ptr); break;
+		case LIST: res = ftp_Handle_LIST(session, parameter_ptr); break;
+		case MODE: res = ftp_Handle_MODE(session, parameter_ptr); break;
+		case MKD:  res = ftp_Handle_MKD(session, parameter_ptr); break;
+		case MDTM: res = ftp_Handle_MDTM(session, parameter_ptr); break;
+		case NLST: res = ftp_Handle_NLIST(session, parameter_ptr); break;
+		case NOOP: res = ftp_Handle_NOOP(session); break;
+		case PASS: res = ftp_Handle_PASS(session, parameter_ptr); break;
+		case PASV: res = ftp_Handle_PASV(session); break;
+		case PORT: res = ftp_Handle_PORT(session, parameter_ptr); break;
+		case PWD:  res = ftp_Handle_PWD(session); break;
+		case QUIT: res = ftp_Handle_QUIT(session); break;
+		case REIN: res = ftp_Handle_REIN(session); break;
+		case REST: res = ftp_Handle_REST(session, parameter_ptr); break;
+		case RETR: res = ftp_Handle_RETR(session, parameter_ptr); break;
+		case RMD:  res = ftp_Handle_RMD(session, parameter_ptr); break;
+		case RNFR: res = ftp_Handle_RNFR(session, parameter_ptr); break;
+		case RNTO: res = ftp_Handle_RNTO(session, parameter_ptr); break;
+		case SMNT: res = ftp_Handle_SMNT(session, parameter_ptr); break;
+		case STAT: res = ftp_Handle_STAT(session, parameter_ptr); break;
+		case STOR: res = ftp_Handle_STOR(session, parameter_ptr); break;
+		case SIZE: res = ftp_Handle_SIZE(session, parameter_ptr); break;
+		case SITE: res = ftp_Handle_SITE(session, parameter_ptr); break;
+		case STOU: res = ftp_Handle_STOU(session, parameter_ptr); break;
+		case STRU: res = ftp_Handle_STRU(session, parameter_ptr); break;
+		case SYST: res = ftp_Handle_SYST(session); break;
+		case TYPE: res = ftp_Handle_TYPE(session, parameter_ptr); break;
+		case USER: res = ftp_Handle_USER(session, parameter_ptr); break;
+		case UTIME: res = ftp_Handle_UTIME(session, parameter_ptr); break;
 		default:break;
 	}
-	return 0;
+	return res;
 }
 
 
@@ -931,6 +1551,7 @@ void lwip_app_ftp_Thread(void *p_arg)
 		session = session_list;
 		while (session != NULL) /*  处理每一个控制块的消息  */
 		{
+			printf("session->socket:%d\r\n", session->sockfd);
 			next = session->next;
 			if (FD_ISSET(session->sockfd, &tmpfds))	/*  如果要处理的套接字在感兴趣的列表里面  */
 			{
@@ -944,8 +1565,9 @@ void lwip_app_ftp_Thread(void *p_arg)
 				else  /*  接收成功后处理消息  */
 				{
 					buffer[numbytes] = 0;
-					if(ftp_process_request(session, buffer)==-1)
+					if(ftp_process_request(session, buffer) == 1)
 					{
+						printf("handler failed\r\n");
 						closesocket(session->sockfd);
 						ftp_close_session(session);
 					}

@@ -1,5 +1,5 @@
 Dependencies for Project 'Gateway', Target 'Gateway': (DO NOT MODIFY !)
-F (.\main.c)(0x5A6A2207)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x5A6AF852)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\BSP\inc\bsp_led.h)(0x5A559F06)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
@@ -41,7 +41,7 @@ I (..\HALLIB\inc\stm32f4xx_hal_pcd.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_ll_usb.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_hcd.h)(0x59EED0E1)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\BSP\inc\bsp_key.h)(0x5A538835)
 I (..\BSP\inc\bsp_usart.h)(0x5A4B8A05)
@@ -63,10 +63,10 @@ I (..\BSP\inc\bsp_lan.h)(0x5A5459D9)
 I (..\BSP\inc\bsp_sdcard.h)(0x5A65AF51)
 I (..\APP\inc\app_w25qxx.h)(0x5A6A1393)
 I (..\FATFS\src\integer.h)(0x5710F3B4)
-I (..\FATFS\src\diskio.h)(0x5A6A1B58)
+I (..\FATFS\src\diskio.h)(0x5A6AF7BA)
 I (..\FATFS\src\ffconf.h)(0x5A6A0376)
 I (..\APP\inc\app_wdog.h)(0x5A54E79A)
-I (..\APP\inc\app_sys.h)(0x5A6A06CA)
+I (..\APP\inc\app_sys.h)(0x5A6AF5F0)
 I (..\UCOSIII\uCOS_CONFIG\includes.h)(0x5469F03F)
 I (D:\Program Files\Keil\ARM\ARMCC\include\ctype.h)(0x57F606B6)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
@@ -94,7 +94,7 @@ I (..\USB\USB_DEVICE\USER\inc\usbd_conf.h)(0x5A69C6B9)
 I (..\USB\USB_HOST\USER\inc\usb_host.h)(0x5A53A8F8)
 I (..\LWIP\include\lwip/netif.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -118,7 +118,7 @@ I (D:\Program Files\Keil\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (..\LWIP\include\lwip/netbuf.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/sys.h)(0x50CEF616)
 I (..\LWIP\arch/sys_arch.h)(0x5A4BA64C)
-I (..\LWIP\app\inc\lwip_app_ftpserver.h)(0x5A69C3F6)
+I (..\LWIP\app\inc\lwip_app_ftpserver.h)(0x5A6B5CF2)
 I (..\LWIP\include\lwip/sockets.h)(0x50CEFB5E)
 I (..\LWIP\include\ipv4\lwip/inet.h)(0x50CEF616)
 F (.\stm32f4xx_hal_msp.c)(0x5A56CEA9)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\stm32f4xx_hal_msp.o --omf_browse .\objects\stm32f4xx_hal_msp.crf --depend .\objects\stm32f4xx_hal_msp.d)
@@ -163,7 +163,7 @@ I (..\HALLIB\inc\stm32f4xx_ll_usb.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_hcd.h)(0x59EED0E1)
 I (..\BSP\inc\bsp_timer.h)(0x5A542106)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\BSP\inc\bsp_key.h)(0x5A538835)
 I (..\BSP\inc\bsp_led.h)(0x5A559F06)
@@ -1044,7 +1044,7 @@ I (..\HALLIB\inc\stm32f4xx_hal_pcd.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_ll_usb.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_hcd.h)(0x59EED0E1)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\BSP\inc\bsp_key.h)(0x5A538835)
 I (..\BSP\inc\bsp_usart.h)(0x5A4B8A05)
@@ -1062,7 +1062,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\BSP\src\bsp_key.c)(0x5A55A595)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_key.o --omf_browse .\objects\bsp_key.crf --depend .\objects\bsp_key.d)
 I (..\BSP\inc\bsp_key.h)(0x5A538835)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1120,7 +1120,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\BSP\src\bsp_timer.c)(0x5A55A595)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_timer.o --omf_browse .\objects\bsp_timer.crf --depend .\objects\bsp_timer.d)
 I (..\BSP\inc\bsp_timer.h)(0x5A542106)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1197,7 +1197,7 @@ I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
 F (..\BSP\src\bsp_spi.c)(0x5A53A729)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_spi.o --omf_browse .\objects\bsp_spi.crf --depend .\objects\bsp_spi.d)
 I (..\BSP\inc\bsp_spi.h)(0x5A4A1256)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1256,7 +1256,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\BSP\src\bsp_malloc.c)(0x5A4CDB6B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_malloc.o --omf_browse .\objects\bsp_malloc.crf --depend .\objects\bsp_malloc.d)
 I (..\BSP\inc\bsp_malloc.h)(0x5A4CDB6D)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1315,7 +1315,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\BSP\inc\bsp_sram.h)(0x5A539F88)
 F (..\BSP\src\bsp_audio.c)(0x5A66CB8F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_audio.o --omf_browse .\objects\bsp_audio.crf --depend .\objects\bsp_audio.d)
 I (..\BSP\inc\bsp_audio.h)(0x5A56248A)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1375,7 +1375,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\BSP\inc\bsp_i2c.h)(0x5A66CB8F)
 F (..\BSP\src\bsp_i2c.c)(0x5A66D057)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_i2c.o --omf_browse .\objects\bsp_i2c.crf --depend .\objects\bsp_i2c.d)
 I (..\BSP\inc\bsp_i2c.h)(0x5A66CB8F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1434,7 +1434,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\BSP\src\bsp_i2s.c)(0x5A65AEF6)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_i2s.o --omf_browse .\objects\bsp_i2s.crf --depend .\objects\bsp_i2s.d)
 I (..\BSP\inc\bsp_i2s.h)(0x5A4B7560)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1511,7 +1511,7 @@ I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
 F (..\BSP\src\bsp.c)(0x5A56D08D)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp.o --omf_browse .\objects\bsp.crf --depend .\objects\bsp.d)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1574,7 +1574,7 @@ F (..\BSP\src\bsp_wlan.c)(0x5A65AC4A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interw
 I (..\BSP\inc\bsp_wlan.h)(0x5A562FA1)
 F (..\BSP\src\bsp_lan.c)(0x5A65AC4A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_lan.o --omf_browse .\objects\bsp_lan.crf --depend .\objects\bsp_lan.d)
 I (..\BSP\inc\bsp_lan.h)(0x5A5459D9)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1634,7 +1634,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\LWIP\arch\lwip_comm.h)(0x5A65AC4A)
 I (..\LWIP\include\lwip\netif.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -1661,10 +1661,10 @@ I (..\LWIP\include\lwip/err.h)(0x50CEF616)
 I (..\LWIP\include\ipv4\lwip/ip_addr.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/def.h)(0x50CEF616)
 I (..\LWIP\include\lwip/pbuf.h)(0x50CEFB5E)
-I (..\APP\inc\app_sys.h)(0x5A6A06CA)
+I (..\APP\inc\app_sys.h)(0x5A6AF5F0)
 F (..\BSP\src\bsp_sdcard.c)(0x5A65AF90)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_sdcard.o --omf_browse .\objects\bsp_sdcard.crf --depend .\objects\bsp_sdcard.d)
 I (..\BSP\inc\bsp_sdcard.h)(0x5A65AF51)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1721,9 +1721,9 @@ I (..\USB\USB_HOST\CORE\inc\usbh_pipes.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
-F (..\APP\src\app_sys.c)(0x5A5A0477)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\app_sys.o --omf_browse .\objects\app_sys.crf --depend .\objects\app_sys.d)
-I (..\APP\inc\app_sys.h)(0x5A6A06CA)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+F (..\APP\src\app_sys.c)(0x5A6AF5F1)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\app_sys.o --omf_browse .\objects\app_sys.crf --depend .\objects\app_sys.d)
+I (..\APP\inc\app_sys.h)(0x5A6AF5F0)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1782,7 +1782,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\APP\src\app_w25qxx.c)(0x5A6A1403)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\app_w25qxx.o --omf_browse .\objects\app_w25qxx.crf --depend .\objects\app_w25qxx.d)
 I (..\APP\inc\app_w25qxx.h)(0x5A6A1393)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1840,7 +1840,7 @@ I (..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\FATFS\src\integer.h)(0x5710F3B4)
-I (..\FATFS\src\diskio.h)(0x5A6A1B58)
+I (..\FATFS\src\diskio.h)(0x5A6AF7BA)
 I (..\FATFS\src\ffconf.h)(0x5A6A0376)
 I (..\BSP\inc\bsp_spi.h)(0x5A4A1256)
 F (..\APP\src\app_wdog.c)(0x5A55A9D9)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\app_wdog.o --omf_browse .\objects\app_wdog.crf --depend .\objects\app_wdog.d)
@@ -1885,10 +1885,10 @@ I (..\HALLIB\inc\stm32f4xx_hal_pcd.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_ll_usb.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h)(0x59EED0E1)
 I (..\HALLIB\inc\stm32f4xx_hal_hcd.h)(0x59EED0E1)
-F (..\FATFS\src\diskio.c)(0x5A6A1F5B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\diskio.o --omf_browse .\objects\diskio.crf --depend .\objects\diskio.d)
-I (..\FATFS\src\diskio.h)(0x5A6A1B58)
+F (..\FATFS\src\diskio.c)(0x5A6AFD92)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\diskio.o --omf_browse .\objects\diskio.crf --depend .\objects\diskio.d)
+I (..\FATFS\src\diskio.h)(0x5A6AF7BA)
 I (..\FATFS\src\ffconf.h)(0x5A6A0376)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -1948,12 +1948,13 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\FATFS\src\integer.h)(0x5710F3B4)
 I (..\APP\inc\app_w25qxx.h)(0x5A6A1393)
 I (..\FATFS\src\ff.h)(0x5710F3B3)
+I (..\APP\inc\app_sys.h)(0x5A6AF5F0)
 F (..\FATFS\src\ff.c)(0x5710F3B3)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\ff.o --omf_browse .\objects\ff.crf --depend .\objects\ff.d)
 I (..\FATFS\src\ff.h)(0x5710F3B3)
 I (..\FATFS\src\integer.h)(0x5710F3B4)
 I (..\FATFS\src\ffconf.h)(0x5A6A0376)
-I (..\FATFS\src\diskio.h)(0x5A6A1B58)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\FATFS\src\diskio.h)(0x5A6AF7BA)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -2401,7 +2402,7 @@ I (D:\Program Files\Keil\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -2875,8 +2876,8 @@ I (..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
-I (..\APP\inc\app_sys.h)(0x5A6A06CA)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\APP\inc\app_sys.h)(0x5A6AF5F0)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\BSP\inc\bsp_key.h)(0x5A538835)
 I (..\BSP\inc\bsp_led.h)(0x5A559F06)
 I (..\BSP\inc\bsp_usart.h)(0x5A4B8A05)
@@ -3135,7 +3136,7 @@ I (..\USB\USB_DEVICE\CORE\inc\usbd_ioreq.h)(0x59EED0E8)
 I (..\USB\USB_DEVICE\CORE\inc\usbd_ctlreq.h)(0x59EED0E8)
 I (..\USB\USB_DEVICE\CLASS\MSC\Inc\usbd_msc_scsi.h)(0x59EED0E8)
 I (..\APP\inc\app_w25qxx.h)(0x5A6A1393)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\BSP\inc\bsp_key.h)(0x5A538835)
 I (..\BSP\inc\bsp_led.h)(0x5A559F06)
 I (..\BSP\inc\bsp_usart.h)(0x5A4B8A05)
@@ -3151,7 +3152,7 @@ I (..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\FATFS\src\integer.h)(0x5710F3B4)
-I (..\FATFS\src\diskio.h)(0x5A6A1B58)
+I (..\FATFS\src\diskio.h)(0x5A6AF7BA)
 I (..\FATFS\src\ffconf.h)(0x5A6A0376)
 F (..\USB\USB_DEVICE\CLASS\MSC\Src\usbd_msc.c)(0x59EED0E8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\usbd_msc.o --omf_browse .\objects\usbd_msc.crf --depend .\objects\usbd_msc.d)
 I (..\USB\USB_DEVICE\CLASS\MSC\Inc\usbd_msc.h)(0x59EED0E8)
@@ -3498,7 +3499,7 @@ I (..\USB\USB_DEVICE\CORE\inc\usbd_core.h)(0x59EED0E8)
 I (..\USB\USB_DEVICE\CORE\inc\usbd_ctlreq.h)(0x59EED0E8)
 F (..\LWIP\core\def.c)(0x50CEF616)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\def.o --omf_browse .\objects\def.crf --depend .\objects\def.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -3524,7 +3525,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -3581,7 +3582,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\LWIP\include\lwip/def.h)(0x50CEF616)
 F (..\LWIP\core\dhcp.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\dhcp.o --omf_browse .\objects\dhcp.crf --depend .\objects\dhcp.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -3607,7 +3608,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -3663,7 +3664,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\core\dns.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\dns.o --omf_browse .\objects\dns.crf --depend .\objects\dns.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -3689,7 +3690,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -3745,7 +3746,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\core\init.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -3771,7 +3772,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -3858,7 +3859,7 @@ I (..\LWIP\include\lwip/api.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/netbuf.h)(0x50CEFB5E)
 F (..\LWIP\core\mem.c)(0x5A69CE4B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\mem.o --omf_browse .\objects\mem.crf --depend .\objects\mem.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -3884,7 +3885,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -3948,7 +3949,7 @@ I (..\LWIP\include\lwip/memp.h)(0x50CEF616)
 I (..\LWIP\include\lwip/memp_std.h)(0x50CEFB5E)
 F (..\LWIP\core\memp.c)(0x5A38A504)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\memp.o --omf_browse .\objects\memp.crf --depend .\objects\memp.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -3974,7 +3975,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4062,7 +4063,7 @@ I (..\LWIP\include\lwip/dns.h)(0x50CEF616)
 I (..\LWIP\include\netif/ppp_oe.h)(0x50CEF616)
 F (..\LWIP\core\netif.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\netif.o --omf_browse .\objects\netif.crf --depend .\objects\netif.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4088,7 +4089,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4160,7 +4161,7 @@ I (..\LWIP\include\lwip/memp.h)(0x50CEF616)
 I (..\LWIP\include\lwip/memp_std.h)(0x50CEFB5E)
 F (..\LWIP\core\pbuf.c)(0x50CEF616)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\pbuf.o --omf_browse .\objects\pbuf.crf --depend .\objects\pbuf.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4186,7 +4187,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4266,7 +4267,7 @@ I (..\LWIP\include\lwip/netifapi.h)(0x50CEF616)
 I (..\LWIP\include\lwip/timers.h)(0x50CEF616)
 F (..\LWIP\core\raw.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\raw.o --omf_browse .\objects\raw.crf --depend .\objects\raw.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4292,7 +4293,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4360,7 +4361,7 @@ I (..\LWIP\include\lwip/mem.h)(0x50CEF616)
 I (..\LWIP\arch/perf.h)(0x5A38AC56)
 F (..\LWIP\core\stats.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\stats.o --omf_browse .\objects\stats.crf --depend .\objects\stats.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4386,7 +4387,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4442,7 +4443,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\core\sys.c)(0x5A4BB29A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4468,7 +4469,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4527,7 +4528,7 @@ I (..\LWIP\include\lwip/err.h)(0x50CEF616)
 I (..\LWIP\arch/sys_arch.h)(0x5A4BA64C)
 F (..\LWIP\core\tcp.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\tcp.o --omf_browse .\objects\tcp.crf --depend .\objects\tcp.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4553,7 +4554,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4623,7 +4624,7 @@ I (..\LWIP\include\lwip/tcp_impl.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/stats.h)(0x50CEFB5E)
 F (..\LWIP\core\tcp_in.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\tcp_in.o --omf_browse .\objects\tcp_in.crf --depend .\objects\tcp_in.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4649,7 +4650,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4721,7 +4722,7 @@ I (..\LWIP\include\lwip/snmp.h)(0x50CEF616)
 I (..\LWIP\arch/perf.h)(0x5A38AC56)
 F (..\LWIP\core\tcp_out.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\tcp_out.o --omf_browse .\objects\tcp_out.crf --depend .\objects\tcp_out.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4747,7 +4748,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4818,7 +4819,7 @@ I (..\LWIP\include\lwip/stats.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/snmp.h)(0x50CEF616)
 F (..\LWIP\core\timers.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\timers.o --omf_browse .\objects\timers.crf --depend .\objects\timers.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4844,7 +4845,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -4927,7 +4928,7 @@ I (..\LWIP\include\ipv4\lwip/autoip.h)(0x50CEF616)
 I (..\LWIP\include\lwip/dns.h)(0x50CEF616)
 F (..\LWIP\core\udp.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\udp.o --omf_browse .\objects\udp.crf --depend .\objects\udp.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -4953,7 +4954,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5025,7 +5026,7 @@ I (..\LWIP\arch/perf.h)(0x5A38AC56)
 I (..\LWIP\include\lwip/dhcp.h)(0x50CEF616)
 F (..\LWIP\netif\etharp.c)(0x5A55AB18)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\etharp.o --omf_browse .\objects\etharp.crf --depend .\objects\etharp.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5051,7 +5052,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5121,7 +5122,7 @@ I (..\LWIP\include\ipv4\lwip/autoip.h)(0x50CEF616)
 I (..\LWIP\include\netif/etharp.h)(0x50CEFB5E)
 F (..\LWIP\netif\ethernetif.c)(0x5A65AC4A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\ethernetif.o --omf_browse .\objects\ethernetif.crf --depend .\objects\ethernetif.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5147,7 +5148,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5220,7 +5221,7 @@ I (..\LWIP\include\netif/ppp_oe.h)(0x50CEF616)
 F (..\LWIP\netif\slipif.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\slipif.o --omf_browse .\objects\slipif.crf --depend .\objects\slipif.d)
 I (..\LWIP\include\netif/slipif.h)(0x50CEF616)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5246,7 +5247,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5307,7 +5308,7 @@ I (..\LWIP\include\lwip/def.h)(0x50CEF616)
 I (..\LWIP\include\lwip/pbuf.h)(0x50CEFB5E)
 F (..\LWIP\arch\lwip_comm.c)(0x5A69D0C2)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\lwip_comm.o --omf_browse .\objects\lwip_comm.crf --depend .\objects\lwip_comm.d)
 I (..\LWIP\arch\lwip_comm.h)(0x5A65AC4A)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -5366,7 +5367,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\LWIP\include\lwip\netif.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5416,12 +5417,12 @@ I (..\LWIP\include\ipv4\lwip/igmp.h)(0x50CEF616)
 I (..\LWIP\include\lwip/api.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/netbuf.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/netifapi.h)(0x50CEF616)
-I (..\APP\inc\app_sys.h)(0x5A6A06CA)
+I (..\APP\inc\app_sys.h)(0x5A6AF5F0)
 F (..\LWIP\arch\sys_arch.c)(0x5A4CDF9E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\sys_arch.o --omf_browse .\objects\sys_arch.crf --depend .\objects\sys_arch.d)
 I (..\UCOSIII\uCOS_CONFIG\os_cfg_app.h)(0x545AF591)
 I (..\LWIP\include\lwip/mem.h)(0x50CEF616)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5447,7 +5448,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5507,7 +5508,7 @@ I (..\LWIP\include\lwip/err.h)(0x50CEF616)
 I (..\LWIP\include\lwip/sys.h)(0x50CEF616)
 F (..\LWIP\core\ipv4\autoip.c)(0x50CEF616)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\autoip.o --omf_browse .\objects\autoip.crf --depend .\objects\autoip.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5533,7 +5534,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5589,7 +5590,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\core\ipv4\icmp.c)(0x5A38C21A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\icmp.o --omf_browse .\objects\icmp.crf --depend .\objects\icmp.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5615,7 +5616,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5684,7 +5685,7 @@ I (..\LWIP\include\lwip/memp_std.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/snmp.h)(0x50CEF616)
 F (..\LWIP\core\ipv4\igmp.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\igmp.o --omf_browse .\objects\igmp.crf --depend .\objects\igmp.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5710,7 +5711,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5766,7 +5767,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\core\ipv4\inet.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\inet.o --omf_browse .\objects\inet.crf --depend .\objects\inet.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5792,7 +5793,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5851,7 +5852,7 @@ I (..\LWIP\include\lwip/def.h)(0x50CEF616)
 I (..\LWIP\include\ipv4\lwip/ip_addr.h)(0x50CEFB5E)
 F (..\LWIP\core\ipv4\inet_chksum.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\inet_chksum.o --omf_browse .\objects\inet_chksum.crf --depend .\objects\inet_chksum.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5877,7 +5878,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -5939,7 +5940,7 @@ I (..\LWIP\include\lwip/def.h)(0x50CEF616)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 F (..\LWIP\core\ipv4\ip.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\ip.o --omf_browse .\objects\ip.crf --depend .\objects\ip.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -5965,7 +5966,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6043,7 +6044,7 @@ I (..\LWIP\include\lwip/memp_std.h)(0x50CEFB5E)
 I (..\LWIP\arch/perf.h)(0x5A38AC56)
 F (..\LWIP\core\ipv4\ip_addr.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\ip_addr.o --omf_browse .\objects\ip_addr.crf --depend .\objects\ip_addr.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6069,7 +6070,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6130,7 +6131,7 @@ I (..\LWIP\include\lwip/err.h)(0x50CEF616)
 I (..\LWIP\include\lwip/pbuf.h)(0x50CEFB5E)
 F (..\LWIP\core\ipv4\ip_frag.c)(0x50CEF616)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\ip_frag.o --omf_browse .\objects\ip_frag.crf --depend .\objects\ip_frag.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6156,7 +6157,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6226,7 +6227,7 @@ I (..\LWIP\include\lwip/memp_std.h)(0x50CEFB5E)
 I (..\LWIP\include\ipv4\lwip/icmp.h)(0x50CEFB5E)
 F (..\LWIP\api\api_lib.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\api_lib.o --omf_browse .\objects\api_lib.crf --depend .\objects\api_lib.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6252,7 +6253,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6331,7 +6332,7 @@ I (..\LWIP\include\lwip/mem.h)(0x50CEF616)
 I (..\LWIP\include\ipv4\lwip/icmp.h)(0x50CEFB5E)
 F (..\LWIP\api\api_msg.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\api_msg.o --omf_browse .\objects\api_msg.crf --depend .\objects\api_msg.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6357,7 +6358,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6438,7 +6439,7 @@ I (..\LWIP\include\lwip/dns.h)(0x50CEF616)
 F (..\LWIP\api\err.c)(0x50CEF616)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\err.o --omf_browse .\objects\err.crf --depend .\objects\err.d)
 I (..\LWIP\include\lwip/err.h)(0x50CEF616)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6464,7 +6465,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6520,7 +6521,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\api\netbuf.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\netbuf.o --omf_browse .\objects\netbuf.crf --depend .\objects\netbuf.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6546,7 +6547,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6610,7 +6611,7 @@ I (..\LWIP\include\lwip/memp_std.h)(0x50CEFB5E)
 F (..\LWIP\api\netdb.c)(0x50CEF616)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\netdb.o --omf_browse .\objects\netdb.crf --depend .\objects\netdb.d)
 I (..\LWIP\include\lwip/netdb.h)(0x50CEF616)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6636,7 +6637,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6692,7 +6693,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\api\netifapi.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\netifapi.o --omf_browse .\objects\netifapi.crf --depend .\objects\netifapi.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6718,7 +6719,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6774,7 +6775,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 F (..\LWIP\api\sockets.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\sockets.o --omf_browse .\objects\sockets.crf --depend .\objects\sockets.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6800,7 +6801,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6879,7 +6880,7 @@ I (..\LWIP\include\lwip/netifapi.h)(0x50CEF616)
 I (..\LWIP\include\lwip/timers.h)(0x50CEF616)
 F (..\LWIP\api\tcpip.c)(0x50CEFB5E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\tcpip.o --omf_browse .\objects\tcpip.crf --depend .\objects\tcpip.d)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -6905,7 +6906,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)
@@ -6983,7 +6984,7 @@ I (..\LWIP\include\ipv4\lwip/ip.h)(0x50CEFB5E)
 I (..\LWIP\include\netif/ppp_oe.h)(0x50CEF616)
 F (..\LWIP\app\src\lwip_app_httpserver.c)(0x5A69D0C2)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\lwip_app_httpserver.o --omf_browse .\objects\lwip_app_httpserver.crf --depend .\objects\lwip_app_httpserver.d)
 I (..\LWIP\app\inc\lwip_app_httpserver.h)(0x5A570379)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
@@ -7042,7 +7043,7 @@ I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h)(0x59EED0E8)
 I (..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h)(0x59EED0E8)
 I (..\LWIP\include\lwip/tcp.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -7073,11 +7074,11 @@ I (..\LWIP\include\lwip/def.h)(0x50CEF616)
 I (..\LWIP\include\ipv4\lwip/ip_addr.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/netif.h)(0x50CEFB5E)
 I (..\LWIP\include\ipv4\lwip/icmp.h)(0x50CEFB5E)
-F (..\LWIP\app\src\lwip_app_ftpserver.c)(0x5A69D0C2)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\lwip_app_ftpserver.o --omf_browse .\objects\lwip_app_ftpserver.crf --depend .\objects\lwip_app_ftpserver.d)
-I (..\LWIP\app\inc\lwip_app_ftpserver.h)(0x5A69C3F6)
+F (..\LWIP\app\src\lwip_app_ftpserver.c)(0x5A6B61D3)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\BSP\inc -I ..\HALLIB\inc -I ..\HALLIB\inc\Legacy -I ..\UCOSIII\uC-CPU -I ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView -I ..\UCOSIII\uC-LIB -I ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\UCOSIII\uCOS-III -I ..\UCOSIII\uCOS-III\Source -I ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\UCOSIII\UCOS_BSP -I ..\UCOSIII\uCOS_CONFIG -I ..\APP\inc -I ..\FATFS\src -I ..\FATFS\src\option -I ..\USB\USB_HOST\USER\inc -I ..\USB\USB_HOST\CORE\inc -I ..\USB\USB_HOST\CLASS\MSC\Inc -I ..\USB\USB_FATFS\inc -I ..\USB\USB_DEVICE\USER\inc -I ..\USB\USB_DEVICE\CORE\inc -I ..\USB\USB_DEVICE\CLASS\MSC\Inc -I ..\LWIP -I ..\LWIP\api -I ..\LWIP\netif -I ..\LWIP\arch -I ..\LWIP\core -I ..\LWIP\include -I ..\LWIP\include\netif -I ..\LWIP\include\ipv4 -I ..\LWIP\include\lwip -I ..\LWIP\app\inc-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\lwip_app_ftpserver.o --omf_browse .\objects\lwip_app_ftpserver.crf --depend .\objects\lwip_app_ftpserver.d)
+I (..\LWIP\app\inc\lwip_app_ftpserver.h)(0x5A6B5CF2)
 I (..\LWIP\include\lwip/sockets.h)(0x50CEFB5E)
 I (..\LWIP\include\lwip/opt.h)(0x5A56E924)
-I (..\LWIP\arch\lwipopts.h)(0x5A69F71C)
+I (..\LWIP\arch\lwipopts.h)(0x5A6AE456)
 I (..\LWIP\include\lwip/debug.h)(0x50CEF616)
 I (..\LWIP\include\lwip/arch.h)(0x50CEF616)
 I (..\LWIP\arch/cc.h)(0x5A69CE4B)
@@ -7103,7 +7104,7 @@ I (..\UCOSIII\uCOS-III\Source\os_type.h)(0x4F47150C)
 I (..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5459E69C)
 I (..\UCOSIII\uC-LIB\lib_math.h)(0x52736048)
 I (..\UCOSIII\uCOS_CONFIG\app_cfg.h)(0x5A4C8A3F)
-I (..\BSP\inc\bsp.h)(0x5A6A0376)
+I (..\BSP\inc\bsp.h)(0x5A6ADCB4)
 I (..\USER\stm32f4xx.h)(0x59EED0DE)
 I (..\USER\stm32f407xx.h)(0x59EED0DD)
 I (..\CORE\core_cm4.h)(0x59EED0E1)

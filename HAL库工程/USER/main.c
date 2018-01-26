@@ -240,7 +240,10 @@ int main(void)
 { 
 	OS_ERR err;
 	uint8_t result;
-
+  DIR dir;
+	FATFS f;
+	
+	
 	HAL_Init();
 	CPU_SR_ALLOC();
 
@@ -253,19 +256,14 @@ int main(void)
 	
 	bsp_key_Config();
 	bsp_mem_Config();
-	
+	app_sys_Config();
 	
 //	bsp_sd_Config();
 	
 	fatfs_init();
-	
-	disk_initialize(0);
-	MX_USB_DEVICE_Init();
-	result = f_mount(fat_FLASH, "0:",1);
-	printf("f_mount:%d\r\n", result);
-	
-	MX_USB_HOST_Init();
-//	MX_FATFS_Init();	
+
+	MX_USB_DEVICE_Init();	
+	MX_USB_HOST_Init();	
 	OSInit(&err);
 	
 	if(lwip_config() == 0)  /* 只有在网线连接的时候会初始化成功 */
@@ -650,14 +648,16 @@ void task_KeyTask(void *p_arg)
 * Note(s)    : 
 *********************************************************************************************************
 */
-FATFS *USB_FS;
+FATFS USB_FS;
 FIL f;
+DIR dir1;
 void task_USBHostTask(void *p_arg)
 {
 	OS_ERR err; 
 	static uint8_t Is_Mount = 0;
+	static uint8_t flag = 0;
 	uint8_t res_mount;
-	USB_FS = (FATFS *)bsp_mem_Malloc(SRAMIN, sizeof(FATFS));
+//	USB_FS = (FATFS *)bsp_mem_Malloc(SRAMIN, sizeof(FATFS));
 	while(1)
 	{
 		MX_USB_HOST_Process();
@@ -666,22 +666,31 @@ void task_USBHostTask(void *p_arg)
 		{
 			case USB_CONNECTED: 
 			{
+			}break;
+			case USB_DISCONNECT:
+			{
+				f_mount(NULL, "0:", 0);
+				Is_Mount = 0;
+			}break;
+			case USB_ACTIVE:
+			{
+				
 				if(Is_Mount == 0)
 				{
-					res_mount = f_mount(USB_FS, "1:", 0);
+					res_mount = f_mount(&USB_FS, "0:", 1);
 					printf("mount usb disk:%d\r\n", res_mount);
 					if(res_mount == FR_OK) Is_Mount = 1;
-					res_mount = f_open(&f, "1:/1.txt", FA_CREATE_ALWAYS);
+				}
+				
+				if(!flag)
+				{
+					flag = 1;
+//					res_mount = f_opendir(&dir1, "0:/");
+					res_mount = f_open(&f, "0:/1.txt", FA_CREATE_ALWAYS);
 					printf("Create file:%d\r\n", res_mount);
 					f_close(&f);
 				}
 			}break;
-			case USB_DISCONNECT:
-			{
-				f_mount(0, "1:", 0);
-				Is_Mount = 0;
-			}break;
-			case USB_ACTIVE:
 			case USB_IDLE:
 			default:break;
 		}

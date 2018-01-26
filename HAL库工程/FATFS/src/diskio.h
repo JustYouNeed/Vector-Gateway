@@ -15,7 +15,10 @@ extern "C" {
 # include "ffconf.h"
 # include "bsp.h"
 # include "integer.h"
+
 	
+#define HOST_HANDLE hUsbHostHS  
+
 /* Results of Disk Functions */
 typedef enum {
 	RES_OK = 0,		/* 0: Successful */
@@ -34,12 +37,8 @@ typedef struct
   DSTATUS (*disk_initialize) (BYTE);                     /*!< Initialize Disk Drive                     */
   DSTATUS (*disk_status)     (BYTE);                     /*!< Get Disk Status                           */
   DRESULT (*disk_read)       (BYTE, BYTE*, DWORD, UINT);       /*!< Read Sector(s)                            */
-#if _USE_WRITE == 1 
   DRESULT (*disk_write)      (BYTE, const BYTE*, DWORD, UINT); /*!< Write Sector(s) when _USE_WRITE = 0       */
-#endif /* _USE_WRITE == 1 */
-#if _USE_IOCTL == 1  
   DRESULT (*disk_ioctl)      (BYTE, BYTE, void*);              /*!< I/O control operation when _USE_IOCTL = 1 */
-#endif /* _USE_IOCTL == 1 */
 
 }Diskio_drvTypeDef;
 
@@ -56,7 +55,7 @@ typedef struct
 }Disk_drvTypeDef;
 
 
-
+uint8_t fatfs_init(void);
 
 /*---------------------------------------*/
 /* Prototypes for disk control functions */
@@ -72,16 +71,9 @@ DRESULT Flash_write(BYTE, const BYTE*, DWORD, UINT);
 DSTATUS USBH_initialize (BYTE);
 DSTATUS USBH_status (BYTE);
 DRESULT USBH_read (BYTE, BYTE*, DWORD, UINT);
-
-#if _USE_WRITE == 1
-  DRESULT USBH_write (BYTE, const BYTE*, DWORD, UINT);
-#endif /* _USE_WRITE == 1 */
-
-#if _USE_IOCTL == 1
-  DRESULT USBH_ioctl (BYTE, BYTE, void*);
-#endif /* _USE_IOCTL == 1 */
+DRESULT USBH_write (BYTE, const BYTE*, DWORD, UINT);
+DRESULT USBH_ioctl (BYTE, BYTE, void*);
   
-	
 uint8_t FATFS_LinkDriverEx(Diskio_drvTypeDef *drv, char *path, uint8_t lun);
 uint8_t FATFS_LinkDriver(Diskio_drvTypeDef *drv, char *path);
 uint8_t FATFS_UnLinkDriverEx(char *path, uint8_t lun);
@@ -90,7 +82,7 @@ uint8_t FATFS_GetAttachedDriversNbr(void);
 
 
 
-void fatfs_init(void);
+
 
 DSTATUS disk_initialize (BYTE pdrv);
 DSTATUS disk_status (BYTE pdrv);
