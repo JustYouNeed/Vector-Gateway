@@ -1,11 +1,11 @@
 .\objects\bsp.o: ..\BSP\src\bsp.c
 .\objects\bsp.o: ..\BSP\inc\bsp.h
-.\objects\bsp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\bsp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\bsp.o: ..\USER\stm32f4xx.h
 .\objects\bsp.o: ..\USER\stm32f407xx.h
 .\objects\bsp.o: ..\CORE\core_cm4.h
-.\objects\bsp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\bsp.o: ..\CORE\core_cmInstr.h
 .\objects\bsp.o: ..\CORE\cmsis_armcc.h
 .\objects\bsp.o: ..\CORE\core_cmFunc.h
@@ -42,21 +42,30 @@
 .\objects\bsp.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\bsp.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\bsp.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
-.\objects\bsp.o: ..\BSP\inc\bsp_key.h
+.\objects\bsp.o: ..\UCOSIII\uCOS_CONFIG\includes.h
+.\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\bsp.o: ..\UCOSIII\uCOS-III\Source\os.h
+.\objects\bsp.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
+.\objects\bsp.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+.\objects\bsp.o: ..\UCOSIII\uC-CPU\cpu_def.h
+.\objects\bsp.o: ..\UCOSIII\uCOS_CONFIG\cpu_cfg.h
+.\objects\bsp.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\bsp.o: ..\UCOSIII\uC-LIB\lib_def.h
+.\objects\bsp.o: ..\UCOSIII\uC-LIB\lib_mem.h
+.\objects\bsp.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\bsp.o: ..\UCOSIII\uCOS_CONFIG\lib_cfg.h
+.\objects\bsp.o: ..\UCOSIII\uC-LIB\lib_str.h
+.\objects\bsp.o: ..\UCOSIII\uC-LIB\lib_ascii.h
+.\objects\bsp.o: ..\UCOSIII\uCOS-III\Source\os_type.h
+.\objects\bsp.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
+.\objects\bsp.o: ..\UCOSIII\uC-LIB\lib_math.h
+.\objects\bsp.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
 .\objects\bsp.o: ..\BSP\inc\bsp.h
+.\objects\bsp.o: ..\BSP\inc\bsp_key.h
 .\objects\bsp.o: ..\BSP\inc\bsp_led.h
 .\objects\bsp.o: ..\BSP\inc\bsp_usart.h
 .\objects\bsp.o: ..\BSP\inc\bsp_timer.h
 .\objects\bsp.o: ..\BSP\inc\bsp_malloc.h
-.\objects\bsp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\bsp.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\bsp.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\bsp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\bsp.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\bsp.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\bsp.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\bsp.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\bsp.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\bsp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\bsp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\bsp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h

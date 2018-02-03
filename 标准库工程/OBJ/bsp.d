@@ -1,12 +1,12 @@
 ..\obj\bsp.o: ..\BSP_DRIVER\src\bsp.c
 ..\obj\bsp.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\bsp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\bsp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\bsp.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\bsp.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\bsp.o: ..\USER\stm32f4xx.h
 ..\obj\bsp.o: ..\CORE\core_cm4.h
-..\obj\bsp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\bsp.o: ..\CORE\core_cmInstr.h
 ..\obj\bsp.o: ..\CORE\core_cmFunc.h
 ..\obj\bsp.o: ..\CORE\core_cm4_simd.h

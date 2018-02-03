@@ -4,13 +4,13 @@
 ..\obj\api_lib.o: ..\LWIP\include\lwip/debug.h
 ..\obj\api_lib.o: ..\LWIP\include\lwip/arch.h
 ..\obj\api_lib.o: ..\LWIP\arch/cc.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\api_lib.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\api_lib.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\api_lib.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\api_lib.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\api_lib.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\api_lib.o: ..\USER\stm32f4xx.h
 ..\obj\api_lib.o: ..\CORE\core_cm4.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\api_lib.o: ..\CORE\core_cmInstr.h
 ..\obj\api_lib.o: ..\CORE\core_cmFunc.h
 ..\obj\api_lib.o: ..\CORE\core_cm4_simd.h
@@ -73,7 +73,7 @@
 ..\obj\api_lib.o: ..\BSP_DRIVER\inc\bsp_malloc.h
 ..\obj\api_lib.o: ..\LWIP\include\lwip/opt.h
 ..\obj\api_lib.o: ..\LWIP\include\lwip/api.h
-..\obj\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\api_lib.o: ..\LWIP\include\lwip/netbuf.h
 ..\obj\api_lib.o: ..\LWIP\include\lwip/pbuf.h
 ..\obj\api_lib.o: ..\LWIP\include\lwip/err.h

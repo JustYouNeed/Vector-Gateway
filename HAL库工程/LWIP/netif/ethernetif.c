@@ -219,7 +219,7 @@ low_level_input(struct netif *netif)
     DISABLE_INT();
     len=ETH_Handler.RxFrameInfos.length;                //获取接收到的以太网帧长度
     buffer=(uint8_t *)ETH_Handler.RxFrameInfos.buffer;  //获取接收到的以太网帧的数据buffer
-  
+   
     if(len>0) p=pbuf_alloc(PBUF_RAW,len,PBUF_POOL);     //申请pbuf
     if(p!=NULL)                                        //pbuf申请成功
     {
@@ -287,10 +287,10 @@ err_t ethernetif_input(struct netif *netif)
     
   /* no packet could be read, silently ignore this */
   if (p == NULL) return 0;
-    
+	  
   /* entry point to the LwIP stack */
   err = netif->input(p, netif);
-    
+  
   if (err != ERR_OK)
   {
     LWIP_DEBUGF(NETIF_DEBUG, ("ethernetif_input: IP input error\n"));

@@ -5,7 +5,7 @@
 # include "ff.h"
 # include "wavplay.h"
 # include "bsp_audio.h"
-
+# include "bsp_i2s.h"
 
 # define I2S_TX_DMA_BUF_SIZE		8192
 

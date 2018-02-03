@@ -383,11 +383,10 @@ ARM Macro Assembler    Page 6
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\objects\os_cpu_a.d -o.\objects\os_cpu_a.o -I"E:\学习资料\电子
-设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE\_Gateway" -I"D:\Program Fi
-les\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\In
-clude" -I"D:\Program Files\Keil\ARM\CMSIS\Include" --predefine="__UVISION_VERSI
-ON SETA 522" --predefine="STM32F407xx SETA 1" --list=.\listings\os_cpu_a.lst ..
-\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu_a.asm
+设计\智能家居\Vector Gateway\程序\HAL库工程\USER\RTE" -ID:\KeilPack\Keil\STM32F
+4xx_DFP\1.0.8\Device\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVIS
+ION_VERSION SETA 521" --predefine="STM32F40_41xxx SETA 1" --list=.\listings\os_
+cpu_a.lst ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu_a.asm
 
 
 

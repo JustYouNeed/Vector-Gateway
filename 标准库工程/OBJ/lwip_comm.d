@@ -1,13 +1,13 @@
 ..\obj\lwip_comm.o: ..\LWIP\arch\lwip_comm.c
 ..\obj\lwip_comm.o: ..\LWIP\arch\lwip_comm.h
 ..\obj\lwip_comm.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\lwip_comm.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\lwip_comm.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\lwip_comm.o: ..\USER\stm32f4xx.h
 ..\obj\lwip_comm.o: ..\CORE\core_cm4.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\lwip_comm.o: ..\CORE\core_cmInstr.h
 ..\obj\lwip_comm.o: ..\CORE\core_cmFunc.h
 ..\obj\lwip_comm.o: ..\CORE\core_cm4_simd.h
@@ -54,10 +54,10 @@
 ..\obj\lwip_comm.o: ..\LWIP\include\lwip/arch.h
 ..\obj\lwip_comm.o: ..\LWIP\arch/cc.h
 ..\obj\lwip_comm.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\lwip_comm.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\lwip_comm.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\lwip_comm.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -96,7 +96,7 @@
 ..\obj\lwip_comm.o: ..\LWIP\include\ipv4\lwip/ip_frag.h
 ..\obj\lwip_comm.o: ..\LWIP\include\lwip/tcpip.h
 ..\obj\lwip_comm.o: ..\LWIP\include\lwip/api_msg.h
-..\obj\lwip_comm.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\lwip_comm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\lwip_comm.o: ..\LWIP\include\ipv4\lwip/igmp.h
 ..\obj\lwip_comm.o: ..\LWIP\include\lwip/api.h
 ..\obj\lwip_comm.o: ..\LWIP\include\lwip/netbuf.h

@@ -8,6 +8,9 @@
 
 #define LWIP_DHCP_MAX_TRIES		4
 
+# define LAN_ETH 0
+# define USART_ETH 1
+
 typedef struct 
 {
 	uint8_t mac[6];

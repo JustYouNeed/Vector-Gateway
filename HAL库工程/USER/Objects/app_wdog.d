@@ -3,7 +3,7 @@
 .\objects\app_wdog.o: ..\USER\stm32f4xx.h
 .\objects\app_wdog.o: ..\USER\stm32f407xx.h
 .\objects\app_wdog.o: ..\CORE\core_cm4.h
-.\objects\app_wdog.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\app_wdog.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\app_wdog.o: ..\CORE\core_cmInstr.h
 .\objects\app_wdog.o: ..\CORE\cmsis_armcc.h
 .\objects\app_wdog.o: ..\CORE\core_cmFunc.h
@@ -15,7 +15,7 @@
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_def.h
 .\objects\app_wdog.o: ..\USER\stm32f4xx.h
 .\objects\app_wdog.o: ..\HALLIB\inc\Legacy/stm32_hal_legacy.h
-.\objects\app_wdog.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\app_wdog.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_rcc_ex.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_gpio.h
 .\objects\app_wdog.o: ..\HALLIB\inc\stm32f4xx_hal_gpio_ex.h

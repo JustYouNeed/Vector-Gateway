@@ -5,13 +5,13 @@
 .\objects\slipif.o: ..\LWIP\include\lwip/debug.h
 .\objects\slipif.o: ..\LWIP\include\lwip/arch.h
 .\objects\slipif.o: ..\LWIP\arch/cc.h
-.\objects\slipif.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\slipif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\slipif.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\slipif.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\slipif.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\slipif.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\slipif.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\slipif.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\slipif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\slipif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\slipif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\slipif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\slipif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\slipif.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\slipif.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\slipif.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 .\objects\slipif.o: ..\USER\stm32f4xx.h
 .\objects\slipif.o: ..\USER\stm32f407xx.h
 .\objects\slipif.o: ..\CORE\core_cm4.h
-.\objects\slipif.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\slipif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\slipif.o: ..\CORE\core_cmInstr.h
 .\objects\slipif.o: ..\CORE\cmsis_armcc.h
 .\objects\slipif.o: ..\CORE\core_cmFunc.h
@@ -69,23 +69,13 @@
 .\objects\slipif.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\slipif.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\slipif.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\slipif.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\slipif.o: ..\BSP\inc\bsp_key.h
 .\objects\slipif.o: ..\BSP\inc\bsp.h
 .\objects\slipif.o: ..\BSP\inc\bsp_led.h
 .\objects\slipif.o: ..\BSP\inc\bsp_usart.h
 .\objects\slipif.o: ..\BSP\inc\bsp_timer.h
 .\objects\slipif.o: ..\BSP\inc\bsp_malloc.h
-.\objects\slipif.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\slipif.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\slipif.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\slipif.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\slipif.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\slipif.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\slipif.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\slipif.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\slipif.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\slipif.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\slipif.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\slipif.o: ..\LWIP\include\lwip/opt.h
 .\objects\slipif.o: ..\LWIP\include\lwip/netif.h
 .\objects\slipif.o: ..\LWIP\include\lwip/err.h

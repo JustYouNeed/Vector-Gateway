@@ -4,13 +4,13 @@
 .\objects\timers.o: ..\LWIP\include\lwip/debug.h
 .\objects\timers.o: ..\LWIP\include\lwip/arch.h
 .\objects\timers.o: ..\LWIP\arch/cc.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\timers.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\timers.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\timers.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\timers.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\timers.o: ..\USER\stm32f4xx.h
 .\objects\timers.o: ..\USER\stm32f407xx.h
 .\objects\timers.o: ..\CORE\core_cm4.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\timers.o: ..\CORE\core_cmInstr.h
 .\objects\timers.o: ..\CORE\cmsis_armcc.h
 .\objects\timers.o: ..\CORE\core_cmFunc.h
@@ -68,23 +68,13 @@
 .\objects\timers.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\timers.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\timers.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\timers.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\timers.o: ..\BSP\inc\bsp_key.h
 .\objects\timers.o: ..\BSP\inc\bsp.h
 .\objects\timers.o: ..\BSP\inc\bsp_led.h
 .\objects\timers.o: ..\BSP\inc\bsp_usart.h
 .\objects\timers.o: ..\BSP\inc\bsp_timer.h
 .\objects\timers.o: ..\BSP\inc\bsp_malloc.h
-.\objects\timers.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\timers.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\timers.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\timers.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\timers.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\timers.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\timers.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\timers.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\timers.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\timers.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\timers.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\timers.o: ..\LWIP\include\lwip/opt.h
 .\objects\timers.o: ..\LWIP\include\lwip/timers.h
 .\objects\timers.o: ..\LWIP\include\lwip/err.h
@@ -103,7 +93,7 @@
 .\objects\timers.o: ..\LWIP\include\lwip/memp_std.h
 .\objects\timers.o: ..\LWIP\include\lwip/tcpip.h
 .\objects\timers.o: ..\LWIP\include\lwip/api_msg.h
-.\objects\timers.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\timers.o: ..\LWIP\include\ipv4\lwip/igmp.h
 .\objects\timers.o: ..\LWIP\include\lwip/api.h
 .\objects\timers.o: ..\LWIP\include\lwip/netbuf.h

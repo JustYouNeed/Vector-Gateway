@@ -1389,7 +1389,7 @@
  * Don't use it if you're not an active lwIP project member
  */
 #ifndef LWIP_TCPIP_CORE_LOCKING
-#define LWIP_TCPIP_CORE_LOCKING         0
+#define LWIP_TCPIP_CORE_LOCKING         1
 #endif
 
 /**
@@ -1465,7 +1465,7 @@
  * SO_RCVTIMEO processing.
  */
 #ifndef LWIP_SO_RCVTIMEO
-#define LWIP_SO_RCVTIMEO                0
+#define LWIP_SO_RCVTIMEO                1
 #endif
 
 /**
@@ -1486,7 +1486,7 @@
  * SO_REUSE==1: Enable SO_REUSEADDR option.
  */
 #ifndef SO_REUSE
-#define SO_REUSE                        0
+#define SO_REUSE                        1
 #endif
 
 /**

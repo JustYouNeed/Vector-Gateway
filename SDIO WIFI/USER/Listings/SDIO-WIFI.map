@@ -1261,18 +1261,18 @@ Image Symbol Table
     i.bsp_tim_SoftDec                        0x08001690   Section        0  bsp_timer.o(i.bsp_tim_SoftDec)
     i.bsp_wlan_Config                        0x080016b8   Section        0  bsp_wlan.o(i.bsp_wlan_Config)
     i.bsp_wlan_GPIOConfig                    0x080016d0   Section        0  bsp_wlan.o(i.bsp_wlan_GPIOConfig)
-    i.bsp_wlan_NVICConfig                    0x080017f8   Section        0  bsp_wlan.o(i.bsp_wlan_NVICConfig)
-    i.bsp_wlan_PowerCmd                      0x08001808   Section        0  bsp_wlan.o(i.bsp_wlan_PowerCmd)
-    i.fputc                                  0x080019a8   Section        0  bsp_uasrt.o(i.fputc)
-    i.main                                   0x080019c4   Section        0  main.o(i.main)
-    x$fpl$fpinit                             0x080019dc   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x080019dc   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x080019e8   Section       24  bsp_malloc.o(.constdata)
-    .constdata                               0x08001a00   Section       40  _printf_hex_int_ll_ptr.o(.constdata)
-    uc_hextab                                0x08001a00   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
-    lc_hextab                                0x08001a14   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
-    .constdata                               0x08001a28   Section       17  __printf_flags_ss_wp.o(.constdata)
-    maptable                                 0x08001a28   Data          17  __printf_flags_ss_wp.o(.constdata)
+    i.bsp_wlan_NVICConfig                    0x08001804   Section        0  bsp_wlan.o(i.bsp_wlan_NVICConfig)
+    i.bsp_wlan_PowerCmd                      0x08001814   Section        0  bsp_wlan.o(i.bsp_wlan_PowerCmd)
+    i.fputc                                  0x080019b0   Section        0  bsp_uasrt.o(i.fputc)
+    i.main                                   0x080019cc   Section        0  main.o(i.main)
+    x$fpl$fpinit                             0x080019e4   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x080019e4   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x080019f0   Section       24  bsp_malloc.o(.constdata)
+    .constdata                               0x08001a08   Section       40  _printf_hex_int_ll_ptr.o(.constdata)
+    uc_hextab                                0x08001a08   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
+    lc_hextab                                0x08001a1c   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
+    .constdata                               0x08001a30   Section       17  __printf_flags_ss_wp.o(.constdata)
+    maptable                                 0x08001a30   Data          17  __printf_flags_ss_wp.o(.constdata)
     .ARM.__AT_0x10000000                     0x10000000   Section    61440  bsp_malloc.o(.ARM.__AT_0x10000000)
     .ARM.__AT_0x1000F000                     0x1000f000   Section     3840  bsp_malloc.o(.ARM.__AT_0x1000F000)
     .data                                    0x20000000   Section       20  system_stm32f4xx.o(.data)
@@ -1563,19 +1563,19 @@ Image Symbol Table
     bsp_tim_SoftConfig                       0x080015ed   Thumb Code   148  bsp_timer.o(i.bsp_tim_SoftConfig)
     bsp_tim_SoftDec                          0x08001691   Thumb Code    40  bsp_timer.o(i.bsp_tim_SoftDec)
     bsp_wlan_Config                          0x080016b9   Thumb Code    24  bsp_wlan.o(i.bsp_wlan_Config)
-    bsp_wlan_GPIOConfig                      0x080016d1   Thumb Code   264  bsp_wlan.o(i.bsp_wlan_GPIOConfig)
-    bsp_wlan_NVICConfig                      0x080017f9   Thumb Code    16  bsp_wlan.o(i.bsp_wlan_NVICConfig)
-    bsp_wlan_PowerCmd                        0x08001809   Thumb Code   334  bsp_wlan.o(i.bsp_wlan_PowerCmd)
-    fputc                                    0x080019a9   Thumb Code    24  bsp_uasrt.o(i.fputc)
-    main                                     0x080019c5   Thumb Code    24  main.o(i.main)
-    _fp_init                                 0x080019dd   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x080019e5   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x080019e5   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    MEM_TABLE_SIZE                           0x080019e8   Data           8  bsp_malloc.o(.constdata)
-    MEM_BLOCK_SIZE                           0x080019f0   Data           8  bsp_malloc.o(.constdata)
-    MEM_SIZE                                 0x080019f8   Data           8  bsp_malloc.o(.constdata)
-    Region$$Table$$Base                      0x08001a3c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08001a5c   Number         0  anon$$obj.o(Region$$Table)
+    bsp_wlan_GPIOConfig                      0x080016d1   Thumb Code   270  bsp_wlan.o(i.bsp_wlan_GPIOConfig)
+    bsp_wlan_NVICConfig                      0x08001805   Thumb Code    16  bsp_wlan.o(i.bsp_wlan_NVICConfig)
+    bsp_wlan_PowerCmd                        0x08001815   Thumb Code   330  bsp_wlan.o(i.bsp_wlan_PowerCmd)
+    fputc                                    0x080019b1   Thumb Code    24  bsp_uasrt.o(i.fputc)
+    main                                     0x080019cd   Thumb Code    24  main.o(i.main)
+    _fp_init                                 0x080019e5   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x080019ed   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x080019ed   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    MEM_TABLE_SIZE                           0x080019f0   Data           8  bsp_malloc.o(.constdata)
+    MEM_BLOCK_SIZE                           0x080019f8   Data           8  bsp_malloc.o(.constdata)
+    MEM_SIZE                                 0x08001a00   Data           8  bsp_malloc.o(.constdata)
+    Region$$Table$$Base                      0x08001a44   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001a64   Number         0  anon$$obj.o(Region$$Table)
     MEM_SRAMCCM                              0x10000000   Data       61440  bsp_malloc.o(.ARM.__AT_0x10000000)
     MAP_SRAMCCM                              0x1000f000   Data        3840  bsp_malloc.o(.ARM.__AT_0x1000F000)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f4xx.o(.data)
@@ -1600,9 +1600,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001ac0, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001ac8, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00001a5c, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00001a64, Max: 0x00080000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1738,18 +1738,18 @@ Memory Map of the image
     0x080015ec   0x000000a4   Code   RO          569    i.bsp_tim_SoftConfig  bsp_timer.o
     0x08001690   0x00000028   Code   RO          570    i.bsp_tim_SoftDec   bsp_timer.o
     0x080016b8   0x00000018   Code   RO         1039    i.bsp_wlan_Config   bsp_wlan.o
-    0x080016d0   0x00000128   Code   RO         1040    i.bsp_wlan_GPIOConfig  bsp_wlan.o
-    0x080017f8   0x00000010   Code   RO         1041    i.bsp_wlan_NVICConfig  bsp_wlan.o
-    0x08001808   0x000001a0   Code   RO         1042    i.bsp_wlan_PowerCmd  bsp_wlan.o
-    0x080019a8   0x0000001c   Code   RO          693    i.fputc             bsp_uasrt.o
-    0x080019c4   0x00000018   Code   RO            3    i.main              main.o
-    0x080019dc   0x0000000a   Code   RO         2903    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x080019e6   0x00000002   PAD
-    0x080019e8   0x00000018   Data   RO          490    .constdata          bsp_malloc.o
-    0x08001a00   0x00000028   Data   RO         2663    .constdata          c_w.l(_printf_hex_int_ll_ptr.o)
-    0x08001a28   0x00000011   Data   RO         2683    .constdata          c_w.l(__printf_flags_ss_wp.o)
-    0x08001a39   0x00000003   PAD
-    0x08001a3c   0x00000020   Data   RO         2967    Region$$Table       anon$$obj.o
+    0x080016d0   0x00000134   Code   RO         1040    i.bsp_wlan_GPIOConfig  bsp_wlan.o
+    0x08001804   0x00000010   Code   RO         1041    i.bsp_wlan_NVICConfig  bsp_wlan.o
+    0x08001814   0x0000019c   Code   RO         1042    i.bsp_wlan_PowerCmd  bsp_wlan.o
+    0x080019b0   0x0000001c   Code   RO          693    i.fputc             bsp_uasrt.o
+    0x080019cc   0x00000018   Code   RO            3    i.main              main.o
+    0x080019e4   0x0000000a   Code   RO         2903    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x080019ee   0x00000002   PAD
+    0x080019f0   0x00000018   Data   RO          490    .constdata          bsp_malloc.o
+    0x08001a08   0x00000028   Data   RO         2663    .constdata          c_w.l(_printf_hex_int_ll_ptr.o)
+    0x08001a30   0x00000011   Data   RO         2683    .constdata          c_w.l(__printf_flags_ss_wp.o)
+    0x08001a41   0x00000003   PAD
+    0x08001a44   0x00000020   Data   RO         2967    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00012780, Max: 0x00020000, ABSOLUTE)
@@ -1806,7 +1806,7 @@ Image component sizes
        548         34          0         16          0      12049   bsp_sdcard.o
        382         42          0         12         80      32143   bsp_timer.o
        822         62          0          4       4176       8633   bsp_uasrt.o
-       856        188          0          0          0       3246   bsp_wlan.o
+       864        194          0          0          0       3250   bsp_wlan.o
         24          0          0          0          0     273140   main.o
        120         14          0          0          0       1044   misc.o
         64         26        392          0       1536        856   startup_stm32f40_41xxx.o
@@ -1817,7 +1817,7 @@ Image component sizes
        340         32          0         20          0       1845   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-      4890        538        448        100     140732     357782   Object Totals
+      4898        544        448        100     140732     357786   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          0          3         28          0   (incl. Padding)
 
@@ -1881,15 +1881,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      6240        588        508        100     140828     352942   Grand Totals
-      6240        588        508        100     140828     352942   ELF Image Totals
-      6240        588        508        100          0          0   ROM Totals
+      6248        594        508        100     140828     352946   Grand Totals
+      6248        594        508        100     140828     352946   ELF Image Totals
+      6248        594        508        100          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 6748 (   6.59kB)
+    Total RO  Size (Code + RO Data)                 6756 (   6.60kB)
     Total RW  Size (RW Data + ZI Data)            140928 ( 137.63kB)
-    Total ROM Size (Code + RO Data + RW Data)       6848 (   6.69kB)
+    Total ROM Size (Code + RO Data + RW Data)       6856 (   6.70kB)
 
 ==============================================================================
 

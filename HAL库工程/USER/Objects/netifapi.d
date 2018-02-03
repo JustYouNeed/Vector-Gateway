@@ -4,13 +4,13 @@
 .\objects\netifapi.o: ..\LWIP\include\lwip/debug.h
 .\objects\netifapi.o: ..\LWIP\include\lwip/arch.h
 .\objects\netifapi.o: ..\LWIP\arch/cc.h
-.\objects\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\netifapi.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\netifapi.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\netifapi.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\netifapi.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\netifapi.o: ..\USER\stm32f4xx.h
 .\objects\netifapi.o: ..\USER\stm32f407xx.h
 .\objects\netifapi.o: ..\CORE\core_cm4.h
-.\objects\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\netifapi.o: ..\CORE\core_cmInstr.h
 .\objects\netifapi.o: ..\CORE\cmsis_armcc.h
 .\objects\netifapi.o: ..\CORE\core_cmFunc.h
@@ -68,21 +68,11 @@
 .\objects\netifapi.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\netifapi.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\netifapi.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\netifapi.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\netifapi.o: ..\BSP\inc\bsp_key.h
 .\objects\netifapi.o: ..\BSP\inc\bsp.h
 .\objects\netifapi.o: ..\BSP\inc\bsp_led.h
 .\objects\netifapi.o: ..\BSP\inc\bsp_usart.h
 .\objects\netifapi.o: ..\BSP\inc\bsp_timer.h
 .\objects\netifapi.o: ..\BSP\inc\bsp_malloc.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\netifapi.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\netifapi.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\netifapi.o: ..\LWIP\include\lwip/opt.h

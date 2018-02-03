@@ -3,13 +3,13 @@
 ..\obj\diskio.o: ..\FATFS\src\integer.h
 ..\obj\diskio.o: ..\APPLICATION\inc\app_w25qxx.h
 ..\obj\diskio.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\diskio.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\diskio.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\diskio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\diskio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\diskio.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\diskio.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\diskio.o: ..\USER\stm32f4xx.h
 ..\obj\diskio.o: ..\CORE\core_cm4.h
-..\obj\diskio.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\diskio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\diskio.o: ..\CORE\core_cmInstr.h
 ..\obj\diskio.o: ..\CORE\core_cmFunc.h
 ..\obj\diskio.o: ..\CORE\core_cm4_simd.h

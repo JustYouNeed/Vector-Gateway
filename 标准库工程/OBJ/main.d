@@ -1,12 +1,12 @@
 ..\obj\main.o: main.c
 ..\obj\main.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\main.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\main.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\main.o: ..\USER\stm32f4xx.h
 ..\obj\main.o: ..\CORE\core_cm4.h
-..\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\main.o: ..\CORE\core_cmInstr.h
 ..\obj\main.o: ..\CORE\core_cmFunc.h
 ..\obj\main.o: ..\CORE\core_cm4_simd.h
@@ -58,10 +58,10 @@
 ..\obj\main.o: ..\LWIP\include\lwip/arch.h
 ..\obj\main.o: ..\LWIP\arch/cc.h
 ..\obj\main.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\main.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\main.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\main.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h

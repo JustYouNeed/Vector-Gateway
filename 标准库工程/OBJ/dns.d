@@ -4,13 +4,13 @@
 ..\obj\dns.o: ..\LWIP\include\lwip/debug.h
 ..\obj\dns.o: ..\LWIP\include\lwip/arch.h
 ..\obj\dns.o: ..\LWIP\arch/cc.h
-..\obj\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\dns.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\dns.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\dns.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\dns.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\dns.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\dns.o: ..\USER\stm32f4xx.h
 ..\obj\dns.o: ..\CORE\core_cm4.h
-..\obj\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\dns.o: ..\CORE\core_cmInstr.h
 ..\obj\dns.o: ..\CORE\core_cmFunc.h
 ..\obj\dns.o: ..\CORE\core_cm4_simd.h

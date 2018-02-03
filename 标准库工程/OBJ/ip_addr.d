@@ -4,13 +4,13 @@
 ..\obj\ip_addr.o: ..\LWIP\include\lwip/debug.h
 ..\obj\ip_addr.o: ..\LWIP\include\lwip/arch.h
 ..\obj\ip_addr.o: ..\LWIP\arch/cc.h
-..\obj\ip_addr.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\ip_addr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\ip_addr.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\ip_addr.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\ip_addr.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\ip_addr.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\ip_addr.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\ip_addr.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\ip_addr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ip_addr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\ip_addr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\ip_addr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\ip_addr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\ip_addr.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\ip_addr.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\ip_addr.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\ip_addr.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\ip_addr.o: ..\USER\stm32f4xx.h
 ..\obj\ip_addr.o: ..\CORE\core_cm4.h
-..\obj\ip_addr.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\ip_addr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\ip_addr.o: ..\CORE\core_cmInstr.h
 ..\obj\ip_addr.o: ..\CORE\core_cmFunc.h
 ..\obj\ip_addr.o: ..\CORE\core_cm4_simd.h

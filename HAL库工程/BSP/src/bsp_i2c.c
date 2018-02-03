@@ -48,15 +48,16 @@ void bsp_i2c_Start(I2C_Str i2c_structure)
 void bsp_i2c_Stop(I2C_Str i2c_structure)
 {
 	i2c_structure.set_sda_out();  /*  先设置SDA线为输出模式  */
-	i2c_structure.set_scl_high(); /*  SCL拉高,SDA拉低  */
+	i2c_structure.set_sda_low(); /*  SCL,SDA拉低  */
 	i2c_structure.set_sda_low();
 	
 	/*  SDA提供上升沿  */
 	bsp_tim_DelayUs(4);
 	i2c_structure.set_sda_high();
+	i2c_structure.set_scl_high();
 	bsp_tim_DelayUs(4);
 	
-	i2c_structure.set_scl_low(); /*  SCL回归空闲  */
+//	i2c_structure.set_scl_low(); /*  SCL回归空闲  */
 }
 
 /*

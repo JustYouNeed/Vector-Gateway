@@ -54,6 +54,7 @@ FTP应答码与响应码
 */
 
 
+
 enum FTP_CMD
 {
 	NONE = 0, /*  指令不存在  */
@@ -93,6 +94,7 @@ enum FTP_CMD
 	TYPE,			/*   数据类型,A:ASCII, E:EBCDIC, I:binary, TYPE<data type> */
 	USER,     /*  系统登录的用户名, USER<username>  */
 	UTIME, 		/*  站点提供的特殊参数,更新文件更改时间  */	
+	OPTS,    
 };
 
 struct ftp_session
@@ -157,6 +159,7 @@ uint8_t ftp_Handle_USER(struct ftp_session* session, char *para);
 uint8_t ftp_Handle_SIZE(struct ftp_session* session, char *para);
 uint8_t ftp_Handle_MDTM(struct ftp_session* session, char *para);
 uint8_t ftp_Handle_UTIME(struct ftp_session* session, char *para);
+uint8_t ftp_Handle_NONE(struct ftp_session* session, char *para);
 
 
 # endif

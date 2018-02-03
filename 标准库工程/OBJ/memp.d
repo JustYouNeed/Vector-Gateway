@@ -4,13 +4,13 @@
 ..\obj\memp.o: ..\LWIP\include\lwip/debug.h
 ..\obj\memp.o: ..\LWIP\include\lwip/arch.h
 ..\obj\memp.o: ..\LWIP\arch/cc.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\memp.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\memp.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\memp.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\memp.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\memp.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\memp.o: ..\USER\stm32f4xx.h
 ..\obj\memp.o: ..\CORE\core_cm4.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\memp.o: ..\CORE\core_cmInstr.h
 ..\obj\memp.o: ..\CORE\core_cmFunc.h
 ..\obj\memp.o: ..\CORE\core_cm4_simd.h
@@ -88,7 +88,7 @@
 ..\obj\memp.o: ..\LWIP\include\ipv4\lwip/icmp.h
 ..\obj\memp.o: ..\LWIP\include\ipv4\lwip/igmp.h
 ..\obj\memp.o: ..\LWIP\include\lwip/api.h
-..\obj\memp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\memp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\memp.o: ..\LWIP\include\lwip/netbuf.h
 ..\obj\memp.o: ..\LWIP\include\lwip/sys.h
 ..\obj\memp.o: ..\LWIP\arch/sys_arch.h

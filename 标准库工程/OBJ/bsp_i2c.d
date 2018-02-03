@@ -1,13 +1,13 @@
 ..\obj\bsp_i2c.o: ..\BSP_DRIVER\src\bsp_i2c.c
 ..\obj\bsp_i2c.o: ..\BSP_DRIVER\inc\bsp_i2c.h
 ..\obj\bsp_i2c.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\bsp_i2c.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\bsp_i2c.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\bsp_i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\bsp_i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\bsp_i2c.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\bsp_i2c.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\bsp_i2c.o: ..\USER\stm32f4xx.h
 ..\obj\bsp_i2c.o: ..\CORE\core_cm4.h
-..\obj\bsp_i2c.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\bsp_i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\bsp_i2c.o: ..\CORE\core_cmInstr.h
 ..\obj\bsp_i2c.o: ..\CORE\core_cmFunc.h
 ..\obj\bsp_i2c.o: ..\CORE\core_cm4_simd.h

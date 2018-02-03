@@ -4,13 +4,13 @@
 .\objects\sys.o: ..\LWIP\include\lwip/debug.h
 .\objects\sys.o: ..\LWIP\include\lwip/arch.h
 .\objects\sys.o: ..\LWIP\arch/cc.h
-.\objects\sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\sys.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\sys.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\sys.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\sys.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\sys.o: ..\USER\stm32f4xx.h
 .\objects\sys.o: ..\USER\stm32f407xx.h
 .\objects\sys.o: ..\CORE\core_cm4.h
-.\objects\sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\sys.o: ..\CORE\core_cmInstr.h
 .\objects\sys.o: ..\CORE\cmsis_armcc.h
 .\objects\sys.o: ..\CORE\core_cmFunc.h
@@ -68,23 +68,13 @@
 .\objects\sys.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\sys.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\sys.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\sys.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\sys.o: ..\BSP\inc\bsp_key.h
 .\objects\sys.o: ..\BSP\inc\bsp.h
 .\objects\sys.o: ..\BSP\inc\bsp_led.h
 .\objects\sys.o: ..\BSP\inc\bsp_usart.h
 .\objects\sys.o: ..\BSP\inc\bsp_timer.h
 .\objects\sys.o: ..\BSP\inc\bsp_malloc.h
-.\objects\sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\sys.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\sys.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\sys.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\sys.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\sys.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\sys.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\sys.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\sys.o: ..\LWIP\include\lwip/opt.h
 .\objects\sys.o: ..\LWIP\include\lwip/sys.h
 .\objects\sys.o: ..\LWIP\include\lwip/err.h

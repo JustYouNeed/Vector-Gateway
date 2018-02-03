@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu Cortex-M4.fp
 ".\objects\main.o"
 ".\objects\stm32f4xx_hal_msp.o"
 ".\objects\stm32f4xx_it.o"
@@ -22,15 +22,16 @@
 ".\objects\stm32f4xx_hal_i2s_ex.o"
 ".\objects\stm32f4xx_hal_rcc_ex.o"
 ".\objects\stm32f4xx_hal_uart.o"
+".\objects\bsp.o"
 ".\objects\bsp_led.o"
 ".\objects\bsp_key.o"
 ".\objects\bsp_timer.o"
 ".\objects\bsp_spi.o"
 ".\objects\bsp_malloc.o"
 ".\objects\bsp_audio.o"
+".\objects\bsp_uasrt.o"
 ".\objects\bsp_i2c.o"
 ".\objects\bsp_i2s.o"
-".\objects\bsp.o"
 ".\objects\bsp_esp.o"
 ".\objects\bsp_wlan.o"
 ".\objects\bsp_lan.o"

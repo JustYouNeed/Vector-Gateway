@@ -4,13 +4,13 @@
 ..\obj\sockets.o: ..\LWIP\include\lwip/debug.h
 ..\obj\sockets.o: ..\LWIP\include\lwip/arch.h
 ..\obj\sockets.o: ..\LWIP\arch/cc.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\sockets.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\sockets.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\sockets.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\sockets.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\sockets.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\sockets.o: ..\USER\stm32f4xx.h
 ..\obj\sockets.o: ..\CORE\core_cm4.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\sockets.o: ..\CORE\core_cmInstr.h
 ..\obj\sockets.o: ..\CORE\core_cmFunc.h
 ..\obj\sockets.o: ..\CORE\core_cm4_simd.h
@@ -73,7 +73,7 @@
 ..\obj\sockets.o: ..\BSP_DRIVER\inc\bsp_malloc.h
 ..\obj\sockets.o: ..\LWIP\include\lwip/opt.h
 ..\obj\sockets.o: ..\LWIP\include\lwip/sockets.h
-..\obj\sockets.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\sockets.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\sockets.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 ..\obj\sockets.o: ..\LWIP\include\lwip/def.h
 ..\obj\sockets.o: ..\LWIP\include\ipv4\lwip/inet.h

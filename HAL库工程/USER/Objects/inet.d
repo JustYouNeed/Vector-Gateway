@@ -4,13 +4,13 @@
 .\objects\inet.o: ..\LWIP\include\lwip/debug.h
 .\objects\inet.o: ..\LWIP\include\lwip/arch.h
 .\objects\inet.o: ..\LWIP\arch/cc.h
-.\objects\inet.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\inet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\inet.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\inet.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\inet.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\inet.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\inet.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\inet.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\inet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\inet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\inet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\inet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\inet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\inet.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\inet.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\inet.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\inet.o: ..\USER\stm32f4xx.h
 .\objects\inet.o: ..\USER\stm32f407xx.h
 .\objects\inet.o: ..\CORE\core_cm4.h
-.\objects\inet.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\inet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\inet.o: ..\CORE\core_cmInstr.h
 .\objects\inet.o: ..\CORE\cmsis_armcc.h
 .\objects\inet.o: ..\CORE\core_cmFunc.h
@@ -68,23 +68,13 @@
 .\objects\inet.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\inet.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\inet.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\inet.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\inet.o: ..\BSP\inc\bsp_key.h
 .\objects\inet.o: ..\BSP\inc\bsp.h
 .\objects\inet.o: ..\BSP\inc\bsp_led.h
 .\objects\inet.o: ..\BSP\inc\bsp_usart.h
 .\objects\inet.o: ..\BSP\inc\bsp_timer.h
 .\objects\inet.o: ..\BSP\inc\bsp_malloc.h
-.\objects\inet.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\inet.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\inet.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\inet.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\inet.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\inet.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\inet.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\inet.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\inet.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\inet.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\inet.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\inet.o: ..\LWIP\include\lwip/opt.h
 .\objects\inet.o: ..\LWIP\include\ipv4\lwip/inet.h
 .\objects\inet.o: ..\LWIP\include\lwip/def.h

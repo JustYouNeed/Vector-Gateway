@@ -1,13 +1,13 @@
 ..\obj\app_wdog.o: ..\APPLICATION\src\app_wdog.c
 ..\obj\app_wdog.o: ..\APPLICATION\inc\app_wdog.h
 ..\obj\app_wdog.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\app_wdog.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\app_wdog.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\app_wdog.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\app_wdog.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\app_wdog.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\app_wdog.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\app_wdog.o: ..\USER\stm32f4xx.h
 ..\obj\app_wdog.o: ..\CORE\core_cm4.h
-..\obj\app_wdog.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\app_wdog.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\app_wdog.o: ..\CORE\core_cmInstr.h
 ..\obj\app_wdog.o: ..\CORE\core_cmFunc.h
 ..\obj\app_wdog.o: ..\CORE\core_cm4_simd.h

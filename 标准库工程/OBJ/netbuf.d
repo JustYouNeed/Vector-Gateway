@@ -4,13 +4,13 @@
 ..\obj\netbuf.o: ..\LWIP\include\lwip/debug.h
 ..\obj\netbuf.o: ..\LWIP\include\lwip/arch.h
 ..\obj\netbuf.o: ..\LWIP\arch/cc.h
-..\obj\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\netbuf.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\netbuf.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\netbuf.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\netbuf.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\netbuf.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\netbuf.o: ..\USER\stm32f4xx.h
 ..\obj\netbuf.o: ..\CORE\core_cm4.h
-..\obj\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\netbuf.o: ..\CORE\core_cmInstr.h
 ..\obj\netbuf.o: ..\CORE\core_cmFunc.h
 ..\obj\netbuf.o: ..\CORE\core_cm4_simd.h

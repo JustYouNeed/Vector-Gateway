@@ -4,13 +4,13 @@
 .\objects\tcpip.o: ..\LWIP\include\lwip/debug.h
 .\objects\tcpip.o: ..\LWIP\include\lwip/arch.h
 .\objects\tcpip.o: ..\LWIP\arch/cc.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\tcpip.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\tcpip.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\tcpip.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\tcpip.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\tcpip.o: ..\USER\stm32f4xx.h
 .\objects\tcpip.o: ..\USER\stm32f407xx.h
 .\objects\tcpip.o: ..\CORE\core_cm4.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\tcpip.o: ..\CORE\core_cmInstr.h
 .\objects\tcpip.o: ..\CORE\cmsis_armcc.h
 .\objects\tcpip.o: ..\CORE\core_cmFunc.h
@@ -68,23 +68,13 @@
 .\objects\tcpip.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\tcpip.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\tcpip.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\tcpip.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\tcpip.o: ..\BSP\inc\bsp_key.h
 .\objects\tcpip.o: ..\BSP\inc\bsp.h
 .\objects\tcpip.o: ..\BSP\inc\bsp_led.h
 .\objects\tcpip.o: ..\BSP\inc\bsp_usart.h
 .\objects\tcpip.o: ..\BSP\inc\bsp_timer.h
 .\objects\tcpip.o: ..\BSP\inc\bsp_malloc.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\tcpip.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\tcpip.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\tcpip.o: ..\LWIP\include\lwip/opt.h
 .\objects\tcpip.o: ..\LWIP\include\lwip/sys.h
 .\objects\tcpip.o: ..\LWIP\include\lwip/err.h
@@ -95,7 +85,7 @@
 .\objects\tcpip.o: ..\LWIP\include\lwip/pbuf.h
 .\objects\tcpip.o: ..\LWIP\include\lwip/tcpip.h
 .\objects\tcpip.o: ..\LWIP\include\lwip/api_msg.h
-.\objects\tcpip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\tcpip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\tcpip.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 .\objects\tcpip.o: ..\LWIP\include\lwip/def.h
 .\objects\tcpip.o: ..\LWIP\include\ipv4\lwip/igmp.h

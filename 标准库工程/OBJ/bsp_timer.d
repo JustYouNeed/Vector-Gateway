@@ -1,13 +1,13 @@
 ..\obj\bsp_timer.o: ..\BSP_DRIVER\src\bsp_timer.c
 ..\obj\bsp_timer.o: ..\BSP_DRIVER\inc\bsp_timer.h
 ..\obj\bsp_timer.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\bsp_timer.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\bsp_timer.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\bsp_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\bsp_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\bsp_timer.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\bsp_timer.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\bsp_timer.o: ..\USER\stm32f4xx.h
 ..\obj\bsp_timer.o: ..\CORE\core_cm4.h
-..\obj\bsp_timer.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\bsp_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\bsp_timer.o: ..\CORE\core_cmInstr.h
 ..\obj\bsp_timer.o: ..\CORE\core_cmFunc.h
 ..\obj\bsp_timer.o: ..\CORE\core_cm4_simd.h
@@ -47,10 +47,10 @@
 ..\obj\bsp_timer.o: ..\BSP_DRIVER\inc\bsp_timer.h
 ..\obj\bsp_timer.o: ..\BSP_DRIVER\inc\bsp_malloc.h
 ..\obj\bsp_timer.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\bsp_timer.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\bsp_timer.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\bsp_timer.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\bsp_timer.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\bsp_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\bsp_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\bsp_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\bsp_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\bsp_timer.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\bsp_timer.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\bsp_timer.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h

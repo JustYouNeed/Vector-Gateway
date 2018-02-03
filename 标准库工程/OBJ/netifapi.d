@@ -4,13 +4,13 @@
 ..\obj\netifapi.o: ..\LWIP\include\lwip/debug.h
 ..\obj\netifapi.o: ..\LWIP\include\lwip/arch.h
 ..\obj\netifapi.o: ..\LWIP\arch/cc.h
-..\obj\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\netifapi.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\netifapi.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\netifapi.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\netifapi.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\netifapi.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\netifapi.o: ..\USER\stm32f4xx.h
 ..\obj\netifapi.o: ..\CORE\core_cm4.h
-..\obj\netifapi.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\netifapi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\netifapi.o: ..\CORE\core_cmInstr.h
 ..\obj\netifapi.o: ..\CORE\core_cmFunc.h
 ..\obj\netifapi.o: ..\CORE\core_cm4_simd.h

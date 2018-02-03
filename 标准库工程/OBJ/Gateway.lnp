@@ -15,6 +15,7 @@
 "..\obj\stm32f4xx_fsmc.o"
 "..\obj\stm32f4x7_eth.o"
 "..\obj\stm32f4xx_iwdg.o"
+"..\obj\stm32f4xx_adc.o"
 "..\obj\bsp.o"
 "..\obj\bsp_key.o"
 "..\obj\bsp_led.o"
@@ -96,6 +97,8 @@
 "..\obj\etharp.o"
 "..\obj\ethernetif.o"
 "..\obj\slipif.o"
+"..\obj\lan_eth.o"
+"..\obj\usart_eth.o"
 "..\obj\lwip_comm.o"
 "..\obj\sys_arch.o"
 "..\obj\autoip.o"
@@ -117,6 +120,6 @@
 "..\obj\lwip_app_ping.o"
 "..\obj\lwip_app_udp.o"
 --strict --scatter "..\OBJ\Gateway.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "..\OBJ\Gateway.map" -o ..\OBJ\Gateway.axf

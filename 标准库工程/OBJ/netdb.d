@@ -5,13 +5,13 @@
 ..\obj\netdb.o: ..\LWIP\include\lwip/debug.h
 ..\obj\netdb.o: ..\LWIP\include\lwip/arch.h
 ..\obj\netdb.o: ..\LWIP\arch/cc.h
-..\obj\netdb.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\netdb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\netdb.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\netdb.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\netdb.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\netdb.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\netdb.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\netdb.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\netdb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\netdb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\netdb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\netdb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\netdb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\netdb.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\netdb.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\netdb.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -33,7 +33,7 @@
 ..\obj\netdb.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\netdb.o: ..\USER\stm32f4xx.h
 ..\obj\netdb.o: ..\CORE\core_cm4.h
-..\obj\netdb.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\netdb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\netdb.o: ..\CORE\core_cmInstr.h
 ..\obj\netdb.o: ..\CORE\core_cmFunc.h
 ..\obj\netdb.o: ..\CORE\core_cm4_simd.h

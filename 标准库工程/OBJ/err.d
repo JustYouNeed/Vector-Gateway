@@ -5,13 +5,13 @@
 ..\obj\err.o: ..\LWIP\include\lwip/debug.h
 ..\obj\err.o: ..\LWIP\include\lwip/arch.h
 ..\obj\err.o: ..\LWIP\arch/cc.h
-..\obj\err.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\err.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\err.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\err.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\err.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\err.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\err.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\err.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\err.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\err.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\err.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\err.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\err.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\err.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\err.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\err.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -33,7 +33,7 @@
 ..\obj\err.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\err.o: ..\USER\stm32f4xx.h
 ..\obj\err.o: ..\CORE\core_cm4.h
-..\obj\err.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\err.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\err.o: ..\CORE\core_cmInstr.h
 ..\obj\err.o: ..\CORE\core_cmFunc.h
 ..\obj\err.o: ..\CORE\core_cm4_simd.h

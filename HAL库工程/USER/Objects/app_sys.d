@@ -1,12 +1,12 @@
 .\objects\app_sys.o: ..\APP\src\app_sys.c
 .\objects\app_sys.o: ..\APP\inc\app_sys.h
 .\objects\app_sys.o: ..\BSP\inc\bsp.h
-.\objects\app_sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\app_sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\app_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\app_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\app_sys.o: ..\USER\stm32f4xx.h
 .\objects\app_sys.o: ..\USER\stm32f407xx.h
 .\objects\app_sys.o: ..\CORE\core_cm4.h
-.\objects\app_sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\app_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\app_sys.o: ..\CORE\core_cmInstr.h
 .\objects\app_sys.o: ..\CORE\cmsis_armcc.h
 .\objects\app_sys.o: ..\CORE\core_cmFunc.h
@@ -43,21 +43,30 @@
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\app_sys.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
-.\objects\app_sys.o: ..\BSP\inc\bsp_key.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS_CONFIG\includes.h
+.\objects\app_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\app_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\app_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\app_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS-III\Source\os.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
+.\objects\app_sys.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+.\objects\app_sys.o: ..\UCOSIII\uC-CPU\cpu_def.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS_CONFIG\cpu_cfg.h
+.\objects\app_sys.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\app_sys.o: ..\UCOSIII\uC-LIB\lib_def.h
+.\objects\app_sys.o: ..\UCOSIII\uC-LIB\lib_mem.h
+.\objects\app_sys.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS_CONFIG\lib_cfg.h
+.\objects\app_sys.o: ..\UCOSIII\uC-LIB\lib_str.h
+.\objects\app_sys.o: ..\UCOSIII\uC-LIB\lib_ascii.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS-III\Source\os_type.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
+.\objects\app_sys.o: ..\UCOSIII\uC-LIB\lib_math.h
+.\objects\app_sys.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
 .\objects\app_sys.o: ..\BSP\inc\bsp.h
+.\objects\app_sys.o: ..\BSP\inc\bsp_key.h
 .\objects\app_sys.o: ..\BSP\inc\bsp_led.h
 .\objects\app_sys.o: ..\BSP\inc\bsp_usart.h
 .\objects\app_sys.o: ..\BSP\inc\bsp_timer.h
 .\objects\app_sys.o: ..\BSP\inc\bsp_malloc.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\app_sys.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\app_sys.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\app_sys.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h

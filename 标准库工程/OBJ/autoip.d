@@ -4,13 +4,13 @@
 ..\obj\autoip.o: ..\LWIP\include\lwip/debug.h
 ..\obj\autoip.o: ..\LWIP\include\lwip/arch.h
 ..\obj\autoip.o: ..\LWIP\arch/cc.h
-..\obj\autoip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\autoip.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\autoip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\autoip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\autoip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\autoip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\autoip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\autoip.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\autoip.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\autoip.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\autoip.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\autoip.o: ..\USER\stm32f4xx.h
 ..\obj\autoip.o: ..\CORE\core_cm4.h
-..\obj\autoip.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\autoip.o: ..\CORE\core_cmInstr.h
 ..\obj\autoip.o: ..\CORE\core_cmFunc.h
 ..\obj\autoip.o: ..\CORE\core_cm4_simd.h

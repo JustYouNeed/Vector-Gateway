@@ -2,13 +2,13 @@
 .\objects\usbd_ctlreq.o: ..\USB\USB_DEVICE\CORE\inc\usbd_ctlreq.h
 .\objects\usbd_ctlreq.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
 .\objects\usbd_ctlreq.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\usbd_ctlreq.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\usbd_ctlreq.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\usbd_ctlreq.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\usbd_ctlreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usbd_ctlreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\usbd_ctlreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\usbd_ctlreq.o: ..\USER\stm32f4xx.h
 .\objects\usbd_ctlreq.o: ..\USER\stm32f407xx.h
 .\objects\usbd_ctlreq.o: ..\CORE\core_cm4.h
-.\objects\usbd_ctlreq.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usbd_ctlreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usbd_ctlreq.o: ..\CORE\core_cmInstr.h
 .\objects\usbd_ctlreq.o: ..\CORE\cmsis_armcc.h
 .\objects\usbd_ctlreq.o: ..\CORE\core_cmFunc.h

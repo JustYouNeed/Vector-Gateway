@@ -4,13 +4,13 @@
 .\objects\inet_chksum.o: ..\LWIP\include\lwip/debug.h
 .\objects\inet_chksum.o: ..\LWIP\include\lwip/arch.h
 .\objects\inet_chksum.o: ..\LWIP\arch/cc.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\inet_chksum.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\inet_chksum.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\inet_chksum.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\inet_chksum.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\inet_chksum.o: ..\USER\stm32f4xx.h
 .\objects\inet_chksum.o: ..\USER\stm32f407xx.h
 .\objects\inet_chksum.o: ..\CORE\core_cm4.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\inet_chksum.o: ..\CORE\core_cmInstr.h
 .\objects\inet_chksum.o: ..\CORE\cmsis_armcc.h
 .\objects\inet_chksum.o: ..\CORE\core_cmFunc.h
@@ -68,27 +68,17 @@
 .\objects\inet_chksum.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\inet_chksum.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\inet_chksum.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\inet_chksum.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\inet_chksum.o: ..\BSP\inc\bsp_key.h
 .\objects\inet_chksum.o: ..\BSP\inc\bsp.h
 .\objects\inet_chksum.o: ..\BSP\inc\bsp_led.h
 .\objects\inet_chksum.o: ..\BSP\inc\bsp_usart.h
 .\objects\inet_chksum.o: ..\BSP\inc\bsp_timer.h
 .\objects\inet_chksum.o: ..\BSP\inc\bsp_malloc.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\inet_chksum.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\inet_chksum.o: ..\LWIP\include\lwip/opt.h
 .\objects\inet_chksum.o: ..\LWIP\include\ipv4\lwip/inet_chksum.h
 .\objects\inet_chksum.o: ..\LWIP\include\lwip/pbuf.h
 .\objects\inet_chksum.o: ..\LWIP\include\lwip/err.h
 .\objects\inet_chksum.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 .\objects\inet_chksum.o: ..\LWIP\include\lwip/def.h
-.\objects\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

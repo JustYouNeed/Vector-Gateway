@@ -4,13 +4,13 @@
 ..\obj\inet_chksum.o: ..\LWIP\include\lwip/debug.h
 ..\obj\inet_chksum.o: ..\LWIP\include\lwip/arch.h
 ..\obj\inet_chksum.o: ..\LWIP\arch/cc.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\inet_chksum.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\inet_chksum.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\inet_chksum.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\inet_chksum.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\inet_chksum.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\inet_chksum.o: ..\USER\stm32f4xx.h
 ..\obj\inet_chksum.o: ..\CORE\core_cm4.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\inet_chksum.o: ..\CORE\core_cmInstr.h
 ..\obj\inet_chksum.o: ..\CORE\core_cmFunc.h
 ..\obj\inet_chksum.o: ..\CORE\core_cm4_simd.h
@@ -77,4 +77,4 @@
 ..\obj\inet_chksum.o: ..\LWIP\include\lwip/err.h
 ..\obj\inet_chksum.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 ..\obj\inet_chksum.o: ..\LWIP\include\lwip/def.h
-..\obj\inet_chksum.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

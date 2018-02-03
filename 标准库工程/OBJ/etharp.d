@@ -4,13 +4,13 @@
 ..\obj\etharp.o: ..\LWIP\include\lwip/debug.h
 ..\obj\etharp.o: ..\LWIP\include\lwip/arch.h
 ..\obj\etharp.o: ..\LWIP\arch/cc.h
-..\obj\etharp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\etharp.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\etharp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\etharp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\etharp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\etharp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\etharp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\etharp.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\etharp.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\etharp.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -32,7 +32,7 @@
 ..\obj\etharp.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\etharp.o: ..\USER\stm32f4xx.h
 ..\obj\etharp.o: ..\CORE\core_cm4.h
-..\obj\etharp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\etharp.o: ..\CORE\core_cmInstr.h
 ..\obj\etharp.o: ..\CORE\core_cmFunc.h
 ..\obj\etharp.o: ..\CORE\core_cm4_simd.h

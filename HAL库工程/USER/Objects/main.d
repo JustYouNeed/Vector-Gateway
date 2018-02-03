@@ -3,7 +3,7 @@
 .\objects\main.o: ..\USER\stm32f4xx.h
 .\objects\main.o: ..\USER\stm32f407xx.h
 .\objects\main.o: ..\CORE\core_cm4.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: ..\CORE\core_cmInstr.h
 .\objects\main.o: ..\CORE\cmsis_armcc.h
 .\objects\main.o: ..\CORE\core_cmFunc.h
@@ -15,7 +15,7 @@
 .\objects\main.o: ..\HALLIB\inc\stm32f4xx_hal_def.h
 .\objects\main.o: ..\USER\stm32f4xx.h
 .\objects\main.o: ..\HALLIB\inc\Legacy/stm32_hal_legacy.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: ..\HALLIB\inc\stm32f4xx_hal_rcc_ex.h
 .\objects\main.o: ..\HALLIB\inc\stm32f4xx_hal_gpio.h
 .\objects\main.o: ..\HALLIB\inc\stm32f4xx_hal_gpio_ex.h
@@ -42,39 +42,12 @@
 .\objects\main.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\main.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
 .\objects\main.o: ..\BSP\inc\bsp.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\main.o: ..\BSP\inc\bsp_key.h
-.\objects\main.o: ..\BSP\inc\bsp.h
-.\objects\main.o: ..\BSP\inc\bsp_led.h
-.\objects\main.o: ..\BSP\inc\bsp_usart.h
-.\objects\main.o: ..\BSP\inc\bsp_timer.h
-.\objects\main.o: ..\BSP\inc\bsp_malloc.h
-.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\main.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
-.\objects\main.o: ..\BSP\inc\bsp_esp.h
-.\objects\main.o: ..\BSP\inc\bsp_wlan.h
-.\objects\main.o: ..\BSP\inc\bsp_lan.h
-.\objects\main.o: ..\BSP\inc\bsp_sdcard.h
-.\objects\main.o: ..\APP\inc\app_w25qxx.h
-.\objects\main.o: ..\FATFS\src\integer.h
-.\objects\main.o: ..\FATFS\src\diskio.h
-.\objects\main.o: ..\FATFS\src\ffconf.h
-.\objects\main.o: ..\APP\inc\app_wdog.h
-.\objects\main.o: ..\APP\inc\app_sys.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\main.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\main.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\main.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\main.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -91,12 +64,44 @@
 .\objects\main.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 .\objects\main.o: ..\UCOSIII\uC-LIB\lib_math.h
 .\objects\main.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
-.\objects\main.o: ..\UCOSIII\uCOS_CONFIG\os_app_hooks.h
+.\objects\main.o: ..\BSP\inc\bsp.h
+.\objects\main.o: ..\BSP\inc\bsp_key.h
+.\objects\main.o: ..\BSP\inc\bsp_led.h
+.\objects\main.o: ..\BSP\inc\bsp_usart.h
+.\objects\main.o: ..\BSP\inc\bsp_timer.h
+.\objects\main.o: ..\BSP\inc\bsp_malloc.h
+.\objects\main.o: ..\BSP\inc\bsp_esp.h
+.\objects\main.o: ..\BSP\inc\bsp_wlan.h
+.\objects\main.o: ..\BSP\inc\bsp_lan.h
+.\objects\main.o: ..\BSP\inc\bsp_sdcard.h
+.\objects\main.o: ..\APP\inc\app_w25qxx.h
+.\objects\main.o: ..\FATFS\src\integer.h
+.\objects\main.o: ..\FATFS\src\diskio.h
+.\objects\main.o: ..\FATFS\src\ffconf.h
+.\objects\main.o: ..\APP\inc\app_wdog.h
+.\objects\main.o: ..\APP\inc\app_sys.h
+.\objects\main.o: ..\APP\inc\app_audio.h
 .\objects\main.o: ..\FATFS\src\ff.h
+.\objects\main.o: ..\AUDIOCODE\wav\wavplay.h
+.\objects\main.o: ..\BSP\inc\bsp_audio.h
+.\objects\main.o: ..\BSP\inc\bsp_i2c.h
+.\objects\main.o: ..\BSP\inc\bsp_i2s.h
+.\objects\main.o: ..\UCOSIII\uCOS_CONFIG\os_app_hooks.h
 .\objects\main.o: ..\USB\USB_DEVICE\USER\inc\usb_device.h
 .\objects\main.o: ..\USB\USB_DEVICE\CORE\inc\usbd_def.h
 .\objects\main.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
 .\objects\main.o: ..\USB\USB_HOST\USER\inc\usb_host.h
+.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\main.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
+.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
+.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
+.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
+.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
+.\objects\main.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
+.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
+.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
+.\objects\main.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\main.o: ..\LWIP\include\lwip/netif.h
 .\objects\main.o: ..\LWIP\include\lwip/opt.h
 .\objects\main.o: ..\LWIP\arch\lwipopts.h
@@ -120,7 +125,7 @@
 .\objects\main.o: ..\LWIP\app\inc\lwip_app_udp.h
 .\objects\main.o: ..\LWIP\include\lwip/udp.h
 .\objects\main.o: ..\LWIP\include\lwip/api.h
-.\objects\main.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\main.o: ..\LWIP\include\lwip/netbuf.h
 .\objects\main.o: ..\LWIP\include\lwip/sys.h
 .\objects\main.o: ..\LWIP\arch/sys_arch.h

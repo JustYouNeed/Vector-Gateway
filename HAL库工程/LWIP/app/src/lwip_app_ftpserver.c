@@ -7,11 +7,12 @@
 #define FTP_MAX_CONNECTION	2
 #define FTP_USER				"Vector"
 #define FTP_PASSWORD		"19960114"
-#define FTP_WELCOME_MSG		"220-= welcome on Vector Smart Gateway FTP server =-\r\n"
+#define FTP_WELCOME_MSG		"220-= welcome on Vector Smart Gateway FTP server =-\r\n220 \r\n"
 #define FTP_BUFFER_SIZE		1024
 __align(4) char REPLY_BUFF[FTP_BUFFER_SIZE];
 
 static struct ftp_session* session_list = NULL;
+static char old_path[256];
 
 # define FTP_TASK_PRIO		7
 # define FTP_TASK_STK_SIZE	1024
@@ -92,7 +93,6 @@ int do_list(char* directory, int sockfd)
 	DIR dir;
 	FILINFO finfo;
 	
-//	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*512);
 	char *direc = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
 	char bufflen;
 	
@@ -123,7 +123,6 @@ int do_list(char* directory, int sockfd)
 			send(sockfd, REPLY_BUFF, bufflen, 0);
 		}
 	}
-//	bsp_mem_Free(SRAMIN, buff);
 	bsp_mem_Free(SRAMIN, direc);
 	f_closedir(&dir);
 	return 0;
@@ -287,6 +286,7 @@ uint8_t ftp_GetCmd(char *buff)
 	else if(ftp_CmdCompare(buff, "SITE") == 0) return SITE;
 	else if(ftp_CmdCompare(buff, "UTIME") == 0) return UTIME;
 	else if(ftp_CmdCompare(buff, "RNFR") == 0) return RNFR;
+	else if(ftp_CmdCompare(buff, "RNTO") == 0) return RNTO;
 	else return NONE;
 }
 
@@ -381,6 +381,14 @@ uint8_t ftp_Handle_APPE(struct ftp_session* session, char *para)
 */
 uint8_t ftp_Handle_CDUP(struct ftp_session* session, char *para)
 {
+	char *path = (char *)bsp_mem_Malloc(SRAMIN, sizeof(char) * 256);
+	char bufflen;
+	sprintf(path, "%s/%s", session->currentdir, "..");
+	
+	sprintf(REPLY_BUFF, "250 Changed to directory \"%s\"\r\n", path);
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	strcpy(session->currentdir, path);
+	bsp_mem_Free(SRAMIN, path);
 	return 0;
 }
 
@@ -400,16 +408,17 @@ uint8_t ftp_Handle_CDUP(struct ftp_session* session, char *para)
 */
 uint8_t ftp_Handle_CWD(struct ftp_session* session, char *para)
 {
-	printf("Change Work dir,%s\r\n",para);
+//	printf("Change Work dir,%s\r\n",para);
 	char *filename = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+//	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
 	char bufflen;
 	build_full_path(session, para, filename, 256);
 
-	bufflen = sprintf(buff, "250 Changed to directory \"%s\"\r\n", buff);
-	send(session->sockfd, buff, bufflen, 0);
+	bufflen = sprintf(REPLY_BUFF, "250 Changed to directory \"%s\"\r\n", filename);
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
 	strcpy(session->currentdir, filename);
 	
+	bsp_mem_Free(SRAMIN, filename);
 	return 0;
 }
 
@@ -489,22 +498,18 @@ uint8_t ftp_Handle_HELP(struct ftp_session* session, char *para)
 */
 uint8_t ftp_Handle_LIST(struct ftp_session* session, char *para)
 {
-//	memset(REPLY_BUFF,0,FTP_BUFFER_SIZE);
-	char *buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*512);
 	char bufflen = 0;
 	uint8_t res = 0;
 	
-	bufflen = sprintf(buff, "150 Opening Binary mode connection for file list.\r\n");
-	send(session->sockfd, buff, bufflen, 0);
+	bufflen = sprintf(REPLY_BUFF, "150 Opening Binary mode connection for file list.\r\n");
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
 	
 	res = do_list(session->currentdir, session->pasv_sockfd);
 	
 	closesocket(session->pasv_sockfd);
 	session->pasv_active = 0;
-	bufflen = sprintf(buff, "226 Transfert Complete.\r\n");
-	send(session->sockfd, buff, bufflen, 0);
-	bsp_mem_Free(SRAMIN, buff);
-	
+	bufflen = sprintf(REPLY_BUFF, "226 Transfert Complete.\r\n");
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);	
 	return res;
 }
 
@@ -545,10 +550,11 @@ uint8_t ftp_Handle_MKD(struct ftp_session* session, char *para)
 {
 	char bufflen;
 	char *path = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	uint8_t result;
 	
 	sprintf(path, "1:%s%s",session->currentdir, para);
 	
-	uint8_t result = f_mkdir(path);
+	result = f_mkdir(path);
 	
 	if(result == FR_EXIST)
 	{
@@ -723,15 +729,17 @@ uint8_t ftp_Handle_PASV(struct ftp_session* session)
 	int sockfd;
 	int optval = 1;
 	fd_set readfds;
+	int res;
 	struct sockaddr_in local, pasvremote;
 	struct timeval tv;
 	socklen_t addr_len = sizeof(struct sockaddr_in);
 
 	tv.tv_sec=3, tv.tv_usec=0;
-	session->pasv_port = 2000;
+	
+	session->pasv_port = 1024;
 	session->pasv_active = 1;
 
-	local.sin_family=AF_INET;
+	local.sin_family=PF_INET;
 	local.sin_port=htons(session->pasv_port);
 	local.sin_addr.s_addr=INADDR_ANY;
 
@@ -740,7 +748,7 @@ uint8_t ftp_Handle_PASV(struct ftp_session* session)
 
 	FD_ZERO(&readfds);
 	printf("build socket...\r\n");
-	sockfd=socket(AF_INET, SOCK_STREAM, 0);
+	sockfd = socket(PF_INET, SOCK_STREAM, 0);
 	printf("sockfd:%d\r\n", sockfd);
 	if(sockfd == -1)
 	{
@@ -751,7 +759,7 @@ uint8_t ftp_Handle_PASV(struct ftp_session* session)
 		goto err1;
 	}
 	printf("set socket...\r\n");
-	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval))==-1)
+	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) == -1)
 	{
 		memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
 		printf("set socket failed\r\n");
@@ -768,8 +776,9 @@ uint8_t ftp_Handle_PASV(struct ftp_session* session)
 		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
 		goto err1;
 	}
-	
-	if(listen(sockfd, 1)==-1)
+	res = listen(sockfd, 1);
+	printf("listen result:%d\r\n", res);
+	if(res == -1)
 	{
 		memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
 		printf("listen socket failed\r\n");
@@ -777,14 +786,15 @@ uint8_t ftp_Handle_PASV(struct ftp_session* session)
 		send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
 		goto err1;
 	}
-//		printf("Listening %d seconds @ port %d\n", tv.tv_sec, session->pasv_port);
-	memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
-	sprintf(REPLY_BUFF, "227 Entering passive mode (%d,%d,%d,%d,%d,%d)\r\n", 127, 0, 0, 1, dig1, dig2);
+	printf("Listening %d seconds @ port %d\n", tv.tv_sec, session->pasv_port);
+	sprintf(REPLY_BUFF, "227 Entering passive mode (%d,%d,%d,%d,%d,%d)\r\n", 192, 168, 137, 20, dig1, dig2);
 	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
 	FD_SET(sockfd, &readfds);
-	select(0, &readfds, 0, 0, &tv);
+	res = select(sockfd+1, &readfds, 0, 0, &tv);
+	os_printf("select result:%d\r\n", res);
 	if(FD_ISSET(sockfd, &readfds))
 	{
+		os_printf("is setted\r\n");
 		if((session->pasv_sockfd = accept(sockfd, (struct sockaddr*)&pasvremote, &addr_len))==-1)
 		{
 			memset(REPLY_BUFF, 0, FTP_BUFFER_SIZE);
@@ -794,7 +804,7 @@ uint8_t ftp_Handle_PASV(struct ftp_session* session)
 		}
 		else
 		{
-//			printf("Got Data(PASV) connection from %s\n", inet_ntoa(pasvremote.sin_addr));
+			os_printf("Got Data(PASV) connection from %s\n", inet_ntoa(pasvremote.sin_addr));
 			session->pasv_active = 1;
 			closesocket(sockfd);
 		}
@@ -1017,6 +1027,23 @@ uint8_t ftp_Handle_RMD(struct ftp_session* session, char *para)
 */
 uint8_t ftp_Handle_RNTO(struct ftp_session* session, char *para)
 {
+	char bufflen = 0;
+	uint8_t res = FR_OK;
+	char *path = (char *)bsp_mem_Malloc(SRAMIN, sizeof(char)*256); 
+	sprintf(path, "1:%s%s", session->currentdir, para);
+	
+	res = f_rename(old_path, path);
+	if(res != FR_OK)
+	{
+		bufflen = sprintf(REPLY_BUFF, "202 rename file \"%s\" failed\r\n", old_path);
+	}
+	else
+	{
+		bufflen = sprintf(REPLY_BUFF, "200 rename file \"%s\" success\r\n", old_path);
+	}
+	
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
+	bsp_mem_Free(SRAMIN, path);
 	return 0;
 }
 
@@ -1037,6 +1064,20 @@ uint8_t ftp_Handle_RNTO(struct ftp_session* session, char *para)
 */
 uint8_t ftp_Handle_RNFR(struct ftp_session* session, char *para)
 {
+//	char *path = (char *)bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	char bufflen = 0;
+	
+	if (session->is_anonymous == TRUE)
+	{
+		bufflen = sprintf(REPLY_BUFF, "550 Permission denied.\r\n");
+		send(session->sockfd, REPLY_BUFF, bufflen, 0);			
+		return 0;
+	}
+	
+	sprintf(old_path, "1:%s%s", session->currentdir, para);
+	
+	bufflen = sprintf(REPLY_BUFF, "250 successfully\r\n");
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
 	return 0;
 }
 
@@ -1056,6 +1097,9 @@ uint8_t ftp_Handle_RNFR(struct ftp_session* session, char *para)
 */
 uint8_t ftp_Handle_SITE(struct ftp_session* session, char *para)
 {
+	char bufflen = 0;
+	bufflen = sprintf(REPLY_BUFF, "250 finish\r\n");
+	send(session->sockfd, REPLY_BUFF, bufflen, 0);
 	return 0;
 }
 
@@ -1117,14 +1161,18 @@ uint8_t ftp_Handle_STOR(struct ftp_session* session, char *para)
 	fd_set readfds;
 	UINT bw;
 	int32_t bytes;
-		
+	FIL file;
+	char *path;
+	char *buff;
+	int res = FR_OK;
 	tv.tv_sec=3, tv.tv_usec=0;
 	
-	char *path = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	sprintf(path, "%s%s", session->currentdir, para);
+	path = bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
+	buff = bsp_mem_Malloc(SRAMIN, sizeof(char)*2048);
+	sprintf(path, "1:/%s%s", session->currentdir, para);
 	
-	int res = FR_OK;
-	FIL file;
+	
+	
 	if(session->is_anonymous == TRUE)
 	{
 		sprintf(REPLY_BUFF, "550 Permission denied.\r\n");
@@ -1132,7 +1180,7 @@ uint8_t ftp_Handle_STOR(struct ftp_session* session, char *para)
 		return 1;
 	}
 	
-	res = f_open(&file, path, FA_CREATE_NEW);
+	res = f_open(&file, path, FA_OPEN_ALWAYS | FA_WRITE);
 	if(res != FR_OK)
 	{
 		sprintf(REPLY_BUFF, "550 Cannot open \"%s\" for writing.\r\n", para);
@@ -1147,12 +1195,15 @@ uint8_t ftp_Handle_STOR(struct ftp_session* session, char *para)
 	
 	while(select(session->pasv_sockfd+1, &readfds, 0, 0, &tv)>0 )
 	{
-		if((bytes = recv(session->pasv_sockfd, REPLY_BUFF, FTP_BUFFER_SIZE, 0))>0)
+		if((bytes = recv(session->pasv_sockfd, buff, FTP_BUFFER_SIZE*2, 0))>0)
 		{
-			f_write(&file, REPLY_BUFF, bytes, &bw);
+			printf("recv data form cilent, length:%d\r\n", bytes);
+			res = f_write(&file, buff, bytes, &bw);
+			printf("write into file:%d\r\n", res);
 		}
 		else if(bytes==0)
 		{
+			printf("recv finished\r\n");
 			f_close(&file);
 			closesocket(session->pasv_sockfd);
 		  sprintf(REPLY_BUFF, "226 Finished.\r\n");
@@ -1161,13 +1212,17 @@ uint8_t ftp_Handle_STOR(struct ftp_session* session, char *para)
 		}
 		else if(bytes==-1)
 		{
+			printf("error quiting\r\n");
 			f_close(&file);
 			closesocket(session->pasv_sockfd);
+			bsp_mem_Free(SRAMIN, path);
+			bsp_mem_Free(SRAMIN, buff);
 			return 1;
 		}
 	}
 	closesocket(session->pasv_sockfd);
 	bsp_mem_Free(SRAMIN, path);
+	bsp_mem_Free(SRAMIN, buff);
 	return 0;
 }
 
@@ -1320,9 +1375,14 @@ uint8_t ftp_Handle_SIZE(struct ftp_session* session, char *para)
 	FIL file;
 	uint8_t res = FR_OK;
 	char *path = (char *)bsp_mem_Malloc(SRAMIN, sizeof(char)*256);
-	sprintf(path, "1:%s/%s", session->currentdir, para);
+	if(strcmp(para, "/") == 0)
+	{
+		sprintf(path, "1:%s", session->currentdir);
+	}
+	else
+		sprintf(path, "1:%s/%s", session->currentdir, para);
 	printf("file path is :%s\r\n", path);
-	res = f_open(&file, path, FA_OPEN_EXISTING);
+	res = f_open(&file, path, FA_OPEN_ALWAYS);
 	if(res != FR_OK)
 	{
 		sprintf(REPLY_BUFF, "550 \"%s\" : not a regular file\r\n", para);
@@ -1354,7 +1414,7 @@ uint8_t ftp_Handle_SIZE(struct ftp_session* session, char *para)
 */
 uint8_t ftp_Handle_MDTM(struct ftp_session* session, char *para)
 {
-	sprintf(REPLY_BUFF, "550 \"/\" : not a regular file\r\n");
+	sprintf(REPLY_BUFF, "502 command not support\r\n");
 	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
 	return 0;
 }
@@ -1381,6 +1441,25 @@ uint8_t ftp_Handle_UTIME(struct ftp_session* session, char *para)
 }
 
 
+/*
+*********************************************************************************************************
+*                                          
+*
+* Description:
+*             
+* Arguments  :
+*
+* Reutrn     :
+*
+* Note(s)    : 
+*********************************************************************************************************
+*/
+uint8_t ftp_Handle_NONE(struct ftp_session* session, char *para)
+{
+	sprintf(REPLY_BUFF, "504 unknow command.\r\n");
+	send(session->sockfd, REPLY_BUFF, strlen(REPLY_BUFF), 0);
+	return 0;
+}
 
 
 /*
@@ -1447,7 +1526,7 @@ int ftp_process_request(struct ftp_session *session, char *buff)
 		case TYPE: res = ftp_Handle_TYPE(session, parameter_ptr); break;
 		case USER: res = ftp_Handle_USER(session, parameter_ptr); break;
 		case UTIME: res = ftp_Handle_UTIME(session, parameter_ptr); break;
-		default:break;
+		default: res = ftp_Handle_NONE(session, parameter_ptr);break;
 	}
 	return res;
 }
@@ -1474,6 +1553,7 @@ void lwip_app_ftp_Thread(void *p_arg)
 	struct sockaddr_in local;	
 	fd_set readfds, tmpfds;
 	struct ftp_session* session;
+	struct ftp_session* next;
 	socklen_t addr_len = sizeof(struct sockaddr);
 	char * buffer = (char *) bsp_mem_Malloc(SRAMIN, FTP_BUFFER_SIZE);
 	
@@ -1547,11 +1627,11 @@ void lwip_app_ftp_Thread(void *p_arg)
 		}  /*  end if(FD_ISSET(sockfd, &tmpfds))  */
 
 		
-		struct ftp_session* next;
+		
 		session = session_list;
 		while (session != NULL) /*  处理每一个控制块的消息  */
 		{
-			printf("session->socket:%d\r\n", session->sockfd);
+//			printf("session->socket:%d\r\n", session->sockfd);
 			next = session->next;
 			if (FD_ISSET(session->sockfd, &tmpfds))	/*  如果要处理的套接字在感兴趣的列表里面  */
 			{

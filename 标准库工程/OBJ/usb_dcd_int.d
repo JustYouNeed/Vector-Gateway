@@ -5,7 +5,7 @@
 ..\obj\usb_dcd_int.o: ..\USB\USB_DEVICE\USER\inc\usb_conf.h
 ..\obj\usb_dcd_int.o: ..\USER\stm32f4xx.h
 ..\obj\usb_dcd_int.o: ..\CORE\core_cm4.h
-..\obj\usb_dcd_int.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\usb_dcd_int.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\usb_dcd_int.o: ..\CORE\core_cmInstr.h
 ..\obj\usb_dcd_int.o: ..\CORE\core_cmFunc.h
 ..\obj\usb_dcd_int.o: ..\CORE\core_cm4_simd.h
@@ -41,8 +41,8 @@
 ..\obj\usb_dcd_int.o: ..\USB\USB_DRIVER\inc\usb_regs.h
 ..\obj\usb_dcd_int.o: ..\USB\USB_DRIVER\inc\usb_defines.h
 ..\obj\usb_dcd_int.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\usb_dcd_int.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\usb_dcd_int.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\usb_dcd_int.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\usb_dcd_int.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\usb_dcd_int.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\usb_dcd_int.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\usb_dcd_int.o: ..\BSP_DRIVER\inc\bsp_key.h

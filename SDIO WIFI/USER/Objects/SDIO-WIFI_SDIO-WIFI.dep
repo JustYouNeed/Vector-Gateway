@@ -1,5 +1,5 @@
 Dependencies for Project 'SDIO-WIFI', Target 'SDIO-WIFI': (DO NOT MODIFY !)
-F (.\main.c)(0x5A66EC41)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\BSP\inc -I ..\CORE -I ..\FWLIB\inc -I ..\USER-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\SDIO WIFI\USER\RTE\_SDIO-WIFI"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x5A6C3227)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\BSP\inc -I ..\CORE -I ..\FWLIB\inc -I ..\USER-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\SDIO WIFI\USER\RTE\_SDIO-WIFI"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\BSP\inc\bsp.h)(0x5A65ECB9)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
@@ -393,7 +393,7 @@ I (..\BSP\inc\bsp_led.h)(0x5A4CDD33)
 I (..\BSP\inc\bsp_usart.h)(0x5A4B8A05)
 I (..\BSP\inc\bsp_timer.h)(0x5A4CE44D)
 I (..\BSP\inc\bsp_malloc.h)(0x5A4CDB6D)
-F (..\BSP\src\bsp_wlan.c)(0x5A6715DC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\BSP\inc -I ..\CORE -I ..\FWLIB\inc -I ..\USER-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\SDIO WIFI\USER\RTE\_SDIO-WIFI"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o .\objects\bsp_wlan.o --omf_browse .\objects\bsp_wlan.crf --depend .\objects\bsp_wlan.d)
+F (..\BSP\src\bsp_wlan.c)(0x5A6C385C)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\BSP\inc -I ..\CORE -I ..\FWLIB\inc -I ..\USER-I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\SDIO WIFI\USER\RTE\_SDIO-WIFI"-I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-I"D:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER --C99-o .\objects\bsp_wlan.o --omf_browse .\objects\bsp_wlan.crf --depend .\objects\bsp_wlan.d)
 I (..\BSP\inc\bsp_wlan.h)(0x5A65EDED)
 I (..\BSP\inc\bsp.h)(0x5A65ECB9)
 I (D:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)

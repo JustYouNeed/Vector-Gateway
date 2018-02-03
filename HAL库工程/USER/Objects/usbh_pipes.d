@@ -2,13 +2,13 @@
 .\objects\usbh_pipes.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
 .\objects\usbh_pipes.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
 .\objects\usbh_pipes.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\usbh_pipes.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\usbh_pipes.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\usbh_pipes.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\usbh_pipes.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usbh_pipes.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\usbh_pipes.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\usbh_pipes.o: ..\USER\stm32f4xx.h
 .\objects\usbh_pipes.o: ..\USER\stm32f407xx.h
 .\objects\usbh_pipes.o: ..\CORE\core_cm4.h
-.\objects\usbh_pipes.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usbh_pipes.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usbh_pipes.o: ..\CORE\core_cmInstr.h
 .\objects\usbh_pipes.o: ..\CORE\cmsis_armcc.h
 .\objects\usbh_pipes.o: ..\CORE\core_cmFunc.h

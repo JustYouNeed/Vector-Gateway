@@ -59,9 +59,9 @@ void bsp_wlan_GPIOConfig(void)
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
 	GPIO_Init(GPIOD, &GPIO_InitStructure);
 	
-	PDout(3) = 0;
-	PBout(8) = 0;
-//	PBout(6) = 1;
+	PDout(3) = 1;
+	PBout(8) = 1;
+	PBout(6) = 1;
 //	
 //	/* 设置GPIOC.8为复用推挽输出，并复用为SDIO功能 */
 //	GPIOC->MODER &= ~(3 << (8*2));  /* 复位GPIOC.8,SDIO_D0 */
@@ -220,8 +220,8 @@ SD_Error bsp_wlan_PowerCmd(FunctionalState cmd)
 		SDIO->CLKCR |= 0 << 14; /*  关闭硬件流控制  */
 		
 		bsp_sdio_SetClk(0xaa);
-		SDIO->POWER = 0x03;
-		SDIO->CLKCR |= 1 << 8;
+		SDIO->POWER = SDIO_POWER_PWRCTRL;
+		SDIO->CLKCR = SDIO_CLKCR_CLKEN | 500;
 		
 //		SDIO->POWER = SDIO_POWER_PWRCTRL;
 //		SDIO->CLKCR = SDIO_CLKCR_CLKEN | 178;

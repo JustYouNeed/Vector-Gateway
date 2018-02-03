@@ -7,7 +7,7 @@
 # include "bsp_wlan.h"
 # include "bsp_lan.h"
 # include "bsp_sdcard.h"
-
+# include "bsp_usart.h"
 
 /******************************************************  分割线  **************************************************************/
 
@@ -15,6 +15,7 @@
 # include "app_w25qxx.h"
 # include "app_wdog.h"
 # include "app_sys.h"
+# include "app_audio.h"
 
 /******************************************************  分割线  **************************************************************/
 
@@ -109,122 +110,6 @@ CPU_STK USBH_TASK_STK[USBH_TASK_STK_SIZE];
 void task_USBHostTask(void *p_arg);
 
 
-extern FATFS * fat_FLASH;				/*  文件系统变量  */
-extern FILE*  file;							/*  文件变量  */
-extern UINT br, bw;							/*  文件读写状态  */
-extern FILINFO * fileInfo;			/*  文件信息  */
-extern DIR dir;									/*  文件目录  */
-
-
-
-
-UART_HandleTypeDef USART3_Handler;
-
-void bsp_usart_Config(void)
-{
-
-  USART3_Handler.Instance = USART3;
-  USART3_Handler.Init.BaudRate = 115200;
-  USART3_Handler.Init.WordLength = UART_WORDLENGTH_8B;
-  USART3_Handler.Init.StopBits = UART_STOPBITS_1;
-  USART3_Handler.Init.Parity = UART_PARITY_NONE;
-  USART3_Handler.Init.Mode = UART_MODE_TX_RX;
-  USART3_Handler.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  USART3_Handler.Init.OverSampling = UART_OVERSAMPLING_16;
-	HAL_UART_Init(&USART3_Handler);
-}
-
-void HAL_UART_MspInit(UART_HandleTypeDef* huart)
-{
-
-  GPIO_InitTypeDef GPIO_InitStruct;
-  if(huart->Instance==USART3)
-  {
-  /* USER CODE BEGIN USART1_MspInit 0 */
-
-  /* USER CODE END USART1_MspInit 0 */
-    /* Peripheral clock enable */
-    __HAL_RCC_USART3_CLK_ENABLE();
-		__HAL_RCC_GPIOD_CLK_ENABLE();
-  
-    /**USART1 GPIO Configuration    
-    PA9     ------> USART1_TX
-    PA10     ------> USART1_RX 
-    */
-    GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_PULLUP;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    GPIO_InitStruct.Alternate = GPIO_AF7_USART3;
-    HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN USART1_MspInit 1 */
-
-  /* USER CODE END USART1_MspInit 1 */
-  }
-
-}
-
-void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
-{
-
-  if(huart->Instance==USART1)
-  {
-  /* USER CODE BEGIN USART1_MspDeInit 0 */
-
-  /* USER CODE END USART1_MspDeInit 0 */
-    /* Peripheral clock disable */
-    __HAL_RCC_USART3_CLK_DISABLE();
-  
-    /**USART1 GPIO Configuration    
-    PA9     ------> USART1_TX
-    PA10     ------> USART1_RX 
-    */
-    HAL_GPIO_DeInit(GPIOD, GPIO_PIN_8|GPIO_PIN_9);
-
-  /* USER CODE BEGIN USART1_MspDeInit 1 */
-
-  /* USER CODE END USART1_MspDeInit 1 */
-  }
-}
-
-//////////////////////////////////////////////////////////////////
-//加入以下代码,支持printf函数,而不需要选择use MicroLIB	  
-#if 1
-#pragma import(__use_no_semihosting)             
-//标准库需要的支持函数                 
-struct __FILE 
-{ 
-	int handle; 
-}; 
-
-FILE __stdout;       
-//定义_sys_exit()以避免使用半主机模式    
-int _sys_exit(int x) 
-{ 
-	x = x; 
-	return 0;
-} 
-
-int _ttywrch(int ch)
-{
-	ch = ch;
-	return 0;
-}
-//重定义fputc函数 
-int fputc(int ch, FILE *f)
-{ 	
-	while((USART3->SR&0X40)==0);//循环发送,直到发送完毕   
-	USART3->DR = (uint8_t) ch;      
-	return ch;
-}
-#endif
-
-void USART1_IRQHandler(void)
-{
-	
-}
-
 /*
 *********************************************************************************************************
 *                                         main 
@@ -239,13 +124,12 @@ void USART1_IRQHandler(void)
 int main(void)
 { 
 	OS_ERR err;
-	uint8_t result;
-  DIR dir;
-	FATFS f;
-	
-	
-	HAL_Init();
+//	uint8_t res;
+//	FIL file;
+//	UINT br;
 	CPU_SR_ALLOC();
+	HAL_Init();
+	
 
 	SystemClock_Config();
 	bsp_tim_SoftConfig();
@@ -258,10 +142,9 @@ int main(void)
 	bsp_mem_Config();
 	app_sys_Config();
 	
-//	bsp_sd_Config();
 	
 	fatfs_init();
-
+	
 	MX_USB_DEVICE_Init();	
 	MX_USB_HOST_Init();	
 	OSInit(&err);
@@ -333,7 +216,7 @@ void task_StartTask(void *p_arg)
 	OSSchedRoundRobinCfg(DEF_ENABLED,1,&err);  
 # endif
 	
-//	app_wdog_Config(5000);		/*  在其他部分初始化完后开启看门狗，喂狗间隔10S  */
+	app_wdog_Config(5000);		/*  在其他部分初始化完后开启看门狗，喂狗间隔10S  */
 	
 	OS_CRITICAL_ENTER();	//进入临界区
 
@@ -368,19 +251,19 @@ void task_StartTask(void *p_arg)
 //							 (OS_ERR 	* )&err);
 								 				
 	/*  创建看门狗任务  */
-//	OSTaskCreate((OS_TCB 	* )&WdogTaskTCB,		
-//							 (CPU_CHAR	* )"Wdog Task", 		
-//							 (OS_TASK_PTR )task_WdogTask, 			
-//							 (void		* )0,					
-//							 (OS_PRIO	  )WDOG_TASK_PRIO,     	
-//							 (CPU_STK   * )&WDOG_TASK_STK[0],	
-//							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE/10,	
-//							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE,		
-//							 (OS_MSG_QTY  )0,					
-//							 (OS_TICK	  )0,					
-//							 (void   	* )0,				
-//							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
-//							 (OS_ERR 	* )&err);
+	OSTaskCreate((OS_TCB 	* )&WdogTaskTCB,		
+							 (CPU_CHAR	* )"Wdog Task", 		
+							 (OS_TASK_PTR )task_WdogTask, 			
+							 (void		* )0,					
+							 (OS_PRIO	  )WDOG_TASK_PRIO,     	
+							 (CPU_STK   * )&WDOG_TASK_STK[0],	
+							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE/10,	
+							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE,		
+							 (OS_MSG_QTY  )0,					
+							 (OS_TICK	  )0,					
+							 (void   	* )0,				
+							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
+							 (OS_ERR 	* )&err);
 							 
 	/*  创建网线状态检测任务  */
 	OSTaskCreate((OS_TCB 	* )&LinkCheckTaskTCB,		
@@ -426,9 +309,15 @@ void task_StartTask(void *p_arg)
 							 (void   	* )0,				
 							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
 							 (OS_ERR 	* )&err);		
-
-//	lwip_app_udp_CreateThread();				
+			
+	/*  创建FTP Server任务  */
 	lwip_app_ftpserver_Config();	 
+	
+	/*  创建互斥信号量,实现串口安全打印  */
+	OSSemCreate((OS_SEM *)&PrintSem,
+				(CPU_CHAR *)"Print Sem",
+				(OS_SEM_CTR)1,
+				(OS_ERR *)&err);
 
 	bsp_led_OFF(1);							 
 	OS_TaskSuspend((OS_TCB *)&StartTaskTCB, &err);		/*  挂起开始任务  */
@@ -466,17 +355,6 @@ void task_LedTask(void *p_arg)
 			bsp_led_Toggle(1);
 			OSTimeDlyHMSM(0,0,0,50,OS_OPT_TIME_HMSM_STRICT, &err);
 		}
-		
-//		if(lwip_info.dhcpStatus == 2)
-//		{
-//			bsp_led_Toggle(2);
-//			OSTimeDlyHMSM(0,0,0,100,OS_OPT_TIME_HMSM_STRICT, &err);
-//		}
-//		else
-//		{
-//			bsp_led_Toggle(1);
-//			OSTimeDlyHMSM(0,0,0,50,OS_OPT_TIME_HMSM_STRICT, &err);
-//		}
 	}
 }
 
@@ -494,27 +372,38 @@ void task_LedTask(void *p_arg)
 void task_PrintTask(void *p_arg)
 {
 	OS_ERR err;	
-	CPU_STK_SIZE free = 0, used = 0;
+	OS_TCB      *p_tcb;
+	float CPU = 0.0f;
 	p_arg = p_arg;	
 	
 	while(DEF_ON)
 	{
-    OSTaskStkChk (&PrintTaskTCB, &free, &used, &err);/*  获取打印任务情况  */
-    printf("Print Tack            used/free:%d/%d  usage:%%%d\r\n", used, free, (used*100)/(used+free));  
-          
-    OSTaskStkChk (&LedTaskTCB, &free, &used, &err);  /*  获取LED任务情况  */
-    printf("LED Task             used/free:%d/%d  usage:%%%d\r\n",used,free,(used*100)/(used+free));  
-          
-    OSTaskStkChk (&WdogTaskTCB,&free,&used,&err);  /*  获取看门狗任务情况  */
-    printf("WDogTask              used/free:%d/%d  usage:%%%d\r\n",used,free,(used*100)/(used+free));  
-          
-    OSTaskStkChk (&LinkCheckTaskTCB,&free,&used,&err);  /*  获取网线状态情况  */
-    printf("LinkCheck             used/free:%d/%d  usage:%%%d\r\n",used,free,(used*100)/(used+free));  
-          
-    OSTaskStkChk (&KeyTaskTCB,&free,&used,&err);  /*  获取按键扫描任务情况  */
-    printf("KeyDetect             used/free:%d/%d  usage:%%%d\r\n",used,free,(used*100)/(used+free));  
-        
-    printf("Link Status:%d\r\n\r\n\r\n", Sys_Info.LinkStatus);  /*  网线连接情况  */
+		CPU_SR_ALLOC();
+
+		CPU_CRITICAL_ENTER();
+		p_tcb = OSTaskDbgListPtr;
+		CPU_CRITICAL_EXIT();
+		
+		/* 打印标题 */
+		os_printf("===============================================================\r\n");
+		os_printf(" 优先级 使用栈 剩余栈 百分比 利用率   任务名\r\n");
+		os_printf("  Prio   Used  Free   Per    CPU     Taskname\r\n");
+		/* 遍历任务控制块列表(TCB list)，打印所有的任务的优先级和名称 */
+		while (p_tcb != (OS_TCB *)0) 
+		{
+			CPU = (float)p_tcb->CPUUsage / 100;
+			os_printf("   %2d  %5d  %5d   %02d%%   %5.2f%%   %s\r\n", 
+			p_tcb->Prio, 
+			p_tcb->StkUsed, 
+			p_tcb->StkFree, 
+			(p_tcb->StkUsed * 100) / (p_tcb->StkUsed + p_tcb->StkFree),
+			CPU,
+			p_tcb->NamePtr);		
+			
+			CPU_CRITICAL_ENTER();
+			p_tcb = p_tcb->DbgNextPtr;
+			CPU_CRITICAL_EXIT();
+		}
 		OSTimeDlyHMSM(0, 0, 2, 0, OS_OPT_TIME_HMSM_STRICT, &err);
 	}
 }
@@ -562,10 +451,10 @@ void task_WdogTask(void *p_arg)
 void task_LinkCheckTask(void *p_arg)
 {
 	OS_ERR err;
-	p_arg = p_arg;
+	
 	uint32_t phyreg = 0x00;
 	uint8_t Status = 0x00;
-	
+	p_arg = p_arg;
 	HAL_ETH_ReadPHYRegister(&ETH_Handler, PHY_BSR, &phyreg);
 	Status =  (phyreg & PHY_LINKED_STATUS);
 	
@@ -629,7 +518,7 @@ void task_KeyTask(void *p_arg)
 		key = bsp_key_GetValue();
 		
 		if(key == KEY_OK_PRESS)
-			bsp_SoftReset();
+			bsp_sys_Reset();
 		OSTimeDlyHMSM(0,0,0,20,OS_OPT_TIME_HMSM_STRICT, &err);
 	}
 }

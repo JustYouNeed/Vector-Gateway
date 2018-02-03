@@ -6,13 +6,13 @@
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\lwip/debug.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\lwip/arch.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\arch/cc.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\lwip_app_ftpserver.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\lwip_app_ftpserver.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\lwip_app_ftpserver.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\lwip_app_ftpserver.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -33,7 +33,7 @@
 .\objects\lwip_app_ftpserver.o: ..\USER\stm32f4xx.h
 .\objects\lwip_app_ftpserver.o: ..\USER\stm32f407xx.h
 .\objects\lwip_app_ftpserver.o: ..\CORE\core_cm4.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\lwip_app_ftpserver.o: ..\CORE\core_cmInstr.h
 .\objects\lwip_app_ftpserver.o: ..\CORE\cmsis_armcc.h
 .\objects\lwip_app_ftpserver.o: ..\CORE\core_cmFunc.h
@@ -70,25 +70,15 @@
 .\objects\lwip_app_ftpserver.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\lwip_app_ftpserver.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\lwip_app_ftpserver.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\lwip_app_ftpserver.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\lwip_app_ftpserver.o: ..\BSP\inc\bsp_key.h
 .\objects\lwip_app_ftpserver.o: ..\BSP\inc\bsp.h
 .\objects\lwip_app_ftpserver.o: ..\BSP\inc\bsp_led.h
 .\objects\lwip_app_ftpserver.o: ..\BSP\inc\bsp_usart.h
 .\objects\lwip_app_ftpserver.o: ..\BSP\inc\bsp_timer.h
 .\objects\lwip_app_ftpserver.o: ..\BSP\inc\bsp_malloc.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\lwip_app_ftpserver.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\lwip/opt.h
-.\objects\lwip_app_ftpserver.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\lwip_app_ftpserver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\lwip/def.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\ipv4\lwip/inet.h

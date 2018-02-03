@@ -4,13 +4,13 @@
 .\objects\usbd_storage_if.o: ..\USB\USB_DEVICE\CLASS\MSC\Inc\usbd_msc_bot.h
 .\objects\usbd_storage_if.o: ..\USB\USB_DEVICE\CORE\inc\usbd_core.h
 .\objects\usbd_storage_if.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\usbd_storage_if.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\usbd_storage_if.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\usbd_storage_if.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\usbd_storage_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usbd_storage_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\usbd_storage_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\usbd_storage_if.o: ..\USER\stm32f4xx.h
 .\objects\usbd_storage_if.o: ..\USER\stm32f407xx.h
 .\objects\usbd_storage_if.o: ..\CORE\core_cm4.h
-.\objects\usbd_storage_if.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usbd_storage_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usbd_storage_if.o: ..\CORE\core_cmInstr.h
 .\objects\usbd_storage_if.o: ..\CORE\cmsis_armcc.h
 .\objects\usbd_storage_if.o: ..\CORE\core_cmFunc.h
@@ -54,23 +54,32 @@
 .\objects\usbd_storage_if.o: ..\USB\USB_DEVICE\CLASS\MSC\Inc\usbd_msc_scsi.h
 .\objects\usbd_storage_if.o: ..\APP\inc\app_w25qxx.h
 .\objects\usbd_storage_if.o: ..\BSP\inc\bsp.h
-.\objects\usbd_storage_if.o: ..\BSP\inc\bsp_key.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS_CONFIG\includes.h
+.\objects\usbd_storage_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\usbd_storage_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\usbd_storage_if.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS-III\Source\os.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-CPU\cpu_def.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS_CONFIG\cpu_cfg.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-LIB\lib_def.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-LIB\lib_mem.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS_CONFIG\lib_cfg.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-LIB\lib_str.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-LIB\lib_ascii.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS-III\Source\os_type.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uC-LIB\lib_math.h
+.\objects\usbd_storage_if.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
 .\objects\usbd_storage_if.o: ..\BSP\inc\bsp.h
+.\objects\usbd_storage_if.o: ..\BSP\inc\bsp_key.h
 .\objects\usbd_storage_if.o: ..\BSP\inc\bsp_led.h
 .\objects\usbd_storage_if.o: ..\BSP\inc\bsp_usart.h
 .\objects\usbd_storage_if.o: ..\BSP\inc\bsp_timer.h
 .\objects\usbd_storage_if.o: ..\BSP\inc\bsp_malloc.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\usbd_storage_if.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\usbd_storage_if.o: ..\FATFS\src\integer.h
 .\objects\usbd_storage_if.o: ..\FATFS\src\diskio.h
 .\objects\usbd_storage_if.o: ..\FATFS\src\ffconf.h

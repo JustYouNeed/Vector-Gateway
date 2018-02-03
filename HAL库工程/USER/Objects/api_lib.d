@@ -4,13 +4,13 @@
 .\objects\api_lib.o: ..\LWIP\include\lwip/debug.h
 .\objects\api_lib.o: ..\LWIP\include\lwip/arch.h
 .\objects\api_lib.o: ..\LWIP\arch/cc.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\api_lib.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\api_lib.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\api_lib.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\api_lib.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\api_lib.o: ..\USER\stm32f4xx.h
 .\objects\api_lib.o: ..\USER\stm32f407xx.h
 .\objects\api_lib.o: ..\CORE\core_cm4.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\api_lib.o: ..\CORE\core_cmInstr.h
 .\objects\api_lib.o: ..\CORE\cmsis_armcc.h
 .\objects\api_lib.o: ..\CORE\core_cmFunc.h
@@ -68,26 +68,16 @@
 .\objects\api_lib.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\api_lib.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\api_lib.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\api_lib.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\api_lib.o: ..\BSP\inc\bsp_key.h
 .\objects\api_lib.o: ..\BSP\inc\bsp.h
 .\objects\api_lib.o: ..\BSP\inc\bsp_led.h
 .\objects\api_lib.o: ..\BSP\inc\bsp_usart.h
 .\objects\api_lib.o: ..\BSP\inc\bsp_timer.h
 .\objects\api_lib.o: ..\BSP\inc\bsp_malloc.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\api_lib.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\api_lib.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\api_lib.o: ..\LWIP\include\lwip/opt.h
 .\objects\api_lib.o: ..\LWIP\include\lwip/api.h
-.\objects\api_lib.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\api_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\api_lib.o: ..\LWIP\include\lwip/netbuf.h
 .\objects\api_lib.o: ..\LWIP\include\lwip/pbuf.h
 .\objects\api_lib.o: ..\LWIP\include\lwip/err.h

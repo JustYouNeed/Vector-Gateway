@@ -29,7 +29,7 @@
 #endif
 
 #define  APP_CFG_TRACE_LEVEL             TRACE_LEVEL_OFF
-#define  APP_CFG_TRACE                   bsp_UsartPrintf
+#define  APP_CFG_TRACE                   bsp_usart_Printf
 
 #define  BSP_CFG_TRACE_LEVEL             TRACE_LEVEL_OFF
 #define  BSP_CFG_TRACE                   printf

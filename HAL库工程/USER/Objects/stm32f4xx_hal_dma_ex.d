@@ -6,7 +6,7 @@
 .\objects\stm32f4xx_hal_dma_ex.o: ..\USER\stm32f4xx.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\USER\stm32f407xx.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\CORE\core_cm4.h
-.\objects\stm32f4xx_hal_dma_ex.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f4xx_hal_dma_ex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\CORE\core_cmInstr.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\CORE\cmsis_armcc.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\CORE\core_cmFunc.h
@@ -14,7 +14,7 @@
 .\objects\stm32f4xx_hal_dma_ex.o: ..\USER\system_stm32f4xx.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\HALLIB\inc\stm32f4xx_hal.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\HALLIB\inc\Legacy/stm32_hal_legacy.h
-.\objects\stm32f4xx_hal_dma_ex.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\stm32f4xx_hal_dma_ex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\HALLIB\inc\stm32f4xx_hal_rcc_ex.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\HALLIB\inc\stm32f4xx_hal_gpio.h
 .\objects\stm32f4xx_hal_dma_ex.o: ..\HALLIB\inc\stm32f4xx_hal_gpio_ex.h

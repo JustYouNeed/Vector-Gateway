@@ -1,13 +1,13 @@
 .\objects\usbd_desc.o: ..\USB\USB_DEVICE\USER\src\usbd_desc.c
 .\objects\usbd_desc.o: ..\USB\USB_DEVICE\CORE\inc\usbd_core.h
 .\objects\usbd_desc.o: ..\USB\USB_DEVICE\USER\inc\usbd_conf.h
-.\objects\usbd_desc.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\usbd_desc.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\usbd_desc.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\usbd_desc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usbd_desc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\usbd_desc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\usbd_desc.o: ..\USER\stm32f4xx.h
 .\objects\usbd_desc.o: ..\USER\stm32f407xx.h
 .\objects\usbd_desc.o: ..\CORE\core_cm4.h
-.\objects\usbd_desc.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usbd_desc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usbd_desc.o: ..\CORE\core_cmInstr.h
 .\objects\usbd_desc.o: ..\CORE\cmsis_armcc.h
 .\objects\usbd_desc.o: ..\CORE\core_cmFunc.h

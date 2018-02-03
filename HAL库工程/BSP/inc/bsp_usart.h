@@ -16,6 +16,9 @@
 	# define USART6_EN	0u
 # endif
 
+# define PRINTF_PORT	COM3
+
+
 # define USART1_AF_EN 0u
 # define USART2_AF_EN 0u
 # define USART3_AF_EN 0u
@@ -95,20 +98,25 @@ typedef struct
 }Usart_Str;
 
 
-void bsp_UsartConfig(void);
-void bsp_UsartGPIOConfig(void);
-void bsp_UsartStructConfig(void);
-void bsp_UsartNVICConfig(void);
-void bsp_UsartPut(Usart_Str * pUsart, uint8_t byte);
-void bsp_UsartIRQHandler(Usart_Str * pUsart);
-void bsp_UsartClearTxBuff(COM_PORT_ENUM Port);
-void bsp_UsartClearRxBuff(COM_PORT_ENUM Port);
-void bsp_UsartSendDataToBuff(COM_PORT_ENUM Port, uint8_t *pBuff, uint16_t Lenght);
-uint16_t bsp_UsartPrintf(COM_PORT_ENUM Port, const char *format, ...);
-uint8_t bsp_UsartGetChar(COM_PORT_ENUM Port, uint8_t *pByte);
+void bsp_usart_Config(void);
+void bsp_usart_GPIOConfig(void);
+void bsp_usart_StructConfig(void);
+void bsp_usart_NVICConfig(void);
+void bsp_usart_Put(Usart_Str * pUsart, uint8_t byte);
+void bsp_usart_IRQHandler(Usart_Str * pUsart);
+void bsp_usart_ClearTxBuff(COM_PORT_ENUM Port);
+void bsp_usart_ClearRxBuff(COM_PORT_ENUM Port);
+void bsp_usart_SendDataToBuff(COM_PORT_ENUM Port, uint8_t *pBuff, uint16_t Lenght);
+uint16_t bsp_usart_Printf(COM_PORT_ENUM Port, const char *format, ...);
+uint8_t bsp_usart_GetChar(COM_PORT_ENUM Port, uint8_t *pByte);
 
 
-USART_TypeDef * bsp_UsartGetPort(COM_PORT_ENUM Port);
-Usart_Str *bsp_UsartGetStr(COM_PORT_ENUM Port);
+USART_TypeDef * bsp_usart_GetPort(COM_PORT_ENUM Port);
+Usart_Str *bsp_usart_GetStr(COM_PORT_ENUM Port);
+
+# if OS_SUPPORT > 0u
+  extern OS_SEM PrintSem;
+  void os_printf(char *format, ...);
+# endif
 # endif
 

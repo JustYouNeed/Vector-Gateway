@@ -1,7 +1,7 @@
 .\objects\bsp_ucosiii.o: ..\UCOSIII\UCOS_BSP\bsp_ucosiii.c
 .\objects\bsp_ucosiii.o: ..\UCOSIII\UCOS_BSP\bsp_ucosiii.h
-.\objects\bsp_ucosiii.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\bsp_ucosiii.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\bsp_ucosiii.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\bsp_ucosiii.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\bsp_ucosiii.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
 .\objects\bsp_ucosiii.o: ..\UCOSIII\uC-CPU\cpu_def.h
 .\objects\bsp_ucosiii.o: ..\UCOSIII\uCOS_CONFIG\cpu_cfg.h
@@ -15,7 +15,7 @@
 .\objects\bsp_ucosiii.o: ..\USER\stm32f4xx.h
 .\objects\bsp_ucosiii.o: ..\USER\stm32f407xx.h
 .\objects\bsp_ucosiii.o: ..\CORE\core_cm4.h
-.\objects\bsp_ucosiii.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bsp_ucosiii.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\bsp_ucosiii.o: ..\CORE\core_cmInstr.h
 .\objects\bsp_ucosiii.o: ..\CORE\cmsis_armcc.h
 .\objects\bsp_ucosiii.o: ..\CORE\core_cmFunc.h

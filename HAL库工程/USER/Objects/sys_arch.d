@@ -6,13 +6,13 @@
 .\objects\sys_arch.o: ..\LWIP\include\lwip/debug.h
 .\objects\sys_arch.o: ..\LWIP\include\lwip/arch.h
 .\objects\sys_arch.o: ..\LWIP\arch/cc.h
-.\objects\sys_arch.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\sys_arch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\sys_arch.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\sys_arch.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\sys_arch.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\sys_arch.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\sys_arch.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\sys_arch.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\sys_arch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\sys_arch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\sys_arch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\sys_arch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\sys_arch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\sys_arch.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\sys_arch.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\sys_arch.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -33,7 +33,7 @@
 .\objects\sys_arch.o: ..\USER\stm32f4xx.h
 .\objects\sys_arch.o: ..\USER\stm32f407xx.h
 .\objects\sys_arch.o: ..\CORE\core_cm4.h
-.\objects\sys_arch.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sys_arch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\sys_arch.o: ..\CORE\core_cmInstr.h
 .\objects\sys_arch.o: ..\CORE\cmsis_armcc.h
 .\objects\sys_arch.o: ..\CORE\core_cmFunc.h
@@ -70,23 +70,13 @@
 .\objects\sys_arch.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\sys_arch.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\sys_arch.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\sys_arch.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\sys_arch.o: ..\BSP\inc\bsp_key.h
 .\objects\sys_arch.o: ..\BSP\inc\bsp.h
 .\objects\sys_arch.o: ..\BSP\inc\bsp_led.h
 .\objects\sys_arch.o: ..\BSP\inc\bsp_usart.h
 .\objects\sys_arch.o: ..\BSP\inc\bsp_timer.h
 .\objects\sys_arch.o: ..\BSP\inc\bsp_malloc.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\sys_arch.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\sys_arch.o: ..\LWIP\include\lwip/opt.h
 .\objects\sys_arch.o: ..\LWIP\arch/sys_arch.h
 .\objects\sys_arch.o: ..\LWIP\include\lwip/pbuf.h

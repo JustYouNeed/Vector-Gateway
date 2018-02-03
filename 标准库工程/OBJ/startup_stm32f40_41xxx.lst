@@ -869,11 +869,10 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=..\obj\startup_stm32f40_41xxx.d -o..\obj\startup_stm32f40_41xxx
-.o -I"E:\学习资料\电子设计\智能家居\Vector Gateway\程序\标准库工程\USER\RTE\_Ga
-teway" -I"D:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS
-\Device\ST\STM32F4xx\Include" -I"D:\Program Files\Keil\ARM\CMSIS\Include" --pre
-define="__UVISION_VERSION SETA 522" --predefine="STM32F407xx SETA 1" --list=..\
-obj\startup_stm32f40_41xxx.lst ..\CORE\startup_stm32f40_41xxx.s
+.o -I.\RTE\_Gateway -ID:\KeilPack\Keil\STM32F4xx_DFP\1.0.8\Device\Include -IC:\
+Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 524" --predefine=
+"STM32F40_41xxx SETA 1" --list=..\obj\startup_stm32f40_41xxx.lst ..\CORE\startu
+p_stm32f40_41xxx.s
 
 
 

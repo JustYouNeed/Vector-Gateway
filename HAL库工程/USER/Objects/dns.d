@@ -4,13 +4,13 @@
 .\objects\dns.o: ..\LWIP\include\lwip/debug.h
 .\objects\dns.o: ..\LWIP\include\lwip/arch.h
 .\objects\dns.o: ..\LWIP\arch/cc.h
-.\objects\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\dns.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\dns.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\dns.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\dns.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\dns.o: ..\USER\stm32f4xx.h
 .\objects\dns.o: ..\USER\stm32f407xx.h
 .\objects\dns.o: ..\CORE\core_cm4.h
-.\objects\dns.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\dns.o: ..\CORE\core_cmInstr.h
 .\objects\dns.o: ..\CORE\cmsis_armcc.h
 .\objects\dns.o: ..\CORE\core_cmFunc.h
@@ -68,21 +68,11 @@
 .\objects\dns.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\dns.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\dns.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\dns.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\dns.o: ..\BSP\inc\bsp_key.h
 .\objects\dns.o: ..\BSP\inc\bsp.h
 .\objects\dns.o: ..\BSP\inc\bsp_led.h
 .\objects\dns.o: ..\BSP\inc\bsp_usart.h
 .\objects\dns.o: ..\BSP\inc\bsp_timer.h
 .\objects\dns.o: ..\BSP\inc\bsp_malloc.h
-.\objects\dns.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\dns.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\dns.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\dns.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\dns.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\dns.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\dns.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\dns.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\dns.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\dns.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\dns.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\dns.o: ..\LWIP\include\lwip/opt.h

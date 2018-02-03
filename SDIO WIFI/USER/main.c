@@ -8,8 +8,8 @@ int main(void)
 //	bsp_sd_Config();
 	while(1)
 	{
-		bsp_led_Toggle(2);
+		bsp_led_Toggle(1);
 		bsp_tim_DelayMs(100);
-	//	printf("nihao\r\n");
+//		printf("nihao\r\n");
 	}
 }

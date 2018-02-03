@@ -6,7 +6,7 @@
 .\objects\stm32f4xx_hal_msp.o: ..\USER\stm32f4xx.h
 .\objects\stm32f4xx_hal_msp.o: ..\USER\stm32f407xx.h
 .\objects\stm32f4xx_hal_msp.o: ..\CORE\core_cm4.h
-.\objects\stm32f4xx_hal_msp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f4xx_hal_msp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f4xx_hal_msp.o: ..\CORE\core_cmInstr.h
 .\objects\stm32f4xx_hal_msp.o: ..\CORE\cmsis_armcc.h
 .\objects\stm32f4xx_hal_msp.o: ..\CORE\core_cmFunc.h
@@ -14,7 +14,7 @@
 .\objects\stm32f4xx_hal_msp.o: ..\USER\system_stm32f4xx.h
 .\objects\stm32f4xx_hal_msp.o: ..\HALLIB\inc\stm32f4xx_hal.h
 .\objects\stm32f4xx_hal_msp.o: ..\HALLIB\inc\Legacy/stm32_hal_legacy.h
-.\objects\stm32f4xx_hal_msp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\stm32f4xx_hal_msp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\stm32f4xx_hal_msp.o: ..\HALLIB\inc\stm32f4xx_hal_rcc_ex.h
 .\objects\stm32f4xx_hal_msp.o: ..\HALLIB\inc\stm32f4xx_hal_gpio.h
 .\objects\stm32f4xx_hal_msp.o: ..\HALLIB\inc\stm32f4xx_hal_gpio_ex.h
@@ -42,22 +42,31 @@
 .\objects\stm32f4xx_hal_msp.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
 .\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp_timer.h
 .\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp.h
-.\objects\stm32f4xx_hal_msp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp_key.h
+.\objects\stm32f4xx_hal_msp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS_CONFIG\includes.h
+.\objects\stm32f4xx_hal_msp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\stm32f4xx_hal_msp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\stm32f4xx_hal_msp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\stm32f4xx_hal_msp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS-III\Source\os.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-CPU\cpu_def.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS_CONFIG\cpu_cfg.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-LIB\lib_def.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-LIB\lib_mem.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-CPU\cpu_core.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS_CONFIG\lib_cfg.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-LIB\lib_str.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-LIB\lib_ascii.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS-III\Source\os_type.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uC-LIB\lib_math.h
+.\objects\stm32f4xx_hal_msp.o: ..\UCOSIII\uCOS_CONFIG\app_cfg.h
 .\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp.h
+.\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp_key.h
 .\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp_led.h
 .\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp_usart.h
 .\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp_timer.h
 .\objects\stm32f4xx_hal_msp.o: ..\BSP\inc\bsp_malloc.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\stm32f4xx_hal_msp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\stm32f4xx_hal_msp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h

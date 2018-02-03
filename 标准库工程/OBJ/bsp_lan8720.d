@@ -1,13 +1,13 @@
 ..\obj\bsp_lan8720.o: ..\BSP_DRIVER\src\bsp_lan8720.c
 ..\obj\bsp_lan8720.o: ..\BSP_DRIVER\inc\bsp_lan8720.h
 ..\obj\bsp_lan8720.o: ..\BSP_DRIVER\inc\bsp.h
-..\obj\bsp_lan8720.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\bsp_lan8720.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\bsp_lan8720.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\bsp_lan8720.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\bsp_lan8720.o: ..\FWLIB\inc\stm32f4x7_eth.h
 ..\obj\bsp_lan8720.o: ..\FWLIB\inc\stm32f4x7_eth_conf.h
 ..\obj\bsp_lan8720.o: ..\USER\stm32f4xx.h
 ..\obj\bsp_lan8720.o: ..\CORE\core_cm4.h
-..\obj\bsp_lan8720.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\bsp_lan8720.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\bsp_lan8720.o: ..\CORE\core_cmInstr.h
 ..\obj\bsp_lan8720.o: ..\CORE\core_cmFunc.h
 ..\obj\bsp_lan8720.o: ..\CORE\core_cm4_simd.h
@@ -54,10 +54,10 @@
 ..\obj\bsp_lan8720.o: ..\LWIP\include\lwip/arch.h
 ..\obj\bsp_lan8720.o: ..\LWIP\arch/cc.h
 ..\obj\bsp_lan8720.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-..\obj\bsp_lan8720.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\bsp_lan8720.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\bsp_lan8720.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\bsp_lan8720.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+..\obj\bsp_lan8720.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\bsp_lan8720.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\bsp_lan8720.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\bsp_lan8720.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\bsp_lan8720.o: ..\UCOSIII\uCOS-III\Source\os.h
 ..\obj\bsp_lan8720.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 ..\obj\bsp_lan8720.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h

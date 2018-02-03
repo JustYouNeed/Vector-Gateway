@@ -4,13 +4,13 @@
 .\objects\dhcp.o: ..\LWIP\include\lwip/debug.h
 .\objects\dhcp.o: ..\LWIP\include\lwip/arch.h
 .\objects\dhcp.o: ..\LWIP\arch/cc.h
-.\objects\dhcp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\dhcp.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\dhcp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\dhcp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\dhcp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\dhcp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\dhcp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\dhcp.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\dhcp.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\dhcp.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\dhcp.o: ..\USER\stm32f4xx.h
 .\objects\dhcp.o: ..\USER\stm32f407xx.h
 .\objects\dhcp.o: ..\CORE\core_cm4.h
-.\objects\dhcp.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\dhcp.o: ..\CORE\core_cmInstr.h
 .\objects\dhcp.o: ..\CORE\cmsis_armcc.h
 .\objects\dhcp.o: ..\CORE\core_cmFunc.h
@@ -68,21 +68,11 @@
 .\objects\dhcp.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\dhcp.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\dhcp.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\dhcp.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\dhcp.o: ..\BSP\inc\bsp_key.h
 .\objects\dhcp.o: ..\BSP\inc\bsp.h
 .\objects\dhcp.o: ..\BSP\inc\bsp_led.h
 .\objects\dhcp.o: ..\BSP\inc\bsp_usart.h
 .\objects\dhcp.o: ..\BSP\inc\bsp_timer.h
 .\objects\dhcp.o: ..\BSP\inc\bsp_malloc.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\dhcp.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\dhcp.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\dhcp.o: ..\LWIP\include\lwip/opt.h

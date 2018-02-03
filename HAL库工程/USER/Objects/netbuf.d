@@ -4,13 +4,13 @@
 .\objects\netbuf.o: ..\LWIP\include\lwip/debug.h
 .\objects\netbuf.o: ..\LWIP\include\lwip/arch.h
 .\objects\netbuf.o: ..\LWIP\arch/cc.h
-.\objects\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\netbuf.o: ..\UCOSIII\uCOS_CONFIG\includes.h
-.\objects\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\ctype.h
-.\objects\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\netbuf.o: ..\UCOSIII\uCOS-III\Source\os.h
 .\objects\netbuf.o: ..\UCOSIII\uCOS_CONFIG\os_cfg.h
 .\objects\netbuf.o: ..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -31,7 +31,7 @@
 .\objects\netbuf.o: ..\USER\stm32f4xx.h
 .\objects\netbuf.o: ..\USER\stm32f407xx.h
 .\objects\netbuf.o: ..\CORE\core_cm4.h
-.\objects\netbuf.o: D:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\netbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\netbuf.o: ..\CORE\core_cmInstr.h
 .\objects\netbuf.o: ..\CORE\cmsis_armcc.h
 .\objects\netbuf.o: ..\CORE\core_cmFunc.h
@@ -68,23 +68,13 @@
 .\objects\netbuf.o: ..\HALLIB\inc\stm32f4xx_ll_usb.h
 .\objects\netbuf.o: ..\HALLIB\inc\stm32f4xx_hal_pcd_ex.h
 .\objects\netbuf.o: ..\HALLIB\inc\stm32f4xx_hal_hcd.h
+.\objects\netbuf.o: ..\UCOSIII\uCOS_CONFIG\includes.h
 .\objects\netbuf.o: ..\BSP\inc\bsp_key.h
 .\objects\netbuf.o: ..\BSP\inc\bsp.h
 .\objects\netbuf.o: ..\BSP\inc\bsp_led.h
 .\objects\netbuf.o: ..\BSP\inc\bsp_usart.h
 .\objects\netbuf.o: ..\BSP\inc\bsp_timer.h
 .\objects\netbuf.o: ..\BSP\inc\bsp_malloc.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\netbuf.o: ..\USB\USB_HOST\USER\inc\usbh_conf.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CORE\inc\usbh_def.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CORE\inc\usbh_ioreq.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CORE\inc\usbh_core.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CORE\inc\usbh_pipes.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CORE\inc\usbh_ctlreq.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_bot.h
-.\objects\netbuf.o: ..\USB\USB_HOST\CLASS\MSC\Inc\usbh_msc_scsi.h
 .\objects\netbuf.o: ..\LWIP\include\lwip/opt.h
 .\objects\netbuf.o: ..\LWIP\include\lwip/netbuf.h
 .\objects\netbuf.o: ..\LWIP\include\lwip/pbuf.h

@@ -12,6 +12,7 @@
 # include "bsp.h"		
 # include "ff.h"
 # include "app_sys.h"
+# include "usbh_msc.h"
 
 # define FLASH_SECTOR_SIZE 	512			  
 

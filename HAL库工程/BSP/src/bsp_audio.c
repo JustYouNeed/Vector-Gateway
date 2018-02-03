@@ -23,11 +23,13 @@ static uint16_t WM8978_REGVAL_TBL[58]=
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 uint8_t bsp_audio_Config(void)
@@ -74,13 +76,15 @@ uint8_t bsp_audio_Config(void)
 
 /*
 *********************************************************************************************************
-*                                          bsp_audio_IICConfig
+*                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_IICConfig(void)
@@ -113,11 +117,13 @@ void bsp_audio_IICConfig(void)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_ADDAConfig(uint8_t dacEn, uint8_t adcEn)
@@ -139,11 +145,13 @@ void bsp_audio_ADDAConfig(uint8_t dacEn, uint8_t adcEn)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_InputConfig(uint8_t micEn, uint8_t lineInEn, uint8_t auxEn)
@@ -170,11 +178,13 @@ void bsp_audio_InputConfig(uint8_t micEn, uint8_t lineInEn, uint8_t auxEn)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_OutputConfig(uint8_t dacEn, uint8_t bpsEn)
@@ -196,11 +206,13 @@ void bsp_audio_OutputConfig(uint8_t dacEn, uint8_t bpsEn)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_MICGain(uint8_t gain)
@@ -215,11 +227,13 @@ void bsp_audio_MICGain(uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_LineInGain(uint8_t gain)
@@ -239,11 +253,13 @@ void bsp_audio_LineInGain(uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_AUXGain(uint8_t gain)
@@ -264,11 +280,13 @@ void bsp_audio_AUXGain(uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 uint8_t bsp_audio_WriteReg(uint8_t reg, uint16_t val)
@@ -290,11 +308,13 @@ uint8_t bsp_audio_WriteReg(uint8_t reg, uint16_t val)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 uint16_t bsp_audio_ReadReg(uint8_t reg)
@@ -308,11 +328,13 @@ uint16_t bsp_audio_ReadReg(uint8_t reg)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_HPVolSet(uint8_t voll, uint8_t volr)
@@ -331,11 +353,13 @@ void bsp_audio_HPVolSet(uint8_t voll, uint8_t volr)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_SPKVolSet(uint8_t vol)
@@ -352,11 +376,13 @@ void bsp_audio_SPKVolSet(uint8_t vol)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_I2SConfig(uint8_t fmt, uint8_t len)
@@ -371,11 +397,13 @@ void bsp_audio_I2SConfig(uint8_t fmt, uint8_t len)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_3DSet(uint8_t deepth)
@@ -390,11 +418,13 @@ void bsp_audio_3DSet(uint8_t deepth)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_EQ3DDir(uint8_t dir)
@@ -411,11 +441,13 @@ void bsp_audio_EQ3DDir(uint8_t dir)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_EQ1Set(uint8_t cfreq, uint8_t gain)
@@ -438,11 +470,13 @@ void bsp_audio_EQ1Set(uint8_t cfreq, uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_EQ2Set(uint8_t cfreq, uint8_t gain)
@@ -462,11 +496,13 @@ void bsp_audio_EQ2Set(uint8_t cfreq, uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_EQ3Set(uint8_t cfreq, uint8_t gain)
@@ -486,11 +522,13 @@ void bsp_audio_EQ3Set(uint8_t cfreq, uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_EQ4Set(uint8_t cfreq, uint8_t gain)
@@ -510,11 +548,13 @@ void bsp_audio_EQ4Set(uint8_t cfreq, uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void bsp_audio_EQ5Set(uint8_t cfreq, uint8_t gain)
@@ -537,16 +577,18 @@ void bsp_audio_EQ5Set(uint8_t cfreq, uint8_t gain)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void AUDIO_SDA_HIGH(void)
 {
-	AUDIO_SDA_PORT->ODR |= AUDIO_SDA_PIN;
+	AUDIO_SDA_PORT->BSRR = AUDIO_SDA_PIN;
 }
 
 
@@ -554,16 +596,18 @@ void AUDIO_SDA_HIGH(void)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void AUDIO_SDA_LOW(void)
 {
-	AUDIO_SDA_PORT->ODR &= ~AUDIO_SDA_PIN;
+	AUDIO_SDA_PORT->BSRR = (uint32_t)AUDIO_SDA_PIN << 16U;
 }
 
 
@@ -571,11 +615,13 @@ void AUDIO_SDA_LOW(void)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void AUDIO_SDA_OUT(void)
@@ -594,11 +640,13 @@ void AUDIO_SDA_OUT(void)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void AUDIO_SDA_IN(void)
@@ -617,16 +665,18 @@ void AUDIO_SDA_IN(void)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 uint8_t AUDIO_SDA_READ(void)
 {
-	return ((AUDIO_SDA_PORT->ODR & AUDIO_SDA_PIN) == 0) ? 0 :1;
+	return ((AUDIO_SDA_PORT->IDR & AUDIO_SDA_PIN) == 0) ? 0 :1;
 }
 
 
@@ -634,11 +684,13 @@ uint8_t AUDIO_SDA_READ(void)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void AUDIO_SCL_HIGH(void)
@@ -652,16 +704,17 @@ void AUDIO_SCL_HIGH(void)
 *********************************************************************************************************
 *                                          
 *
-* Description: 
+* Description:
 *             
-* Arguments : 
+* Arguments  :
 *
-* Note(s)   : 
+* Reutrn     :
+*
+* Note(s)    : 
 *********************************************************************************************************
 */
 void AUDIO_SCL_LOW(void)
 {
-	
-	AUDIO_SCL_PORT->ODR &= ~AUDIO_SCL_PIN;
+	AUDIO_SCL_PORT->BSRR = (uint32_t)AUDIO_SCL_PIN << 16U;
 }
 
