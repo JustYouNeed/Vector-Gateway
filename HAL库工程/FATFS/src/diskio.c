@@ -32,7 +32,7 @@ Disk_drvTypeDef disk = {{0},{0},{0},0};		/*  磁盘控制结构体  */
 
 
 
-char Flash_Path[4];		/*  Flash根目录  */
+char Flash_Path[3];		/*  Flash根目录  */
 
 /*  Flash Disk控制结构体  */
 const Diskio_drvTypeDef Flash_Disk = 
@@ -50,7 +50,7 @@ extern USBH_HandleTypeDef  HOST_HANDLE;
 static DWORD scratch[_MAX_SS / 4];
 
 
-char USB_Path[4];			/*  U盘根目录  */
+char USB_Path[3];			/*  U盘根目录  */
 /*  U盘控制结构体  */
 const Diskio_drvTypeDef  USB_Disk =
 {
@@ -566,7 +566,6 @@ uint8_t FATFS_LinkDriverEx(Diskio_drvTypeDef *drv, char *path, uint8_t lun)
     path[0] = DiskNum + '0';
     path[1] = ':';
     path[2] = 0;
-    path[3] = 0;
     ret = 0;
   }
   

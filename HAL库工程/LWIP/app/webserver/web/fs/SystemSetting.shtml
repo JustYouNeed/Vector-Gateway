@@ -1,0 +1,75 @@
+<! DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Vector Gateway Control Page
+		</title>
+		
+		<style type="text/css">
+			.header
+				{
+					background-color:black;
+					color:white;
+					clear:both;
+					text-align:center;
+					height:100px;
+					line-height:100px;
+				}
+			.section
+				{
+					img-align:center;
+					text-align:center;
+					height:600px;
+				}
+			.setting
+				{
+					text-align:center;
+					height:300px;
+					font-size:20px
+				}
+			.set
+				{
+					background-color:red;
+					margin-left:100px;
+					margin-top:0px;
+					text-align:center;
+					font-size:20px;
+					height:600px;
+					width:200px;
+				}
+		</style>
+	</head>
+	<body>
+		<div class = "header">
+			<h1>Vector Gateway Control Page</h1>
+		</div>
+		<hr>
+		
+		<div class = "set">
+			<p>System Setting</p>
+		</div>
+		
+		<form method="GET" action="LED.cgi">
+			<div>
+				<input name="LED" type="radio" value="LEDON"/>ON
+				<input name="LED" type="radio" value="LEDOFF"/>OFF
+				<input name="BUTTON" type="submit" id="BUTTON" value="SEND"/>
+			</div>
+		</form>
+		<hr>
+		
+		<div class = "setting">
+			<p><b>
+				[ 
+				<a href = "index.shtml">Home</a>
+				|
+				<a href = "SystemSetting.shtml">System Setting</a>
+				| 
+				<a href = "NetworkSetting.shtml">Network Setting</a> 
+				| 
+				<a href = "FTPServer.shtml">FTP Server</a> 
+				]
+			</b></p>
+		<div>
+	</body>
+</html>

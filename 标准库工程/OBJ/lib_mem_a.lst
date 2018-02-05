@@ -444,11 +444,11 @@ ARM Macro Assembler    Page 7
   310 00000220         
   311 00000220                 END
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=..\obj\lib_mem_a.d -o..\obj\lib_mem_a.o -I.\RTE\_Gateway -ID:\K
-eilPack\Keil\STM32F4xx_DFP\1.0.8\Device\Include -IC:\Keil_v5\ARM\CMSIS\Include 
---predefine="__UVISION_VERSION SETA 524" --predefine="STM32F40_41xxx SETA 1" --
-list=..\obj\lib_mem_a.lst ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView\lib_me
-m_a.asm
+erwork --depend=..\obj\lib_mem_a.d -o..\obj\lib_mem_a.o -I"E:\学习资料\电子设计
+\智能家居\Vector Gateway\程序\标准库工程\USER\RTE" -ID:\KeilPack\Keil\STM32F4xx
+_DFP\1.0.8\Device\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION
+_VERSION SETA 521" --predefine="STM32F40_41xxx SETA 1" --list=..\obj\lib_mem_a.
+lst ..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView\lib_mem_a.asm
 
 
 

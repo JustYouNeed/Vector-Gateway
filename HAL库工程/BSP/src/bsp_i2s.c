@@ -243,14 +243,14 @@ void (*i2s_tx_callback)(void);
 * Note(s)    : 
 *********************************************************************************************************
 */
-void DMA1_Stream4_IRQHandler(void)
-{    
-  OSIntEnter();    
-	if(DMA1->HISR & (1 << 5))   /*  DMA1_Stream4,传输完成标志  */
-	{ 
-		DMA1->HIFCR |= 1 << 5;
-      	i2s_tx_callback();	//执行回调函数,读取数据等操作在这里面处理  
-	}   
-  OSIntExit(); 	
-} 
+//void DMA1_Stream4_IRQHandler(void)
+//{    
+//OSIntEnter();    
+//if(DMA1->HISR & (1 << 5))   /*  DMA1_Stream4,传输完成标志  */
+//{ 
+//	DMA1->HIFCR |= 1 << 5;
+//			i2s_tx_callback();	//执行回调函数,读取数据等操作在这里面处理  
+//}   
+//OSIntExit(); 	
+//} 
 

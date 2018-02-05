@@ -1,4 +1,5 @@
 # include "lwip_app_httpserver.h"
+# include "ff.h"
 
 const uint8_t html[] = 
 	"<html>\
@@ -10,6 +11,11 @@ const uint8_t html[] =
 static err_t http_server_recv(void *arg, struct tcp_pcb *pcb, struct pbuf *p, err_t err)
 {
 	char *data = NULL;
+	uint8_t res;
+	FIL file;
+	UINT br;
+	uint8_t *buff = (uint8_t*)bsp_mem_Malloc(SRAMIN, sizeof(uint8_t)*1024);
+	
 	if(p != NULL)
 	{
 		tcp_recved(pcb, p->tot_len);
@@ -17,13 +23,28 @@ static err_t http_server_recv(void *arg, struct tcp_pcb *pcb, struct pbuf *p, er
 		if((p->len >= 3) && data[0] == 'G' && data[1] == 'E' && data[2] == 'T')  /* HTTP GET请求，返回网页 */
 		{
 			printf("GET Request\r\n");
-			tcp_write(pcb, html, sizeof(html), 1);
+			res = f_open(&file, "1:/WEB/index.html", FA_OPEN_EXISTING | FA_READ);
+			if(res == FR_OK)
+			{
+				while(1)
+				{
+					res = f_read(&file, buff, 1024, &br);
+					if(br == 0 || res != FR_OK) break;
+					tcp_write(pcb, buff, br, 1);
+				}
+			}
+			else 
+			{
+				bsp_mem_Free(SRAMIN, buff);
+				return tcp_close(pcb);
+			}
 		}
 		else
 		{
 			printf("Request Error\r\n");
 		}
 		pbuf_free(p);  /* 数据处理完后释放内存 */
+		tcp_close(pcb);
 	}
 	else if(err == ERR_OK)
 	{

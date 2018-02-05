@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\BSP\inc;..\HALLIB\inc;..\HALLIB\inc\Legacy;..\UCOSIII\uC-CPU;..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView;..\UCOSIII\uC-LIB;..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\UCOSIII\uCOS-III;..\UCOSIII\uCOS-III\Source;..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\UCOSIII\UCOS_BSP;..\UCOSIII\uCOS_CONFIG;..\APP\inc;..\FATFS\src;..\FATFS\src\option;..\USB\USB_HOST\USER\inc;..\USB\USB_HOST\CORE\inc;..\USB\USB_HOST\CLASS\MSC\Inc;..\USB\USB_FATFS\inc;..\USB\USB_DEVICE\USER\inc;..\USB\USB_DEVICE\CORE\inc;..\USB\USB_DEVICE\CLASS\MSC\Inc;..\LWIP;..\LWIP\api;..\LWIP\netif;..\LWIP\arch;..\LWIP\core;..\LWIP\include;..\LWIP\include\netif;..\LWIP\include\ipv4;..\LWIP\include\lwip;..\LWIP\app\inc;..\AUDIOCODE\wav;..\AUDIOCODE\ogg;..\AUDIOCODE\ogg\oggdec;..\AUDIOCODE\ogg\oggdec\debian;..\AUDIOCODE\mp3;..\AUDIOCODE\mp3\helix;..\AUDIOCODE\flac;..\AUDIOCODE\flac\flacdec</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\BSP\inc;..\HALLIB\inc;..\HALLIB\inc\Legacy;..\UCOSIII\uC-CPU;..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView;..\UCOSIII\uC-LIB;..\UCOSIII\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\UCOSIII\uCOS-III;..\UCOSIII\uCOS-III\Source;..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\UCOSIII\UCOS_BSP;..\UCOSIII\uCOS_CONFIG;..\APP\inc;..\FATFS\src;..\FATFS\src\option;..\USB\USB_HOST\USER\inc;..\USB\USB_HOST\CORE\inc;..\USB\USB_HOST\CLASS\MSC\Inc;..\USB\USB_FATFS\inc;..\USB\USB_DEVICE\USER\inc;..\USB\USB_DEVICE\CORE\inc;..\USB\USB_DEVICE\CLASS\MSC\Inc;..\LWIP;..\LWIP\api;..\LWIP\netif;..\LWIP\arch;..\LWIP\core;..\LWIP\include;..\LWIP\include\netif;..\LWIP\include\ipv4;..\LWIP\include\lwip;..\LWIP\app\ftpserver\inc;..\LWIP\app\webserver\inc;..\LWIP\app\webserver\web;..\AUDIOCODE\wav;..\AUDIOCODE\ogg;..\AUDIOCODE\ogg\oggdec;..\AUDIOCODE\ogg\oggdec\debian;..\AUDIOCODE\mp3;..\AUDIOCODE\mp3\helix;..\AUDIOCODE\flac;..\AUDIOCODE\flac\flacdec</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -445,11 +445,6 @@
               <FilePath>..\HALLIB\src\stm32f4xx_hal_tim.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_spi.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\src\stm32f4xx_hal_dma.c</FilePath>
@@ -480,11 +475,6 @@
               <FilePath>..\HALLIB\src\stm32f4xx_hal_dma_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_iwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\src\stm32f4xx_hal_iwdg.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal_i2s.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\src\stm32f4xx_hal_i2s.c</FilePath>
@@ -498,6 +488,11 @@
               <FileName>stm32f4xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\src\stm32f4xx_hal_rcc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\src\stm32f4xx_hal_spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_uart.c</FileName>
@@ -1125,14 +1120,24 @@
           <GroupName>LWIP_APP</GroupName>
           <Files>
             <File>
-              <FileName>lwip_app_httpserver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LWIP\app\src\lwip_app_httpserver.c</FilePath>
-            </File>
-            <File>
               <FileName>lwip_app_ftpserver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LWIP\app\src\lwip_app_ftpserver.c</FilePath>
+              <FilePath>..\LWIP\app\ftpserver\src\lwip_app_ftpserver.c</FilePath>
+            </File>
+            <File>
+              <FileName>fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LWIP\app\webserver\src\fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>httpd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LWIP\app\webserver\src\httpd.c</FilePath>
+            </File>
+            <File>
+              <FileName>httpd_cgi_ssi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LWIP\app\webserver\src\httpd_cgi_ssi.c</FilePath>
             </File>
           </Files>
         </Group>

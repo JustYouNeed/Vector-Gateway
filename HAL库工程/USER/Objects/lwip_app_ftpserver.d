@@ -1,5 +1,5 @@
-.\objects\lwip_app_ftpserver.o: ..\LWIP\app\src\lwip_app_ftpserver.c
-.\objects\lwip_app_ftpserver.o: ..\LWIP\app\inc\lwip_app_ftpserver.h
+.\objects\lwip_app_ftpserver.o: ..\LWIP\app\ftpserver\src\lwip_app_ftpserver.c
+.\objects\lwip_app_ftpserver.o: ..\LWIP\app\ftpserver\inc\lwip_app_ftpserver.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\lwip/sockets.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\include\lwip/opt.h
 .\objects\lwip_app_ftpserver.o: ..\LWIP\arch\lwipopts.h

@@ -45,11 +45,12 @@
 # include "lwip/netif.h"
 # include "lwip_comm.h"
 # include "lwipopts.h"
-# include "lwip_app_telnet.h"
-# include "lwip_app_httpserver.h"
-# include "lwip_app_tcpcilent.h"
-# include "lwip_app_udp.h"
+//# include "lwip_app_telnet.h"
+//# include "lwip_app_httpserver.h"
+//# include "lwip_app_tcpcilent.h"
+//# include "lwip_app_udp.h"
 # include "lwip_app_ftpserver.h"
+# include "httpd.h"
 
 /******************************************************  分割线  **************************************************************/
 
@@ -127,7 +128,7 @@ int main(void)
 //	uint8_t res;
 //	FIL file;
 //	UINT br;
-	CPU_SR_ALLOC();
+//	CPU_SR_ALLOC();
 	HAL_Init();
 	
 
@@ -147,35 +148,40 @@ int main(void)
 	
 	MX_USB_DEVICE_Init();	
 	MX_USB_HOST_Init();	
-	OSInit(&err);
+//	OSInit(&err);
 	
-	if(lwip_config() == 0)  /* 只有在网线连接的时候会初始化成功 */
+//	if(lwip_config() == 0)  /* 只有在网线连接的时候会初始化成功 */
+//	{
+////		lwip_app_telnetConfig();
+////		lwip_app_HTTPServerConfig();
+////		lwip_app_TCPClientConfig();
+//	}
+//	httpd_init();
+//	OS_CRITICAL_ENTER();
+//	
+//	/*  创建开始任务，该任务只运行一次，在此任务中创建其他任务  */
+//	OSTaskCreate( (OS_TCB *)&StartTaskTCB,
+//							  (CPU_CHAR *)"Start Task",
+//								(OS_TASK_PTR )task_StartTask,
+//								(void *)0,
+//								(OS_PRIO )START_TASK_PRIO,
+//								(CPU_STK	*)&START_TASK_STK[0],
+//								(CPU_STK_SIZE )START_TASK_STK_SIZE/10,
+//								(CPU_STK_SIZE )START_TASK_STK_SIZE,
+//								(OS_MSG_QTY )0,
+//								(OS_TICK )0,
+//								(void *)0,
+//								(OS_OPT )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR,
+//								(OS_ERR *)&err);
+//								
+//	
+//	OS_CRITICAL_EXIT();
+//	OSStart(&err);
+  while(1)
 	{
-//		lwip_app_telnetConfig();
-//		lwip_app_HTTPServerConfig();
-//		lwip_app_TCPClientConfig();
-	}
-	OS_CRITICAL_ENTER();
-	
-	/*  创建开始任务，该任务只运行一次，在此任务中创建其他任务  */
-	OSTaskCreate( (OS_TCB *)&StartTaskTCB,
-							  (CPU_CHAR *)"Start Task",
-								(OS_TASK_PTR )task_StartTask,
-								(void *)0,
-								(OS_PRIO )START_TASK_PRIO,
-								(CPU_STK	*)&START_TASK_STK[0],
-								(CPU_STK_SIZE )START_TASK_STK_SIZE/10,
-								(CPU_STK_SIZE )START_TASK_STK_SIZE,
-								(OS_MSG_QTY )0,
-								(OS_TICK )0,
-								(void *)0,
-								(OS_OPT )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR,
-								(OS_ERR *)&err);
-								
-	
-	OS_CRITICAL_EXIT();
-	OSStart(&err);
-  while(1);		/*  程序不会运行到这  */
+		bsp_led_Toggle(2);
+		bsp_tim_DelayMs(100);
+	}		/*  程序不会运行到这  */
 }
 
 
@@ -216,7 +222,7 @@ void task_StartTask(void *p_arg)
 	OSSchedRoundRobinCfg(DEF_ENABLED,1,&err);  
 # endif
 	
-	app_wdog_Config(5000);		/*  在其他部分初始化完后开启看门狗，喂狗间隔10S  */
+//	app_wdog_Config(5000);		/*  在其他部分初始化完后开启看门狗，喂狗间隔10S  */
 	
 	OS_CRITICAL_ENTER();	//进入临界区
 
@@ -251,49 +257,49 @@ void task_StartTask(void *p_arg)
 //							 (OS_ERR 	* )&err);
 								 				
 	/*  创建看门狗任务  */
-	OSTaskCreate((OS_TCB 	* )&WdogTaskTCB,		
-							 (CPU_CHAR	* )"Wdog Task", 		
-							 (OS_TASK_PTR )task_WdogTask, 			
-							 (void		* )0,					
-							 (OS_PRIO	  )WDOG_TASK_PRIO,     	
-							 (CPU_STK   * )&WDOG_TASK_STK[0],	
-							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE/10,	
-							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE,		
-							 (OS_MSG_QTY  )0,					
-							 (OS_TICK	  )0,					
-							 (void   	* )0,				
-							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
-							 (OS_ERR 	* )&err);
+//	OSTaskCreate((OS_TCB 	* )&WdogTaskTCB,		
+//							 (CPU_CHAR	* )"Wdog Task", 		
+//							 (OS_TASK_PTR )task_WdogTask, 			
+//							 (void		* )0,					
+//							 (OS_PRIO	  )WDOG_TASK_PRIO,     	
+//							 (CPU_STK   * )&WDOG_TASK_STK[0],	
+//							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE/10,	
+//							 (CPU_STK_SIZE)WDOG_TASK_STK_SIZE,		
+//							 (OS_MSG_QTY  )0,					
+//							 (OS_TICK	  )0,					
+//							 (void   	* )0,				
+//							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
+//							 (OS_ERR 	* )&err);
 							 
 	/*  创建网线状态检测任务  */
-	OSTaskCreate((OS_TCB 	* )&LinkCheckTaskTCB,		
-							 (CPU_CHAR	* )"Link Check Task", 		
-							 (OS_TASK_PTR )task_LinkCheckTask, 			
-							 (void		* )0,					
-							 (OS_PRIO	  )LINK_TASK_PRIO,     	
-							 (CPU_STK   * )&LINK_TASK_STK[0],	
-							 (CPU_STK_SIZE)LINK_TASK_STK_SIZE/10,	
-							 (CPU_STK_SIZE)LINK_TASK_STK_SIZE,		
-							 (OS_MSG_QTY  )0,					
-							 (OS_TICK	  )0,					
-							 (void   	* )0,				
-							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
-							 (OS_ERR 	* )&err);
+//	OSTaskCreate((OS_TCB 	* )&LinkCheckTaskTCB,		
+//							 (CPU_CHAR	* )"Link Check Task", 		
+//							 (OS_TASK_PTR )task_LinkCheckTask, 			
+//							 (void		* )0,					
+//							 (OS_PRIO	  )LINK_TASK_PRIO,     	
+//							 (CPU_STK   * )&LINK_TASK_STK[0],	
+//							 (CPU_STK_SIZE)LINK_TASK_STK_SIZE/10,	
+//							 (CPU_STK_SIZE)LINK_TASK_STK_SIZE,		
+//							 (OS_MSG_QTY  )0,					
+//							 (OS_TICK	  )0,					
+//							 (void   	* )0,				
+//							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
+//							 (OS_ERR 	* )&err);
 							 
 	/*  创建U盘检测任务  */
-	OSTaskCreate((OS_TCB 	* )&USBHostTaskTCB,		
-							 (CPU_CHAR	* )"USB Host Task", 		
-							 (OS_TASK_PTR )task_USBHostTask, 			
-							 (void		* )0,					
-							 (OS_PRIO	  )USBH_TASK_PRIO,     	
-							 (CPU_STK   * )&USBH_TASK_STK[0],	
-							 (CPU_STK_SIZE)USBH_TASK_STK_SIZE/10,	
-							 (CPU_STK_SIZE)USBH_TASK_STK_SIZE,		
-							 (OS_MSG_QTY  )0,					
-							 (OS_TICK	  )0,					
-							 (void   	* )0,				
-							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
-							 (OS_ERR 	* )&err);
+//	OSTaskCreate((OS_TCB 	* )&USBHostTaskTCB,		
+//							 (CPU_CHAR	* )"USB Host Task", 		
+//							 (OS_TASK_PTR )task_USBHostTask, 			
+//							 (void		* )0,					
+//							 (OS_PRIO	  )USBH_TASK_PRIO,     	
+//							 (CPU_STK   * )&USBH_TASK_STK[0],	
+//							 (CPU_STK_SIZE)USBH_TASK_STK_SIZE/10,	
+//							 (CPU_STK_SIZE)USBH_TASK_STK_SIZE,		
+//							 (OS_MSG_QTY  )0,					
+//							 (OS_TICK	  )0,					
+//							 (void   	* )0,				
+//							 (OS_OPT      )OS_OPT_TASK_STK_CHK|OS_OPT_TASK_STK_CLR, 
+//							 (OS_ERR 	* )&err);
 									 				
 	/*  创建按键任务  */
 	OSTaskCreate((OS_TCB 	* )&KeyTaskTCB,		
@@ -311,7 +317,7 @@ void task_StartTask(void *p_arg)
 							 (OS_ERR 	* )&err);		
 			
 	/*  创建FTP Server任务  */
-	lwip_app_ftpserver_Config();	 
+//	lwip_app_ftpserver_Config();	 
 	
 	/*  创建互斥信号量,实现串口安全打印  */
 	OSSemCreate((OS_SEM *)&PrintSem,
@@ -319,7 +325,7 @@ void task_StartTask(void *p_arg)
 				(OS_SEM_CTR)1,
 				(OS_ERR *)&err);
 
-	bsp_led_OFF(1);							 
+	bsp_led_OFF(0);							 
 	OS_TaskSuspend((OS_TCB *)&StartTaskTCB, &err);		/*  挂起开始任务  */
 	OS_CRITICAL_EXIT();								
 }
@@ -430,7 +436,7 @@ void task_WdogTask(void *p_arg)
 	while(1)
 	{
 		app_wdog_Feed();
-		OSTimeDlyHMSM(0,0,3,0,OS_OPT_TIME_HMSM_STRICT, &err);
+		OSTimeDlyHMSM(0,0,2,0,OS_OPT_TIME_HMSM_STRICT, &err);
 	}
 }
 

@@ -85,3 +85,6 @@
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\ipv4\lwip/ip_addr.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\lwip/netif.h
 .\objects\lwip_app_httpserver.o: ..\LWIP\include\ipv4\lwip/icmp.h
+.\objects\lwip_app_httpserver.o: ..\FATFS\src\ff.h
+.\objects\lwip_app_httpserver.o: ..\FATFS\src\integer.h
+.\objects\lwip_app_httpserver.o: ..\FATFS\src\ffconf.h

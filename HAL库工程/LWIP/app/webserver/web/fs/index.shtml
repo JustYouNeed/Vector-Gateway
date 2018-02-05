@@ -1,0 +1,58 @@
+<! DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Vector Gateway Control Page
+		</title>
+		
+		<style>
+			#header
+				{
+					background-color:black;
+					color:white;
+					clear:both;
+					text-align:center;
+					height:100px;
+					line-height:100px;
+				}
+			#section
+				{
+					img-align:center;
+					text-align:center;
+					height:600px;
+				}
+			#setting
+				{
+					text-align:center;
+					height:300px;
+					font-size:20px
+				}
+		</style>
+	</head>
+	<body>
+		<div id = "header">
+			<h1>Vector Gateway Control Page</h1>
+		</div>
+		<hr>
+		
+		<div id = "section">
+			<img src = "img/QR.jpg" alt = "QR">
+		</div>
+		
+		<hr>
+		
+		<div id = "setting">
+			<p><b>
+				[ 
+				<a href = "index.shtml">Home</a>
+				|
+				<a href = "SystemSetting.shtml">System Setting</a>
+				| 
+				<a href = "NetworkSetting.shtml">Network Setting</a> 
+				| 
+				<a href = "FTPServer.shtml">FTP Server</a> 
+				]
+			</b></p>
+		<div>
+	</body>
+</html>

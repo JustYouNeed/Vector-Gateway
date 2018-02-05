@@ -3,3 +3,6 @@
 *.d
 *.crf
 *.crf
+*.o
+*.crf
+*.crf

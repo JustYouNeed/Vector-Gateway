@@ -28,7 +28,8 @@
 # include "bsp_spi.h"
 
 uint16_t W25QXX_TYPE = W25Q128;
-
+uint8_t FLASH_RX_BUFF[4096];
+uint8_t FLASH_TX_BUFF[4096];
 
 /*
 *********************************************************************************************************
@@ -56,10 +57,15 @@ void app_flash_Config(void)
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
 	HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
+//	FLASH_RX_BUFF = (uint8_t *)bsp_mem_Malloc(SRAMIN, sizeof(uint8_t) * 4096);
+//	FLASH_TX_BUFF = (uint8_t *)bsp_mem_Malloc(SRAMIN, sizeof(uint8_t) * 4096);
+	
 	FLASH_CS = 1;
 	
-	bsp_spiConfig(SPI3);
-	bsp_spiSetSpeed(SPI3, SPI_BAUDRATEPRESCALER_2);
+	bsp_spi_Config(SPI3);
+	bsp_spi_SetSpeed(SPI3, SPI_BAUDRATEPRESCALER_2);
+	W25QXX_TYPE = app_flash_ReadID();
+	os_printf("Device ID:%d\r\n", W25QXX_TYPE);
 }
 
 
@@ -79,16 +85,21 @@ void app_flash_Config(void)
 uint16_t app_flash_ReadID(void)
 {
 	uint16_t id = 0x00;
+	uint16_t cnt = 0;
+	
+	FLASH_TX_BUFF[cnt++] = 0x90;
+	FLASH_TX_BUFF[cnt++] = 0x00;
+	FLASH_TX_BUFF[cnt++] = 0x00;
+	FLASH_TX_BUFF[cnt++] = 0x00;
+	FLASH_TX_BUFF[cnt++] = 0xff;
+	FLASH_TX_BUFF[cnt++] = 0xff;
+	
 	FLASH_CS = 0;
-	bsp_spiReadWriteByte(SPI3, 0x90);
-	bsp_spiReadWriteByte(SPI3, 0x00);
-	bsp_spiReadWriteByte(SPI3, 0x00);
-	bsp_spiReadWriteByte(SPI3, 0x00);
-	
-	id |= bsp_spiReadWriteByte(SPI3, 0xff)<<8;
-	id |= bsp_spiReadWriteByte(SPI3, 0xff);
-	
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);
 	FLASH_CS = 1;
+	
+	os_printf("%x%x\r\n",FLASH_RX_BUFF[4], FLASH_RX_BUFF[5]);
+	id = FLASH_RX_BUFF[4] << 8 | FLASH_RX_BUFF[5];
 	return id;
 }
 
@@ -110,12 +121,15 @@ uint16_t app_flash_ReadID(void)
 uint8_t app_flash_ReadSR(void)
 {
 	uint8_t byte = 0x0;
+	uint16_t cnt = 0;
+	
+	FLASH_TX_BUFF[cnt++] = W25X_ReadStatusReg;
+	FLASH_TX_BUFF[cnt++] = 0xff;
 	
 	FLASH_CS = 0;
-	bsp_spiReadWriteByte(SPI3, W25X_ReadStatusReg);
-	byte = bsp_spiReadWriteByte(SPI3, 0xff);
+	bsp_spi_Transmit(SPI3, &byte, FLASH_TX_BUFF, cnt);
 	FLASH_CS = 1;
-	
+
 	return byte;
 }
 
@@ -135,9 +149,12 @@ uint8_t app_flash_ReadSR(void)
 */
 void app_flash_WriteSR(uint8_t sr)
 {
+	uint16_t cnt = 0;
+	
+	FLASH_TX_BUFF[cnt++] = W25X_WriteStatusReg;
+	FLASH_TX_BUFF[cnt++] = sr;
 	FLASH_CS = 0;
-	bsp_spiReadWriteByte(SPI3, W25X_WriteStatusReg);
-	bsp_spiReadWriteByte(SPI3, sr);
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);
 	FLASH_CS = 1;
 }
 
@@ -145,13 +162,13 @@ void app_flash_WriteSR(uint8_t sr)
 
 /*
 *********************************************************************************************************
-*                                        app_flash_WriteCmd  
+*                                          
 *
-* Description:
+* Description: 
 *             
-* Arguments  :
+* Arguments  : 
 *
-* Reutrn     :
+* Reutrn     : 
 *
 * Note(s)    : 
 *********************************************************************************************************
@@ -159,11 +176,15 @@ void app_flash_WriteSR(uint8_t sr)
 
 void app_flash_WriteCmd(FunctionalState state)
 {
-	FLASH_CS = 0;
+	uint16_t cnt = 0;
+	
 	if(state == DISABLE)
-		bsp_spiReadWriteByte(SPI3, W25X_WriteDisable);
+		FLASH_TX_BUFF[cnt++] = W25X_WriteDisable;
 	else if(state == ENABLE)
-		bsp_spiReadWriteByte(SPI3, W25X_WriteEnable);
+		FLASH_TX_BUFF[cnt++] = W25X_WriteEnable;
+	
+	FLASH_CS = 0;
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);
 	FLASH_CS = 1;
 }
 
@@ -183,14 +204,18 @@ void app_flash_WriteCmd(FunctionalState state)
 */
 void app_flash_WritePage(uint8_t *buff, uint32_t addr, uint16_t len)
 {
-	uint16_t i;  
+	uint16_t cnt = 0;
+	
+	FLASH_TX_BUFF[cnt++] = W25X_PageProgram;	//发送写页命令   
+	FLASH_TX_BUFF[cnt++] = (uint8_t)((addr) >> 16);	//发送24bit地址 
+	FLASH_TX_BUFF[cnt++] = (uint8_t)((addr) >> 8);
+	FLASH_TX_BUFF[cnt++] = (uint8_t)addr;
+	
 	app_flash_WriteCmd(ENABLE);                  //SET WEL 
 	FLASH_CS = 0;                            //使能器件   
-	bsp_spiReadWriteByte(SPI3, W25X_PageProgram);      //发送写页命令   
-	bsp_spiReadWriteByte(SPI3, (uint8_t)((addr)>>16)); //发送24bit地址    
-	bsp_spiReadWriteByte(SPI3, (uint8_t)((addr)>>8));   
-	bsp_spiReadWriteByte(SPI3, (uint8_t)addr);   
-	for(i=0;i<len;i++)bsp_spiReadWriteByte(SPI3,buff[i]);//循环写数  
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);
+	
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, buff, len);
 	FLASH_CS=1;                            //取消片选 
 	app_flash_WaitBusy();					   //等待写入结束
 }
@@ -212,20 +237,20 @@ void app_flash_WritePage(uint8_t *buff, uint32_t addr, uint16_t len)
 void app_flash_WriteNoCheck(uint8_t *buff, uint32_t addr, uint16_t len)
 {
 	uint16_t pageremain;	   
-	pageremain=256-addr%256; //单页剩余的字节数		 	    
-	if(len<=pageremain)pageremain=len;//不大于256个字节
+	pageremain = 256 - addr %256; //单页剩余的字节数		 	    
+	if(len <= pageremain)pageremain=len;//不大于256个字节
 	while(1)
 	{	   
-		app_flash_WritePage(buff,addr,pageremain);
-		if(len==pageremain)break;//写入结束了
+		app_flash_WritePage(buff, addr, pageremain);
+		if(len == pageremain)break;//写入结束了
 	 	else //NumByteToWrite>pageremain
 		{
-			buff+=pageremain;
-			addr+=pageremain;	
+			buff += pageremain;
+			addr += pageremain;	
 
-			len-=pageremain;			  //减去已经写入了的字节数
-			if(len>256)pageremain=256; //一次可以写入256个字节
-			else pageremain=len; 	  //不够256个字节了
+			len -= pageremain;			  //减去已经写入了的字节数
+			if(len > 256) pageremain = 256; //一次可以写入256个字节
+			else pageremain = len; 	  //不够256个字节了
 		}
 	}
 }
@@ -245,16 +270,18 @@ void app_flash_WriteNoCheck(uint8_t *buff, uint32_t addr, uint16_t len)
 */
 uint8_t app_flash_Read(uint8_t *buff, uint32_t addr, uint16_t len)
 {
-	uint16_t i;   										    
+	uint16_t cnt = 0;
+	
+	FLASH_TX_BUFF[cnt++] = W25X_ReadData;	
+	FLASH_TX_BUFF[cnt++] = (uint8_t)((addr) >> 16);	//发送24bit地址 
+	FLASH_TX_BUFF[cnt++] = (uint8_t)((addr) >> 8);
+	FLASH_TX_BUFF[cnt++] = (uint8_t)addr;
+	
 	FLASH_CS = 0;                            //使能器件   
-	bsp_spiReadWriteByte(SPI3, W25X_ReadData);         //发送读取命令   
-	bsp_spiReadWriteByte(SPI3, (uint8_t)((addr)>>16));  //发送24bit地址    
-	bsp_spiReadWriteByte(SPI3, (uint8_t)((addr)>>8));   
-	bsp_spiReadWriteByte(SPI3, (uint8_t)addr);   
-	for(i=0;i<len;i++)
-	{ 
-			buff[i]=bsp_spiReadWriteByte(SPI3, 0XFF);   //循环读数  
-	}
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);
+	
+	bsp_spi_Transmit(SPI3, buff, FLASH_TX_BUFF, len);
+
 	FLASH_CS=1;  
 	
 	return RES_OK;
@@ -274,15 +301,13 @@ uint8_t app_flash_Read(uint8_t *buff, uint32_t addr, uint16_t len)
 * Note(s)    : 
 *********************************************************************************************************
 */
-
+uint8_t W25QXX_BUF[4096];
 uint8_t app_flash_Write(uint8_t *buff, uint32_t addr, uint16_t len)
 {
 	uint32_t secpos;
 	uint16_t secoff;
 	uint16_t secremain;	   
  	uint16_t i;  
-	uint8_t  *W25QXX_BUF;		
-	W25QXX_BUF = (uint8_t *)bsp_mem_Malloc(SRAMIN, 4096);
 	
  	secpos = addr/4096;//扇区地址  
 	secoff = addr%4096;//在扇区内的偏移
@@ -319,9 +344,6 @@ uint8_t app_flash_Write(uint8_t *buff, uint32_t addr, uint16_t len)
 			else secremain = len;			//下一个扇区可以写完了
 		}	 
 	}
-
-	bsp_mem_Free(SRAMIN, W25QXX_BUF);
-	
 	return RES_OK;
 }
 
@@ -341,11 +363,17 @@ uint8_t app_flash_Write(uint8_t *buff, uint32_t addr, uint16_t len)
 */
 void app_flash_EraseChip(void)
 {
+	uint16_t cnt = 0;
+	
+	FLASH_TX_BUFF[cnt++] = W25X_ChipErase;
+	
 	app_flash_WriteCmd(ENABLE);                  //SET WEL 
 	app_flash_WaitBusy();   
+	
 	FLASH_CS = 0;                            //使能器件   
-	bsp_spiReadWriteByte(SPI3, W25X_ChipErase);        //发送片擦除命令  
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);        //发送片擦除命令  
 	FLASH_CS=1;                            //取消片选     	      
+	
 	app_flash_WaitBusy();   				   //等待芯片擦除结束
 }
 
@@ -365,14 +393,19 @@ void app_flash_EraseChip(void)
 */
 void app_flash_EraseSector(uint32_t dstAddr)
 {
+	uint16_t cnt = 0;
+	
+	FLASH_TX_BUFF[cnt++] = W25X_SectorErase;
+	FLASH_TX_BUFF[cnt++] = (uint8_t)((dstAddr)>>16);
+	FLASH_TX_BUFF[cnt++] = (uint8_t)((dstAddr)>>8);
+	FLASH_TX_BUFF[cnt++] = (uint8_t)dstAddr;
+	
 	dstAddr*=4096;
 	app_flash_WriteCmd(ENABLE);                  //SET WEL 	 
 	app_flash_WaitBusy();   
-	FLASH_CS=0;                            //使能器件   
-	bsp_spiReadWriteByte(SPI3, W25X_SectorErase);      //发送扇区擦除指令 
-	bsp_spiReadWriteByte(SPI3, (uint8_t)((dstAddr)>>16));  //发送24bit地址    
-	bsp_spiReadWriteByte(SPI3, (uint8_t)((dstAddr)>>8));   
-	bsp_spiReadWriteByte(SPI3, (uint8_t)dstAddr);  
+	
+	FLASH_CS=0;                            //使能器件  
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);
 	FLASH_CS=1;                            //取消片选     	      
 	app_flash_WaitBusy();   				   //等待擦除完成
 }
@@ -393,7 +426,7 @@ void app_flash_EraseSector(uint32_t dstAddr)
 */
 void app_flash_WaitBusy(void)
 {
-		while((app_flash_ReadSR() & 0x01)==0x01);   // 等待BUSY位清空
+	while((app_flash_ReadSR() & 0x01)==0x01);   // 等待BUSY位清空
 }
 
 
@@ -413,11 +446,15 @@ void app_flash_WaitBusy(void)
 */
 void app_flash_PowerCmd(FunctionalState state)
 {
-	FLASH_CS = 0;
+	uint16_t cnt = 0;
+	
 	if(state == DISABLE)
-		bsp_spiReadWriteByte(SPI3, W25X_PowerDown);
+		FLASH_TX_BUFF[cnt++] = W25X_PowerDown;
 	else if(state == ENABLE)
-		bsp_spiReadWriteByte(SPI3, W25X_ReleasePowerDown);
+		FLASH_TX_BUFF[cnt++] = W25X_ReleasePowerDown;
+	
+	FLASH_CS = 0;
+	bsp_spi_Transmit(SPI3, FLASH_RX_BUFF, FLASH_TX_BUFF, cnt);
 	FLASH_CS = 1;
 	bsp_tim_DelayUs(3);
 }
